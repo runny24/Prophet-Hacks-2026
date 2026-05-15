@@ -1,0 +1,506 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+% --- Organization slides (TOC + section dividers) ---
+\AtBeginSection[]
+{
+  \begin{frame}{Outline}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\title{DSI: AI Development Program}
+\subtitle{Part 1: Introduction to AI Development}
+\author{University of Chicago}
+\date{\today}
+
+\begin{document}
+
+\frame{\titlepage}
+
+% Global outline (matches \section{} titles)
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+
+% Basics of building AI Systems
+\section*{Introduction and Overview}
+
+
+\begin{frame}{Who Am I?}
+\begin{itemize}
+\item Director Data Science Clinic
+\item Undergrad: UC Berkeley, PhD: UCLA
+\item Worked in Consulting, Video Games, AI
+\item I'm also an investor and consultant for AI Startups.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Some Games I've Worked on}
+% Images live in: lecture_1/slides/images/
+% Collage layout with intentional overlap (TikZ absolute positioning).
+\begin{tikzpicture}[remember picture,overlay]
+  \coordinate (NW) at (current page.north west);
+
+  % NOTE: Use a consistent anchor everywhere (north west) and position by offsets.
+  % The order matters (later nodes sit on top of earlier ones).
+
+
+  \node[anchor=north west] at ($(NW)+(0.04\paperwidth,-0.1\paperheight)$) {%
+    \IfFileExists{images/kovaak.jpg}{\includegraphics[width=0.46\paperwidth]{images/kovaak.jpg}}{}%
+  };
+
+  \node[anchor=north west] at ($(NW)+(0.48\paperwidth,-0.1\paperheight)$) {%
+    \IfFileExists{images/familyguyquestforstuff.png}{\includegraphics[width=0.34\paperwidth]{images/familyguyquestforstuff.png}}{}%
+  };
+
+
+  \node[anchor=north west] at ($(NW)+(0.02\paperwidth,-0.4\paperheight)$) {%
+    \IfFileExists{images/cityrush.jpg}{\includegraphics[width=0.28\paperwidth]{images/cityrush.jpg}}{}%
+  };
+
+
+  \node[anchor=north west] at ($(NW)+(0.49\paperwidth,-0.435\paperheight)$) {%
+    \IfFileExists{images/spellstorm.jpg}{\includegraphics[width=0.28\paperwidth]{images/spellstorm.jpg}}{}%
+  };
+
+
+
+  \node[anchor=north west] at ($(NW)+(0.3\paperwidth,-0.4\paperheight)$) {%
+    \IfFileExists{images/wofp.jpg}{\includegraphics[width=0.2\paperwidth]{images/wofp.jpg}}{}%
+  };
+
+  \node[anchor=north west] at ($(NW)+(0.8\paperwidth,-0.1\paperheight)$) {%
+    \IfFileExists{images/sonicdash.jpg}{\includegraphics[width=0.2\paperwidth]{images/sonicdash.jpg}}{}%
+  };
+
+
+
+  \node[anchor=north west] at ($(NW)+(0.80\paperwidth,-0.72\paperheight)$) {%
+    \IfFileExists{images/vippoker.jpg}{\includegraphics[width=0.13\paperwidth]{images/vippoker.jpg}}{}%
+  };
+
+  \node[anchor=north west] at ($(NW)+(0.75\paperwidth,-0.45\paperheight)$) {%
+    \IfFileExists{images/tinyzoo_friends.jpg}{\includegraphics[width=0.22\paperwidth]{images/tinyzoo_friends.jpg}}{}%
+  };
+
+
+
+  \node[anchor=north west] at ($(NW)+(0.23\paperwidth,-0.76\paperheight)$) {%
+    \IfFileExists{images/sonicjumpfever.jpg}{\includegraphics[width=0.1\paperwidth]{images/sonicjumpfever.jpg}}{}%
+  };
+
+  \node[anchor=north west] at ($(NW)+(0.50\paperwidth,-0.7\paperheight)$) {%
+    \IfFileExists{images/TinyMonsters.png}{\includegraphics[width=0.26\paperwidth]{images/TinyMonsters.png}}{}%
+  };
+  
+\end{tikzpicture}
+\end{frame}
+
+\section{Motivation and Learning Objectives}
+
+\begin{frame}{Motivation: Why AI Development?}
+\begin{itemize}
+    \item AI can be used directly through chat interfaces (ChatGPT, Claude)
+    \item However, most production AI systems are built \textbf{programmatically} through APIs
+    \item Why?
+    \begin{enumerate}
+        \item \textbf{Control}: Cost management, output formatting, verification
+        \item \textbf{Integration}: Connect AI to existing systems (databases, CRMs, APIs)
+        \item \textbf{Human Oversight}: Code provides guardrails against hallucination
+        \item \textbf{Automation}: Scale beyond manual chat interactions
+        \item \textbf{Scalability}: Building systems that can scale beyond a one-to-one human-chat.
+    \end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Example: Personalized Marketing Outreach}
+\begin{itemize}
+    \item A company wants to use their CRM system to send personalized cold outreach emails
+    \item They need to write code to:
+    \begin{itemize}
+        \item Connect to their CRM database
+        \item Retrieve prospect information
+        \item Generate personalized emails using an LLM API
+        \item Send emails through their email system
+    \end{itemize}
+    \item This requires \textbf{programmatic integration}, not just chat interfaces
+    \item This is a concrete example of why we build AI systems programmatically
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Course Learning Objectives}
+By the end of this course, you will:
+\begin{enumerate}
+    \item \textbf{Understand AI terminology}
+    \begin{itemize}
+        \item Don't make an ass out of yourself during an interview
+        \item Speak confidently about LLMs, tokens, context windows, agents, tools
+    \end{itemize}
+    \item \textbf{Gain familiarity with cost drivers}
+    \begin{itemize}
+        \item Understand what makes ROI sense and what doesn't
+        \item Calculate and optimize token costs
+    \end{itemize}
+    \item \textbf{Experience building AI systems}
+    \begin{itemize}
+        \item Have concrete experiences to talk about in interviews
+        \item Tune and optimize real systems
+        \item Understand the trade-offs in building such systems
+    \end{itemize}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Today: Workshop 1}
+\begin{itemize}
+    \item Focus on the \textbf{basic} definitions and how to work with these models
+    \item Build foundation for hands-on work
+    \item About 1 hour of lecture, 30 minutes hands-on
+\end{itemize}
+\vspace{0.5cm}
+\textbf{Next lectures}:
+\begin{itemize}
+    \item Workshop 2 - 4: Specific Implementation that highlight concrete problems
+    \item Dates: Thursday (1/15), Monday (1/26) and Tuesday (1/27)
+    \item Workshops will be 30-ish minutes of lecture followed by 1 hour of hands-on time
+    \item Between each lecture there will be a set of readings (usually articles)
+\end{itemize}
+\end{frame}
+
+\section{Foundations \& Terminology}
+
+\begin{frame}{So what is AI?}
+\begin{center}
+\Large
+When people say ``AI'' today, they usually mean \textbf{Large Language Models (LLMs)} or \textbf{Foundation Model}
+\end{center}
+\vspace{1cm}
+... So what is an LLM / Foundation Model?
+\end{frame}
+
+\begin{frame}{Lets start with LLMs!}
+\begin{itemize}
+
+    \item A \textbf{Large Language Model (LLM)} is an artificial intelligence system trained on massive amounts of text data (often trillions of words)
+    \item These models learn patterns in language and can:
+    \begin{itemize}
+        \item Generate human-like text
+        \item Answer questions
+        \item Translate languages
+        \item Summarize documents
+        \item Write code
+        \item And much more
+    \end{itemize}
+    \item Think of an LLM as a very sophisticated autocomplete system that has read a significant portion of the internet
+\end{itemize}
+\vspace{0.3cm}
+\end{frame}
+
+\begin{frame}{LLM Mental Model: Simplified}
+\begin{center}
+\begin{center}
+\IfFileExists{images/LLMProcess.jpg}{\includegraphics[width=0.7\textwidth]{images/LLMProcess.jpg}}{}
+\end{center}
+
+\end{center}
+\vspace{0.5cm}
+\footnotesize We won't dive into the specifics of how this works, but this mental model is useful for understanding cost and performance.
+\end{frame}
+
+\begin{frame}{Foundation Models}
+\begin{itemize}
+	
+	\item What about images and text?
+
+    \item A \textbf{foundation model} is a large-scale machine learning model trained on broad data 
+    \item \textbf{Key characteristics:}
+    \begin{itemize}
+        \item Broad training: Trained on diverse, large-scale datasets
+        \item General-purpose: Can be adapted to many different tasks
+        \item Transfer learning: Knowledge learned from training can be applied to new tasks
+        \item Base for specialization: Can be fine-tuned or used as-is for specific applications
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Foundation Models vs LLMs}
+\begin{itemize}
+    \item \textbf{Foundation Model} is the broader category
+    \begin{itemize}
+        \item Can handle multiple modalities (text, images, audio, video)
+        \item Often called ``multimodal models''
+    \end{itemize}
+    \item \textbf{LLM} (should) specifically refers to language models
+    \item \textbf{Colloquially}: People often say ``LLM'' to mean ``foundation model''
+    \item They operate the same way (embedding $\rightarrow$ transformation $\rightarrow$ output)
+\end{itemize}
+\vspace{0.5cm}
+\textbf{Examples of foundation models:}
+\begin{itemize}
+    \item \textbf{Language}: GPT-4, Claude, Llama (these are LLMs)
+    \item \textbf{Vision}: CLIP, DALL-E
+    \item \textbf{Multimodal}: GPT-4V (vision + language), Gemini
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Key Terminology}
+\begin{itemize}
+    \item \textbf{Token}: The basic unit of text that an LLM processes (word, part of word, or punctuation)
+\begin{itemize}
+\item  1 token $\approx$ .75 words (so a bit less than a word)
+\end{itemize}
+    \item \textbf{Prompt}: The input text you give to an LLM
+    \item \textbf{Completion/Response}: The output text generated by the LLM
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{How Do We Use These Models?}
+\begin{enumerate}
+    \item \textbf{Chat Interfaces}: ChatGPT, Claude, Gemini
+    \begin{itemize}
+        \item Direct user interaction
+        \item Good for exploration and prototyping
+    \end{itemize}
+    \item \textbf{Terminal Interfaces}: Claude Code CLI, Open AI Codex, OpenCode
+    \begin{itemize}
+        \item Command-line access
+        \item Integration with development workflows
+    \end{itemize}
+    \item \textbf{API (Application Programming Interface)}
+    \begin{itemize}
+        \item \textbf{This is our focus} - programmatic access
+        \item Build production systems
+        \item Integrate with existing applications
+    \end{itemize}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{LLM Limitations}
+While LLMs are powerful, they have important limitations:
+\begin{enumerate}
+    \item \textbf{Knowledge Cutoff}: They only know information from their training data up to a certain date
+    \item \textbf{Hallucination}: They can generate plausible-sounding but incorrect information
+    \item \textbf{No Real-World Actions}: They can't directly interact with external systems (databases, APIs, file systems)
+    \item \textbf{Context Limits}: They have maximum context window sizes
+    \item \textbf{Static Knowledge}: They can't learn new information after training without fine-tuning or retrieval
+\end{enumerate}
+\end{frame}
+
+
+
+\section{Context}
+
+\begin{frame}{Content Engineering: The Core of AI System Development}
+\begin{itemize}
+    \item Most of what we do when programming AI systems is \textbf{engineering what goes into the model}
+    \item We call this \textbf{content engineering} (or \textbf{context engineering})
+    \item It focuses on manipulating the \textbf{context window} to generate responses that are most likely to succeed
+    \item This is where the real work happens:
+    \begin{itemize}
+        \item Designing effective prompts
+        \item Structuring information for the model
+        \item Providing the right examples and constraints
+        \item Managing context size and relevance
+    \end{itemize}
+    \item \textbf{The model is powerful, but what you put in determines what you get out}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Context windows: What they are}
+\begin{itemize}
+    \item The \textbf{context window} is the model's working memory for a single request
+    \item Everything the model can use must fit inside it
+    \item When you exceed the window, something gets dropped or truncated
+	\begin{itemize}
+		\item Some tools will do automatic context window management (compacting, etc), but the trade-offs remain
+	\end{itemize}
+	\item So how big are these context windows?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Context Window Size Limitations}
+\begin{itemize}
+    \item Different models have different maximum context window sizes (measured in \textbf{tokens})
+    \item Common model context windows (as of 2024-2025):
+    \begin{itemize}
+        \item \textbf{GPT-4}: 128,000 tokens
+        \item \textbf{Claude 3.5 Sonnet}: 200,000 tokens
+        \item \textbf{Claude Sonnet 4}: 1,000,000 tokens (announced 2025)
+        \item \textbf{Llama 3.1} (70B, 405B): 128,000 tokens
+    \end{itemize}
+    \item \textbf{Remember}: 1 token $\approx$ 0.75 words
+    \item Larger context windows enable:
+    \begin{itemize}
+        \item Processing longer documents
+        \item Maintaining longer conversation history
+        \item Including more retrieved information
+    \end{itemize}
+    \item But they also increase cost and latency
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Context windows: practical implications}
+\begin{itemize}
+    \item \textbf{Tradeoffs}: More context can improve grounding, but increases cost/latency
+    \item \textbf{Recency and placement matter}: Newer text is usually attended to more
+    \end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Breaking Down the Context Window}
+\begin{itemize}
+    \item For commercial LLMs, the context window can be broken into 3 components
+    \begin{enumerate}
+        \item \textbf{System Prompt}: High-level instructions \& safety rules
+        \item \textbf{User Prompt}: The actual request or question
+        \item \textbf{Environment Context}: Retrieved documents, tool outputs, conversation history
+    \end{enumerate}
+        \item Understanding this breakdown helps with:
+    \begin{itemize}
+        \item Cost optimization (what's necessary vs. optional)
+        \item Prompt design (where to put different types of instructions)
+        \item Debugging (what the model actually sees)
+    \end{itemize}
+
+\end{itemize}
+
+
+\end{frame}
+
+
+\begin{frame}{System Prompt}
+\begin{itemize}
+	\item The \textbf{system prompt} is separate from the user prompt and sets the model's behavior
+    \item The \textbf{system prompt} sets the highest-level behavior (tone, rules, safety, format)    
+	\item It is NOT under our control
+	\item It can be changed without us noticing or warning
+\end{itemize}
+\vspace{0.2cm}
+\footnotesize See example system prompts: \url{https://github.com/guy915/System-Prompts}
+
+\end{frame}
+
+
+\begin{frame}{Environment Context}
+\begin{itemize}
+	\item We can add additional features to our context window to give "abilities" to our LLM
+	\item For example: we could add a tool that would allow our LLM to browse our hard drive (in the case of local Claude code)
+	\item There are a lot of different patterns for this:
+\begin{itemize}
+\item MCP
+\item Skills
+\item Tools
+\item \texttt{AGENTS.md} files
+\end{itemize}
+\item Anything programmatically accessible that helps the model understand the environment, task, or user's situation
+\item These are generally put into the context window one time and then always exist when starting up.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{User Prompt}
+	\begin{itemize}
+		\item The \textbf{User Prompt} or \textbf{User Messages} is what we provide the LLM
+		\item This is our most common interaction point
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Context Failure}
+\begin{itemize}
+	\item When LLMs fail it is (frequently) due to problems by incorrectly engineered context. 
+    \item \textbf{Failure modes} to watch for:
+    \begin{itemize}
+        \item forgetting earlier constraints
+        \item losing critical details due to truncation
+        \item quoting the wrong source when too many docs are included
+    \end{itemize}
+	\end{itemize}
+\end{frame}
+
+\section{Pricing}
+
+\begin{frame}{Token economics: why tokens matter}
+\begin{itemize}
+    \item Most LLM APIs charge by tokens:
+    \begin{itemize}
+        \item \textbf{input tokens} (prompt, system prompt, retrieved docs, tool outputs)
+        \item \textbf{output tokens} (the model's response)
+    \end{itemize}
+    \item Cost and latency generally scale with total tokens processed
+    \item \textbf{Context engineering is also cost engineering}:
+    \begin{itemize}
+        \item tighter prompts $\rightarrow$ lower cost and often higher reliability
+        \item smaller context when possible $\rightarrow$ faster, cheaper
+    \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Real-world pricing examples}
+\textbf{Example (OpenAI GPT-4.1 family; per 1M tokens)}\vspace{0.2cm}
+
+\begin{center}
+	
+
+\begin{tabular}{|l|r|r|}
+\hline
+\textbf{Model} & \textbf{Input} & \textbf{Output} \\
+\hline
+GPT-5.2 & \$1.75 & \$14.00 \\
+GPT-4.1 & \$2.00 & \$8.00 \\
+GPT-4.1 mini & \$0.40 & \$1.60 \\
+GPT-4.1 nano & \$0.10 & \$0.40 \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.2cm}
+\footnotesize Source: \url{https://platform.openai.com/docs/pricing}
+\end{frame}
+
+
+\begin{frame}{Cost math (simple model)}
+\begin{itemize}
+    \item Typical pricing is ``\$ per 1M tokens''
+    \item Approximate cost per call:
+    \[
+      \text{cost} \approx \left(\frac{T_{in}}{10^6} \cdot p_{in}\right) + \left(\frac{T_{out}}{10^6} \cdot p_{out}\right)
+    \]
+    \item Engineering levers:
+    \begin{itemize}
+        \item reduce retrieved context (better retrieval, smaller snippets)
+        \item constrain output length (max tokens, structured output)
+        \item pick the cheapest model that meets quality requirements
+        \item cache repeated context (where supported)
+    \end{itemize}
+\end{itemize}
+\vspace{0.2cm}
+\footnotesize Pricing references: \url{https://openai.com/api/pricing/}
+\end{frame}
+
+
+\section{Exercise}
+
+\begin{frame}{Exercise}
+	The goal for today is:
+\begin{itemize}
+\item Team up with another person (min group 2, max group 3)	
+\item Get access to your API Keys	
+\item Verify that you can use the keys
+\item Complete the notebook. Can you engineer the context to get all the webpages to be classified correctly?
+\end{itemize}
+\end{frame}
+
+\end{document}
+
+
+
+
+
