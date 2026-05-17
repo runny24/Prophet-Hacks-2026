@@ -34,6 +34,13 @@ class BotConfig:
 
     enable_rag: bool = False
     enable_blf: bool = False
+    blf_max_markets_per_tick: int = 1
+    blf_max_steps: int = 2
+    blf_provider: str = "openrouter"
+    blf_model: str = "deepseek/deepseek-chat"
+    blf_timeout_seconds: int = 20
+    blf_json_retries: int = 1
+    blf_enable_extra_search: bool = False
     rag_max_markets_per_tick: int = 12
     rag_max_queries: int = 3
     rag_max_results_per_query: int = 5
@@ -46,6 +53,7 @@ class BotConfig:
     block_trade_on_high_resolution_risk: bool = True
     official_source_missing_edge_multiplier: float = 2.0
     allow_live_submit: bool = False
+    threshold_debug: bool = False
 
     @classmethod
     def from_env(cls) -> "BotConfig":
@@ -56,6 +64,24 @@ class BotConfig:
             dry_run=os.getenv("EDGE_TRADER_DRY_RUN", "0").lower() in {"1", "true", "yes"},
             enable_rag=os.getenv("EDGE_TRADER_ENABLE_RAG", "0").lower() in {"1", "true", "yes"},
             enable_blf=os.getenv("EDGE_TRADER_ENABLE_BLF", "0").lower() in {"1", "true", "yes"},
+            blf_max_markets_per_tick=int(
+                os.getenv("EDGE_TRADER_MAX_BLF_MARKETS_PER_TICK", str(cls.blf_max_markets_per_tick))
+            ),
+            blf_max_steps=int(os.getenv("EDGE_TRADER_BLF_MAX_STEPS", str(cls.blf_max_steps))),
+            blf_provider=os.getenv(
+                "EDGE_TRADER_BLF_PROVIDER",
+                os.getenv("EDGE_TRADER_LLM_PROVIDER", cls.blf_provider),
+            ),
+            blf_model=os.getenv(
+                "EDGE_TRADER_BLF_MODEL",
+                os.getenv("EDGE_TRADER_LLM_MODEL", cls.blf_model),
+            ),
+            blf_timeout_seconds=int(
+                os.getenv("EDGE_TRADER_BLF_TIMEOUT_SECONDS", str(cls.blf_timeout_seconds))
+            ),
+            blf_json_retries=int(os.getenv("EDGE_TRADER_BLF_JSON_RETRIES", str(cls.blf_json_retries))),
+            blf_enable_extra_search=os.getenv("EDGE_TRADER_BLF_ENABLE_EXTRA_SEARCH", "0").lower()
+            in {"1", "true", "yes"},
             rag_max_markets_per_tick=int(
                 os.getenv(
                     "EDGE_TRADER_MAX_RAG_MARKETS_PER_TICK",
@@ -79,6 +105,7 @@ class BotConfig:
             llm_json_retries=int(os.getenv("EDGE_TRADER_LLM_JSON_RETRIES", str(cls.llm_json_retries))),
             allow_live_submit=os.getenv("EDGE_TRADER_ALLOW_LIVE_SUBMIT", "0").lower()
             in {"1", "true", "yes"},
+            threshold_debug=os.getenv("EDGE_TRADER_THRESHOLD_DEBUG", "0").lower() in {"1", "true", "yes"},
         )
 
     def to_experiment_config(self) -> dict:

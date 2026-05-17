@@ -95,6 +95,25 @@ class StrategyCoreTests(unittest.TestCase):
 
         self.assertGreater(combined.p_final or 0, 0.40)
         self.assertLess(combined.p_final or 1, 0.60)
+        self.assertIsNotNone(combined.p_final_before_blf)
+
+    def test_blf_rag_disagreement_keeps_aggregation_conservative(self) -> None:
+        signals = ForecastSignals(
+            market_id="m1",
+            p_market=0.40,
+            p_stat=0.40,
+            p_2402=0.80,
+            p_blf=0.20,
+            confidence="medium",
+            uncertainty=0.06,
+            evidence_package={"resolution_check": {"trade_blocker": False, "risk_flags": []}},
+        )
+
+        combined = combine_signals(signals)
+
+        self.assertLess(abs((combined.p_final or 0.40) - 0.40), 0.05)
+        self.assertLess(abs(combined.blf_adjustment or 0), 0.05)
+        self.assertIn("shrunken verifier", combined.aggregation_reason)
 
     def test_sizing_respects_low_confidence_threshold_and_cap(self) -> None:
         config = BotConfig(max_new_notional_per_trade=100)

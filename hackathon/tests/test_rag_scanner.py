@@ -117,6 +117,42 @@ class LowQualityLlmSummarizer:
         }
 
 
+class NoDirectFutureLlmSummarizer:
+    def summarize(self, market: MarketView, evidence_items: list[dict]) -> dict:
+        return {
+            "evidence_for_yes": [],
+            "evidence_for_no": [],
+            "open_questions": ["No direct announcement evidence yet."],
+            "p_2402_raw": 0.02,
+            "confidence": "low",
+            "evidence_quality": 1,
+            "risk_flags": ["No direct evidence that an announcement has happened yet."],
+            "reasoning_summary": "No direct evidence of an announcement yet.",
+        }
+
+
+class ExplicitDeclineFutureLlmSummarizer:
+    def summarize(self, market: MarketView, evidence_items: list[dict]) -> dict:
+        return {
+            "evidence_for_yes": [],
+            "evidence_for_no": [
+                {
+                    "summary": "The person explicitly declined and ruled out running.",
+                    "source": "example.com",
+                    "url": "https://example.com/decline",
+                    "relevance": 5,
+                    "supports_resolution_condition": True,
+                }
+            ],
+            "open_questions": [],
+            "p_2402_raw": 0.02,
+            "confidence": "medium",
+            "evidence_quality": 4,
+            "risk_flags": ["explicit_decline"],
+            "reasoning_summary": "The person declined and ruled out the future announcement.",
+        }
+
+
 class EmptySearchAdapter:
     def search(self, query: str, *, max_results: int) -> list[SearchResult]:
         return []
@@ -349,6 +385,57 @@ class RagScannerTests(unittest.TestCase):
         self.assertTrue(package["resolution_check"]["trade_blocker"])
         self.assertIn("official_source_not_confirmed", package["risk_flags"])
         self.assertLess(package["p_2402_final_after_shrinkage"], 0.5)
+
+    def test_future_candidacy_no_direct_evidence_anchors_near_market_prior(self) -> None:
+        market = make_market(
+            question="Who will run for the Republican presidential nomination in 2028?",
+            description="Resolves YES if Marco Rubio announces a presidential campaign before 2028.",
+            resolution_time=datetime.now(UTC) + timedelta(days=600),
+            yes_mid=0.64,
+            yes_bid=0.62,
+            yes_ask=0.66,
+        )
+        scanner = RagScanner(
+            enabled=True,
+            search_adapter=FakeSearchAdapter(),
+            llm_summarizer=NoDirectFutureLlmSummarizer(),
+            enable_llm_summary=True,
+            max_queries=1,
+            max_results_per_query=2,
+        )
+
+        package = scanner.scan_package(market, market_mid=market.yes_mid)
+
+        self.assertEqual(package["market_type"], "future_candidacy")
+        self.assertTrue(package["absence_of_evidence_penalty_detected"])
+        self.assertTrue(package["future_event_should_anchor_to_market"])
+        self.assertGreater(package["p_2402_raw"], 0.50)
+        self.assertLess(abs(package["p_2402"] - market.yes_mid), 0.08)
+
+    def test_explicit_decline_can_still_lower_future_candidacy_probability(self) -> None:
+        market = make_market(
+            question="Who will run for the Republican presidential nomination in 2028?",
+            description="Resolves YES if Marco Rubio announces a presidential campaign before 2028.",
+            resolution_time=datetime.now(UTC) + timedelta(days=600),
+            yes_mid=0.64,
+            yes_bid=0.62,
+            yes_ask=0.66,
+        )
+        scanner = RagScanner(
+            enabled=True,
+            search_adapter=FakeSearchAdapter(),
+            llm_summarizer=ExplicitDeclineFutureLlmSummarizer(),
+            enable_llm_summary=True,
+            max_queries=1,
+            max_results_per_query=2,
+        )
+
+        package = scanner.scan_package(market, market_mid=market.yes_mid)
+
+        self.assertFalse(package["absence_of_evidence_penalty_detected"])
+        self.assertTrue(package["strong_contrary_evidence_detected"])
+        self.assertEqual(package["p_2402_raw"], 0.02)
+        self.assertLess(package["p_2402"], market.yes_mid)
 
     def test_scan_updates_forecast_signals_without_sizing(self) -> None:
         market = make_market()

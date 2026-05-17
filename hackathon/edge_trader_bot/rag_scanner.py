@@ -22,6 +22,11 @@ from typing import Any, Mapping, Protocol
 import requests
 
 from .math_utils import clamp_probability, shrink_toward
+from .market_classifier import (
+    classify_market,
+    detect_absence_of_evidence_penalty,
+    future_event_prompt_guidance,
+)
 from .resolution_checker import check_resolution_risk
 from .schemas import ForecastSignals, MarketView
 
@@ -282,6 +287,8 @@ class RagScanner:
         started = time.monotonic()
         market = normalize_market(market)
         base = fallback_package(market)
+        market_metadata = classify_market(market)
+        base.update(market_metadata)
         if not self.enabled:
             base["risk_flags"].append("rag_disabled")
             base["scanner_elapsed_ms"] = elapsed_ms(started)
@@ -316,6 +323,7 @@ class RagScanner:
 
             llm_package = None
             llm_diagnostics = llm_default_diagnostics()
+            llm_diagnostics.update(market_metadata)
             if self.enable_llm_summary and self.llm_summarizer is not None:
                 llm_started = time.monotonic()
                 llm_diagnostics.update(
@@ -373,6 +381,22 @@ class RagScanner:
 
             if llm_package is not None:
                 llm_p = clamp_probability(float(llm_package["p_2402_raw"]), eps=0.02)
+                absence_diag = detect_absence_of_evidence_penalty(
+                    market_metadata=market_metadata,
+                    p_raw=llm_p,
+                    market_mid=market_mid or market.yes_mid,
+                    reasoning_summary=str(llm_package.get("reasoning_summary", "")),
+                    risk_flags=llm_package.get("risk_flags", []),
+                    evidence_for_yes=llm_package.get("evidence_for_yes", []),
+                    evidence_for_no=llm_package.get("evidence_for_no", []),
+                    missing_information=llm_package.get("open_questions", []),
+                )
+                llm_diagnostics.update(absence_diag)
+                if absence_diag["absence_of_evidence_penalty_detected"]:
+                    llm_diagnostics["p_2402_raw_original"] = llm_p
+                    llm_p = clamp_probability(float(absence_diag["guarded_probability"]), eps=0.02)
+                    llm_package["p_2402_raw"] = llm_p
+                    risk_flags = merge_flags(risk_flags, ["absence_as_negative_guardrail"])
                 llm_quality = int(llm_package["evidence_quality"])
                 llm_confidence = str(llm_package["confidence"])
                 p_rough = shrink_llm_probability(
@@ -394,6 +418,7 @@ class RagScanner:
             return {
                 "market_id": market.market_id,
                 "question": market.question,
+                **market_metadata,
                 "p_2402": p_rough,
                 "evidence_quality": evidence_quality,
                 "confidence": confidence,
@@ -523,9 +548,11 @@ def normalize_market(market: MarketInput) -> MarketView:
 
 
 def fallback_package(market: MarketView) -> dict[str, Any]:
+    market_metadata = classify_market(market)
     return {
         "market_id": market.market_id,
         "question": market.question,
+        **market_metadata,
         "p_2402": None,
         "evidence_quality": 0,
         "confidence": "low",
@@ -556,7 +583,12 @@ def llm_default_diagnostics() -> dict[str, Any]:
         "llm_error_category": None,
         "llm_elapsed_ms": 0,
         "p_2402_raw": None,
+        "p_2402_raw_original": None,
         "p_2402_final_after_shrinkage": None,
+        "absence_of_evidence_penalty_detected": False,
+        "no_direct_evidence_reasoning": False,
+        "future_event_should_anchor_to_market": False,
+        "strong_contrary_evidence_detected": False,
         "json_parse_error": None,
         "fallback_reason": None,
         "llm_prompt_metadata": {},
@@ -808,6 +840,7 @@ def domain_from_url(url: str) -> str:
 
 
 def build_llm_rag_prompt(market: MarketView, evidence_items: list[dict[str, Any]]) -> str:
+    market_metadata = classify_market(market)
     normalized = [
         {
             "summary": item.get("summary", ""),
@@ -826,12 +859,14 @@ def build_llm_rag_prompt(market: MarketView, evidence_items: list[dict[str, Any]
                 "Do not provide long chain-of-thought.",
                 "Use concise reasoning_summary only.",
                 "Judge whether evidence supports the exact resolution condition, not just the headline.",
+                *future_event_prompt_guidance(market_metadata),
             ],
             "market": {
                 "market_id": market.market_id,
                 "question": market.question,
                 "description_or_resolution_criteria": market.description,
                 "resolution_time": market.resolution_time.isoformat(),
+                **market_metadata,
             },
             "search_results": normalized,
             "output_schema": {

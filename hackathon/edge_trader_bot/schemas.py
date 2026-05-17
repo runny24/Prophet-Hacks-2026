@@ -40,6 +40,11 @@ class ForecastSignals:
     risk_flags: list[str] = field(default_factory=list)
     reason: str = ""
     evidence_package: dict[str, Any] | None = None
+    blf_package: dict[str, Any] | None = None
+    p_final_before_blf: float | None = None
+    p_final_after_blf: float | None = None
+    blf_adjustment: float | None = None
+    aggregation_reason: str = ""
 
 
 @dataclass
