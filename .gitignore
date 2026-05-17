@@ -3,3 +3,6 @@
 .DS_Store
 __pycache__/
 *.py[cod]
+hackathon/logs/
+hackathon/.edge_trader/
+.claude/
