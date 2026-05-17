@@ -25,6 +25,7 @@ from .market_classifier import (
 )
 from .rag_scanner import (
     LlmProviderConfig,
+    DEEPSEEK_CHAT_COMPLETIONS_ENDPOINT,
     OPENAI_CHAT_COMPLETIONS_ENDPOINT,
     OPENROUTER_CHAT_COMPLETIONS_ENDPOINT,
     build_llm_headers,
@@ -66,24 +67,27 @@ class ChatCompletionsBlfSummarizer:
         last_error: BlfError | None = None
         for _ in range(max(1, self.runtime.json_retries)):
             try:
+                payload: dict[str, Any] = {
+                    "model": self.provider_config.model,
+                    "messages": [
+                        {
+                            "role": "system",
+                            "content": (
+                                "You are a conservative prediction-market belief-state verifier. "
+                                "Return strict JSON only. Do not include hidden reasoning or chain-of-thought."
+                            ),
+                        },
+                        {"role": "user", "content": prompt},
+                    ],
+                    "temperature": 0,
+                }
+                # Perplexity (and some other providers) reject response_format
+                if self.provider_config.provider not in ("openrouter",):
+                    payload["response_format"] = {"type": "json_object"}
                 response = requests.post(
                     self.provider_config.endpoint,
                     headers=build_llm_headers(self.provider_config),
-                    json={
-                        "model": self.provider_config.model,
-                        "messages": [
-                            {
-                                "role": "system",
-                                "content": (
-                                    "You are a conservative prediction-market belief-state verifier. "
-                                    "Return strict JSON only. Do not include hidden reasoning or chain-of-thought."
-                                ),
-                            },
-                            {"role": "user", "content": prompt},
-                        ],
-                        "temperature": 0,
-                        "response_format": {"type": "json_object"},
-                    },
+                    json=payload,
                     timeout=self.runtime.timeout_seconds,
                 )
                 if response.status_code == 429:
@@ -267,6 +271,11 @@ def build_blf_provider_config_from_env(provider: str, model: str) -> LlmProvider
         if not api_key:
             return None
         return LlmProviderConfig(provider=provider, api_key=api_key, model=model, endpoint=OPENAI_CHAT_COMPLETIONS_ENDPOINT)
+    if provider == "deepseek":
+        api_key = os.getenv("DEEPSEEK_API_KEY")
+        if not api_key:
+            return None
+        return LlmProviderConfig(provider=provider, api_key=api_key, model=model, endpoint=DEEPSEEK_CHAT_COMPLETIONS_ENDPOINT)
     logger.warning("Unsupported BLF provider %s; BLF disabled for this tick", provider)
     return None
 

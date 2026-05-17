@@ -165,6 +165,7 @@ class BraveSearchAdapter:
 
 OPENROUTER_CHAT_COMPLETIONS_ENDPOINT = "https://openrouter.ai/api/v1/chat/completions"
 OPENAI_CHAT_COMPLETIONS_ENDPOINT = "https://api.openai.com/v1/chat/completions"
+DEEPSEEK_CHAT_COMPLETIONS_ENDPOINT = "https://api.deepseek.com/v1/chat/completions"
 
 
 @dataclass(frozen=True)
@@ -506,6 +507,17 @@ def build_llm_provider_config_from_env() -> LlmProviderConfig | None:
             api_key=api_key,
             model=model,
             endpoint=OPENAI_CHAT_COMPLETIONS_ENDPOINT,
+        )
+
+    if provider == "deepseek":
+        api_key = os.getenv("DEEPSEEK_API_KEY")
+        if not api_key:
+            return None
+        return LlmProviderConfig(
+            provider=provider,
+            api_key=api_key,
+            model=model,
+            endpoint=DEEPSEEK_CHAT_COMPLETIONS_ENDPOINT,
         )
 
     logger.warning("Unsupported LLM provider %s; LLM RAG summarizer disabled", provider)
