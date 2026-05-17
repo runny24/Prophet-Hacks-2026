@@ -125,5 +125,24 @@ def maybe_exit_position(
 
 
 def rank_decisions(decisions: list[TradeDecision], limit: int) -> list[TradeDecision]:
-    ranked = sorted(decisions, key=lambda d: d.expected_value, reverse=True)
-    return ranked[:limit]
+    exits = sorted(
+        [decision for decision in decisions if decision.action == "SELL"],
+        key=lambda d: d.expected_value,
+        reverse=True,
+    )
+    entries = sorted(
+        [decision for decision in decisions if decision.action != "SELL"],
+        key=lambda d: (entry_channel_priority(d.reason), d.edge, d.expected_value),
+        reverse=True,
+    )
+    return [*exits, *entries][:limit]
+
+
+def entry_channel_priority(reason: str) -> int:
+    if "fresh_event" in reason:
+        return 3
+    if "clean_forecast_mispricing" in reason:
+        return 2
+    if "momentum" in reason or "mean_reversion" in reason:
+        return 1
+    return 0

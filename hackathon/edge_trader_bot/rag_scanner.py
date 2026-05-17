@@ -397,6 +397,15 @@ class RagScanner:
                     llm_p = clamp_probability(float(absence_diag["guarded_probability"]), eps=0.02)
                     llm_package["p_2402_raw"] = llm_p
                     risk_flags = merge_flags(risk_flags, ["absence_as_negative_guardrail"])
+                sports_diag = sports_overconfidence_diagnostics(
+                    market_metadata,
+                    p_raw=llm_p,
+                    market_mid=market_mid or market.yes_mid,
+                    llm_package=llm_package,
+                )
+                llm_diagnostics.update(sports_diag)
+                if sports_diag["sports_llm_overconfidence_detected"]:
+                    risk_flags = merge_flags(risk_flags, ["sports_llm_overconfidence"])
                 llm_quality = int(llm_package["evidence_quality"])
                 llm_confidence = str(llm_package["confidence"])
                 p_rough = shrink_llm_probability(
@@ -405,6 +414,8 @@ class RagScanner:
                     llm_quality,
                     llm_confidence,
                     resolution_check,
+                    market_metadata=market_metadata,
+                    quantitative_support=sports_diag["sports_quantitative_support"],
                 )
                 llm_diagnostics["p_2402_raw"] = llm_p
                 llm_diagnostics["p_2402_final_after_shrinkage"] = p_rough
@@ -589,6 +600,10 @@ def llm_default_diagnostics() -> dict[str, Any]:
         "no_direct_evidence_reasoning": False,
         "future_event_should_anchor_to_market": False,
         "strong_contrary_evidence_detected": False,
+        "sports_llm_overconfidence_detected": False,
+        "sports_quantitative_support": False,
+        "sports_support_source_type": "none",
+        "sports_risk_explanation": None,
         "json_parse_error": None,
         "fallback_reason": None,
         "llm_prompt_metadata": {},
@@ -714,6 +729,8 @@ def shrink_llm_probability(
     evidence_quality: int,
     confidence: str,
     resolution_check: dict[str, Any],
+    market_metadata: dict[str, Any] | None = None,
+    quantitative_support: bool = False,
 ) -> float:
     if evidence_quality <= 2:
         weight = 0.15
@@ -728,7 +745,93 @@ def shrink_llm_probability(
         weight = min(weight, 0.10)
     elif resolution_check.get("ambiguity_level") == "medium":
         weight = min(weight, 0.20)
+    if (market_metadata or {}).get("market_type") == "sports_outcome":
+        if not quantitative_support:
+            weight = min(weight, 0.08)
+        elif abs(p_raw - market_mid) >= 0.12:
+            weight = min(weight, 0.18)
     return shrink_toward(p_raw, clamp_probability(market_mid), weight)
+
+
+def sports_overconfidence_diagnostics(
+    market_metadata: dict[str, Any],
+    *,
+    p_raw: float,
+    market_mid: float,
+    llm_package: dict[str, Any],
+) -> dict[str, Any]:
+    if market_metadata.get("market_type") != "sports_outcome":
+        return {
+            "sports_llm_overconfidence_detected": False,
+            "sports_quantitative_support": False,
+            "sports_support_source_type": "none",
+            "sports_risk_explanation": None,
+        }
+    support_type = sports_support_source_type(llm_package)
+    quantitative = support_type in {
+        "odds_market",
+        "sportsbook_odds",
+        "model_forecast",
+        "elo_rating",
+        "simulation",
+        "quantitative_ranking",
+    }
+    disagreement = abs(p_raw - market_mid)
+    overconfident = disagreement >= 0.08 and not quantitative
+    if disagreement >= 0.12 and support_type not in {
+        "odds_market",
+        "sportsbook_odds",
+        "model_forecast",
+        "elo_rating",
+        "simulation",
+    }:
+        overconfident = True
+    return {
+        "sports_llm_overconfidence_detected": overconfident,
+        "sports_quantitative_support": quantitative,
+        "sports_support_source_type": support_type,
+        "sports_risk_explanation": (
+            "RAG sports probability moved far from market without strong quantitative odds/model support."
+            if overconfident
+            else None
+        ),
+    }
+
+
+def has_quantitative_sports_support(llm_package: dict[str, Any]) -> bool:
+    return sports_support_source_type(llm_package) in {
+        "odds_market",
+        "sportsbook_odds",
+        "model_forecast",
+        "elo_rating",
+        "simulation",
+        "quantitative_ranking",
+    }
+
+
+def sports_support_source_type(llm_package: dict[str, Any]) -> str:
+    support_items = [
+        *(llm_package.get("evidence_for_yes") or []),
+        *(llm_package.get("evidence_for_no") or []),
+    ]
+    text = json.dumps(support_items, default=str).lower()
+    if not text or text == "[]":
+        return "none"
+    if any(term in text for term in ("prediction market", "market odds", "market-implied", "market implied")):
+        return "odds_market"
+    if any(term in text for term in ("sportsbook", "bookmaker", "betting odds", "implied odds")):
+        return "sportsbook_odds"
+    if any(term in text for term in ("model forecast", "forecast model", "statistical projection", "projected probability")):
+        return "model_forecast"
+    if any(term in text for term in ("elo", "team rating", "rating system")):
+        return "elo_rating"
+    if "simulation" in text or "monte carlo" in text:
+        return "simulation"
+    if any(term in text for term in ("quantitative ranking", "power rating", "ranked by", "statistical ranking")):
+        return "quantitative_ranking"
+    if any(term in text for term in ("favorite", "contender", "roster", "injury", "coach", "player", "qualitative")):
+        return "qualitative_news"
+    return "unclear"
 
 
 def evidence_quality_score(
@@ -859,6 +962,8 @@ def build_llm_rag_prompt(market: MarketView, evidence_items: list[dict[str, Any]
                 "Do not provide long chain-of-thought.",
                 "Use concise reasoning_summary only.",
                 "Judge whether evidence supports the exact resolution condition, not just the headline.",
+                "For sports_outcome markets, include base rate, field size, and current betting/odds context. Do not let narrative alone create a large probability move.",
+                "For sports_outcome markets, treat the market midpoint as a strong prior unless evidence is quantitative and odds-aware.",
                 *future_event_prompt_guidance(market_metadata),
             ],
             "market": {

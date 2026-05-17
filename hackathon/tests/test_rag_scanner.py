@@ -41,6 +41,20 @@ class FakeSearchAdapter:
         ][:max_results]
 
 
+class SportsSearchAdapter:
+    def search(self, query: str, *, max_results: int) -> list[SearchResult]:
+        return [
+            SearchResult(
+                title="France World Cup power ranking discussion",
+                url="https://example.com/france-world-cup",
+                snippet="Analysts discuss France as a strong World Cup contender, but without betting odds context.",
+                source="example.com",
+                timestamp="1 day ago",
+                rank=1,
+            )
+        ][:max_results]
+
+
 class FakeLlmSummarizer:
     def summarize(self, market: MarketView, evidence_items: list[dict]) -> dict:
         return {
@@ -150,6 +164,72 @@ class ExplicitDeclineFutureLlmSummarizer:
             "evidence_quality": 4,
             "risk_flags": ["explicit_decline"],
             "reasoning_summary": "The person declined and ruled out the future announcement.",
+        }
+
+
+class SportsNarrativeLlmSummarizer:
+    def summarize(self, market: MarketView, evidence_items: list[dict]) -> dict:
+        return {
+            "evidence_for_yes": [
+                {
+                    "summary": "France has elite players and a strong recent tournament narrative.",
+                    "source": "example.com",
+                    "url": "https://example.com/france-world-cup",
+                    "relevance": 5,
+                    "supports_resolution_condition": False,
+                }
+            ],
+            "evidence_for_no": [],
+            "open_questions": ["Need base rates, field size, and current odds."],
+            "p_2402_raw": 0.46,
+            "confidence": "high",
+            "evidence_quality": 5,
+            "risk_flags": [],
+            "reasoning_summary": "Narrative support, but no odds-aware quantitative support.",
+        }
+
+
+class SportsQuantitativeLlmSummarizer:
+    def summarize(self, market: MarketView, evidence_items: list[dict]) -> dict:
+        return {
+            "evidence_for_yes": [
+                {
+                    "summary": "Betting odds imply a 20% probability after accounting for field size.",
+                    "source": "sportsbook.example",
+                    "url": "https://sportsbook.example/world-cup",
+                    "relevance": 5,
+                    "supports_resolution_condition": True,
+                }
+            ],
+            "evidence_for_no": [],
+            "open_questions": [],
+            "p_2402_raw": 0.20,
+            "confidence": "medium",
+            "evidence_quality": 5,
+            "risk_flags": [],
+            "reasoning_summary": "Odds-aware estimate uses betting odds, base rate, and field size.",
+        }
+
+
+class SportsSimulationLlmSummarizer:
+    def summarize(self, market: MarketView, evidence_items: list[dict]) -> dict:
+        return {
+            "evidence_for_yes": [
+                {
+                    "summary": "A Monte Carlo simulation gives the team a 22% title probability.",
+                    "source": "model.example",
+                    "url": "https://model.example/world-cup",
+                    "relevance": 5,
+                    "supports_resolution_condition": True,
+                }
+            ],
+            "evidence_for_no": [],
+            "open_questions": [],
+            "p_2402_raw": 0.22,
+            "confidence": "medium",
+            "evidence_quality": 5,
+            "risk_flags": [],
+            "reasoning_summary": "Simulation-based model forecast.",
         }
 
 
@@ -436,6 +516,82 @@ class RagScannerTests(unittest.TestCase):
         self.assertTrue(package["strong_contrary_evidence_detected"])
         self.assertEqual(package["p_2402_raw"], 0.02)
         self.assertLess(package["p_2402"], market.yes_mid)
+
+    def test_sports_narrative_overconfidence_gets_flag_and_stronger_shrinkage(self) -> None:
+        market = make_market(
+            question="Will France win the 2026 FIFA World Cup?",
+            description="Resolves YES if France wins the 2026 FIFA World Cup.",
+            resolution_time=datetime.now(UTC) + timedelta(days=60),
+            yes_mid=0.179,
+            yes_bid=0.17,
+            yes_ask=0.188,
+        )
+        scanner = RagScanner(
+            enabled=True,
+            search_adapter=SportsSearchAdapter(),
+            llm_summarizer=SportsNarrativeLlmSummarizer(),
+            enable_llm_summary=True,
+            max_queries=1,
+            max_results_per_query=1,
+        )
+
+        package = scanner.scan_package(market, market_mid=market.yes_mid)
+
+        self.assertEqual(package["market_type"], "sports_outcome")
+        self.assertTrue(package["sports_llm_overconfidence_detected"])
+        self.assertIn("sports_llm_overconfidence", package["risk_flags"])
+        self.assertFalse(package["sports_quantitative_support"])
+        self.assertEqual(package["sports_support_source_type"], "qualitative_news")
+        self.assertIn("without strong quantitative", package["sports_risk_explanation"])
+        self.assertLess(package["p_2402_final_after_shrinkage"], market.yes_mid + 0.04)
+
+    def test_sports_quantitative_support_avoids_overconfidence_flag(self) -> None:
+        market = make_market(
+            question="Will France win the 2026 FIFA World Cup?",
+            description="Resolves YES if France wins the 2026 FIFA World Cup.",
+            resolution_time=datetime.now(UTC) + timedelta(days=60),
+            yes_mid=0.179,
+            yes_bid=0.17,
+            yes_ask=0.188,
+        )
+        scanner = RagScanner(
+            enabled=True,
+            search_adapter=SportsSearchAdapter(),
+            llm_summarizer=SportsQuantitativeLlmSummarizer(),
+            enable_llm_summary=True,
+            max_queries=1,
+            max_results_per_query=1,
+        )
+
+        package = scanner.scan_package(market, market_mid=market.yes_mid)
+
+        self.assertTrue(package["sports_quantitative_support"])
+        self.assertEqual(package["sports_support_source_type"], "sportsbook_odds")
+        self.assertFalse(package["sports_llm_overconfidence_detected"])
+        self.assertNotIn("sports_llm_overconfidence", package["risk_flags"])
+
+    def test_sports_simulation_support_type_is_quantitative(self) -> None:
+        market = make_market(
+            question="Will France win the 2026 FIFA World Cup?",
+            description="Resolves YES if France wins the 2026 FIFA World Cup.",
+            resolution_time=datetime.now(UTC) + timedelta(days=60),
+            yes_mid=0.179,
+            yes_bid=0.17,
+            yes_ask=0.188,
+        )
+        scanner = RagScanner(
+            enabled=True,
+            search_adapter=SportsSearchAdapter(),
+            llm_summarizer=SportsSimulationLlmSummarizer(),
+            enable_llm_summary=True,
+            max_queries=1,
+            max_results_per_query=1,
+        )
+
+        package = scanner.scan_package(market, market_mid=market.yes_mid)
+
+        self.assertTrue(package["sports_quantitative_support"])
+        self.assertEqual(package["sports_support_source_type"], "simulation")
 
     def test_scan_updates_forecast_signals_without_sizing(self) -> None:
         market = make_market()

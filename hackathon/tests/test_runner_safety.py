@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import json
 import os
+import threading
+import time
 import unittest
 from dataclasses import dataclass
 from datetime import UTC, datetime, timedelta
@@ -15,11 +17,23 @@ from ai_prophet_core.arena import TickLease
 
 from edge_trader_bot.config import BotConfig
 from edge_trader_bot.json_utils import json_safe
+from edge_trader_bot.live_readiness import (
+    LiveReadinessConfig,
+    evaluate_market_live_readiness,
+    evaluate_tick_live_readiness,
+)
 from edge_trader_bot.runner import (
     EdgeTraderBot,
+    RuntimeDiagnostics,
+    TickWorkBudget,
+    edge_diagnostics,
     get_env_status,
+    market_debug_row,
     normalize_risk_flags,
     opportunity_report,
+    pipeline_debug_rows,
+    run_bounded_jobs,
+    selection_is_selected,
     threshold_debug_report,
 )
 from edge_trader_bot.schemas import ForecastSignals, MarketView, TradeDecision
@@ -239,6 +253,18 @@ class RunnerSafetyTests(unittest.TestCase):
         self.assertEqual(plan["signals"]["m0"]["market_type"], "future_candidacy")
         self.assertTrue(plan["signals"]["m0"]["absence_of_evidence_penalty_detected"])
         self.assertIn("market_type", plan["pipeline_debug"][0])
+        self.assertIn("rag_selected", plan["pipeline_debug"][0])
+        self.assertIn("blf_selected", plan["pipeline_debug"][0])
+        self.assertIn("trade_readiness_verdict", plan)
+        self.assertIn("replay_records", plan)
+        self.assertIn("stage_wall_times", plan)
+        self.assertIn("concurrency_settings", plan)
+        self.assertIn("tick_time_budget_seconds", plan)
+        self.assertEqual(plan["replay_records"][0]["tick_id"], plan["tick_id"])
+        self.assertIn("resolution_check", plan["replay_records"][0])
+        self.assertIn("rag_sources", plan["replay_records"][0])
+        self.assertIn("blf_update_summary", plan["replay_records"][0])
+        self.assertIn("live_readiness", plan["replay_records"][0])
         self.assertEqual(plan["max_rag_markets_per_tick"], 1)
         self.assertEqual(plan["rag_markets_attempted"], 1)
         self.assertEqual(plan["rag_markets_scanned"], 1)
@@ -323,6 +349,261 @@ class RunnerSafetyTests(unittest.TestCase):
         selected = bot.select_blf_markets(markets, signals)
 
         self.assertEqual(selected, ["m_high"])
+
+    def test_bounded_jobs_run_concurrently_and_respect_limit(self) -> None:
+        markets = [
+            MarketView(
+                market_id=f"m{i}",
+                question="Will X happen?",
+                description=None,
+                resolution_time=datetime.now(UTC) + timedelta(days=1),
+                yes_bid=0.4,
+                yes_ask=0.42,
+                yes_mid=0.41,
+                no_bid=0.58,
+                no_ask=0.60,
+                no_mid=0.59,
+                spread=0.02,
+                volume_24h=100,
+            )
+            for i in range(4)
+        ]
+        active = 0
+        max_active = 0
+        lock = threading.Lock()
+
+        def worker(market):
+            nonlocal active, max_active
+            with lock:
+                active += 1
+                max_active = max(max_active, active)
+            time.sleep(0.05)
+            with lock:
+                active -= 1
+            return ForecastSignals(market_id=market.market_id, p_market=0.41, p_stat=0.41)
+
+        started = time.monotonic()
+        results = run_bounded_jobs(markets, worker, max_workers=2)
+        elapsed = time.monotonic() - started
+
+        self.assertEqual(set(results), {"m0", "m1", "m2", "m3"})
+        self.assertLess(elapsed, 0.16)
+        self.assertLessEqual(max_active, 2)
+
+    def test_rag_stage_exception_returns_fallback_without_crashing(self) -> None:
+        market = MarketView(
+            market_id="m1",
+            question="Will X happen?",
+            description=None,
+            resolution_time=datetime.now(UTC) + timedelta(days=1),
+            yes_bid=0.4,
+            yes_ask=0.42,
+            yes_mid=0.41,
+            no_bid=0.58,
+            no_ask=0.60,
+            no_mid=0.59,
+            spread=0.02,
+            volume_24h=100,
+        )
+        bot = EdgeTraderBot(BotConfig(enable_rag=True, rag_max_markets_per_tick=1))
+
+        class BrokenRag:
+            def scan(self, market, signals):
+                raise RuntimeError("boom")
+
+        bot.rag = BrokenRag()
+        signals = {"m1": ForecastSignals(market_id="m1", p_market=0.41, p_stat=0.41)}
+
+        result = bot.run_rag_stage(
+            [market],
+            signals,
+            {"m1": {"selected": True, "rag_selected": True}},
+            TickWorkBudget(started=time.monotonic(), time_budget_seconds=600, stop_before_deadline_seconds=90),
+            RuntimeDiagnostics.from_config(bot.config),
+        )
+
+        self.assertIn("rag_scanner_exception", result["m1"].risk_flags)
+        self.assertIn("boom", result["m1"].evidence_package["scanner_error"])
+
+    def test_deadline_skips_new_rag_and_blf_work(self) -> None:
+        market = MarketView(
+            market_id="m1",
+            question="Will X happen?",
+            description=None,
+            resolution_time=datetime.now(UTC) + timedelta(days=1),
+            yes_bid=0.4,
+            yes_ask=0.42,
+            yes_mid=0.41,
+            no_bid=0.58,
+            no_ask=0.60,
+            no_mid=0.59,
+            spread=0.02,
+            volume_24h=100,
+        )
+        bot = EdgeTraderBot(BotConfig(enable_rag=True, enable_blf=True, rag_max_markets_per_tick=1))
+        diagnostics = RuntimeDiagnostics.from_config(bot.config)
+        budget = TickWorkBudget(started=time.monotonic() - 100, time_budget_seconds=120, stop_before_deadline_seconds=90)
+        signals = {"m1": ForecastSignals(market_id="m1", p_market=0.41, p_stat=0.41)}
+
+        after_rag = bot.run_rag_stage(
+            [market],
+            signals,
+            {"m1": {"selected": True, "rag_selected": True}},
+            budget,
+            diagnostics,
+        )
+        after_blf = bot.run_blf_stage(
+            [market],
+            after_rag,
+            {"m1": {"selected": True, "blf_selected": True}},
+            budget,
+            diagnostics,
+        )
+
+        self.assertIn("rag_skipped_deadline", after_blf["m1"].risk_flags)
+        self.assertIn("blf_skipped_deadline", after_blf["m1"].risk_flags)
+        plan_diag = diagnostics.to_plan()
+        self.assertTrue(plan_diag["early_stop_triggered"])
+        self.assertEqual(plan_diag["skipped_due_to_deadline_count"], 2)
+
+    def test_rag_selection_schema_alpha_diagnostic_has_selected_for_every_market(self) -> None:
+        bot = EdgeTraderBot(
+            BotConfig(enable_rag=True, rag_selection_mode="alpha_diagnostic", rag_max_markets_per_tick=1)
+        )
+        markets = [
+            MarketView(
+                market_id=f"m{i}",
+                question="Will X happen?",
+                description=None,
+                resolution_time=datetime.now(UTC) + timedelta(days=30),
+                yes_bid=0.4,
+                yes_ask=0.42,
+                yes_mid=0.41,
+                no_bid=0.58,
+                no_ask=0.60,
+                no_mid=0.59,
+                spread=0.02,
+                volume_24h=100,
+            )
+            for i in range(3)
+        ]
+
+        selection = bot.rag_selection_metadata(markets)
+
+        self.assertEqual(set(selection), {"m0", "m1", "m2"})
+        for record in selection.values():
+            self.assertIn("selected", record)
+            self.assertIn("rank", record)
+            self.assertIn("score", record)
+            self.assertIn("reason", record)
+            self.assertEqual(record["selected"], record["rag_selected"])
+            self.assertEqual(record["rank"], record["rag_selection_rank"])
+            self.assertEqual(record["score"], record["rag_selection_score"])
+            self.assertEqual(record["reason"], record["rag_selection_reason"])
+
+    def test_rag_selection_schema_current_has_selected_for_every_market(self) -> None:
+        bot = EdgeTraderBot(BotConfig(enable_rag=True, rag_selection_mode="current", rag_max_markets_per_tick=1))
+        markets = [
+            MarketView(
+                market_id=f"m{i}",
+                question="Will X happen?",
+                description=None,
+                resolution_time=datetime.now(UTC) + timedelta(days=30),
+                yes_bid=0.4,
+                yes_ask=0.42,
+                yes_mid=0.41,
+                no_bid=0.58,
+                no_ask=0.60,
+                no_mid=0.59,
+                spread=0.02,
+                volume_24h=100,
+            )
+            for i in range(2)
+        ]
+
+        selection = bot.rag_selection_metadata(markets)
+
+        self.assertTrue(selection["m0"]["selected"])
+        self.assertFalse(selection["m1"]["selected"])
+        self.assertIn("current_order", selection["m1"]["reason"])
+
+    def test_pipeline_debug_does_not_crash_when_rag_selection_missing(self) -> None:
+        market = MarketView(
+            market_id="m1",
+            question="Will X happen?",
+            description=None,
+            resolution_time=datetime.now(UTC) + timedelta(days=1),
+            yes_bid=0.40,
+            yes_ask=0.44,
+            yes_mid=0.42,
+            no_bid=0.56,
+            no_ask=0.60,
+            no_mid=0.58,
+            spread=0.04,
+            volume_24h=100,
+        )
+        signals = ForecastSignals(market_id="m1", p_market=0.42, p_stat=0.42, p_final=0.43)
+
+        rows = pipeline_debug_rows({"m1": market}, {"m1": signals}, [], BotConfig(), {}, {})
+
+        self.assertFalse(rows[0]["rag_selected"])
+        self.assertIn("rag_selection_missing", rows[0]["rag_selection_reason"])
+
+    def test_selection_alias_without_selected_is_supported(self) -> None:
+        self.assertTrue(selection_is_selected({"rag_selected": True}, selected_key="rag_selected"))
+        market = MarketView(
+            market_id="m1",
+            question="Will X happen?",
+            description=None,
+            resolution_time=datetime.now(UTC) + timedelta(days=1),
+            yes_bid=0.40,
+            yes_ask=0.44,
+            yes_mid=0.42,
+            no_bid=0.56,
+            no_ask=0.60,
+            no_mid=0.58,
+            spread=0.04,
+            volume_24h=100,
+        )
+        signals = ForecastSignals(market_id="m1", p_market=0.42, p_stat=0.42, p_final=0.43)
+
+        row = market_debug_row(
+            market,
+            signals,
+            None,
+            BotConfig(),
+            {"rag_selected": True, "rag_selection_rank": 1, "rag_selection_score": 2.0, "rag_selection_reason": ["alias"]},
+            {},
+        )
+
+        self.assertTrue(row["selected"])
+        self.assertTrue(row["rag_selected"])
+        self.assertEqual(row["rank"], 1)
+
+    def test_rag_skipped_budget_recorded_for_unselected_market(self) -> None:
+        bot = EdgeTraderBot(BotConfig(enable_rag=True, rag_selection_mode="current", rag_max_markets_per_tick=1))
+        markets = [
+            MarketView(
+                market_id=f"m{i}",
+                question="Will X happen?",
+                description=None,
+                resolution_time=datetime.now(UTC) + timedelta(days=30),
+                yes_bid=0.4,
+                yes_ask=0.42,
+                yes_mid=0.41,
+                no_bid=0.58,
+                no_ask=0.60,
+                no_mid=0.59,
+                spread=0.02,
+                volume_24h=100,
+            )
+            for i in range(2)
+        ]
+
+        selection = bot.rag_selection_metadata(markets)
+
+        self.assertFalse(selection["m1"]["selected"])
+        self.assertIn("rag_skipped_budget", selection["m1"]["reason"])
 
     def test_blf_enabled_dry_run_submission_still_does_not_call_submit(self) -> None:
         bot = EdgeTraderBot(BotConfig(dry_run=True, enable_blf=True))
@@ -475,6 +756,8 @@ class RunnerSafetyTests(unittest.TestCase):
 
         self.assertTrue(all(scenario["hypothetical_trade_count"] == 0 for scenario in report["scenarios"]))
         self.assertTrue(all(scenario["blocked_by_resolution_risk"] == 1 for scenario in report["scenarios"]))
+        self.assertIn(0.005, report["diagnostic_edge_thresholds"])
+        self.assertEqual(config.min_edge, 0.06)
 
     def test_opportunity_report_includes_blf_fields(self) -> None:
         market = MarketView(
@@ -510,8 +793,210 @@ class RunnerSafetyTests(unittest.TestCase):
 
         self.assertEqual(report["blf_changed_probability_most"][0]["market_id"], "m1")
         self.assertIn("p_blf_final_after_shrinkage", report["top_by_best_edge"][0])
+        self.assertIn("top_by_maker_edge", report)
+        self.assertIn("top_by_mid_edge", report)
+        self.assertIn("top_by_spread_adjusted_maker_edge", report)
+        self.assertIn("manual_review_candidates", report)
+        self.assertIn("manual_review_actionable_count", report)
+        self.assertEqual(report["manual_review_actionable_count"], 1)
+        self.assertIn("count_positive_maker_edge", report)
         self.assertIn("rag_disagrees_with_market_most_excluding_absence_penalty", report)
         self.assertIn("markets_with_no_positive_edge_all_relaxed_thresholds", report)
+
+    def test_maker_and_mid_edge_fields_compute_correctly(self) -> None:
+        market = MarketView(
+            market_id="m1",
+            question="Will X happen?",
+            description=None,
+            resolution_time=datetime.now(UTC) + timedelta(days=1),
+            yes_bid=0.40,
+            yes_ask=0.44,
+            yes_mid=0.42,
+            no_bid=0.56,
+            no_ask=0.60,
+            no_mid=0.58,
+            spread=0.04,
+            volume_24h=100,
+        )
+
+        edges = edge_diagnostics(market, 0.43)
+
+        self.assertAlmostEqual(edges["taker_edge_yes"], -0.01)
+        self.assertAlmostEqual(edges["maker_edge_yes"], 0.03)
+        self.assertAlmostEqual(edges["mid_edge_yes"], 0.01)
+        self.assertAlmostEqual(edges["yes_spread"], 0.04)
+        self.assertAlmostEqual(edges["maker_edge_after_half_spread_yes"], 0.01)
+        self.assertAlmostEqual(edges["maker_edge_after_full_spread_yes"], -0.01)
+        self.assertAlmostEqual(edges["maker_edge_after_half_spread"], 0.01)
+        self.assertEqual(edges["passive_opportunity_quality"], "medium")
+        self.assertEqual(edges["best_maker_side"], "YES")
+
+    def test_passive_opportunity_quality_categories(self) -> None:
+        market = MarketView(
+            market_id="m1",
+            question="Will X happen?",
+            description=None,
+            resolution_time=datetime.now(UTC) + timedelta(days=1),
+            yes_bid=0.40,
+            yes_ask=0.44,
+            yes_mid=0.42,
+            no_bid=0.56,
+            no_ask=0.60,
+            no_mid=0.58,
+            spread=0.04,
+            volume_24h=100,
+        )
+
+        self.assertEqual(edge_diagnostics(market, 0.445)["passive_opportunity_quality"], "strong")
+        self.assertEqual(edge_diagnostics(market, 0.432)["passive_opportunity_quality"], "medium")
+        self.assertEqual(edge_diagnostics(market, 0.423)["passive_opportunity_quality"], "weak")
+        self.assertEqual(edge_diagnostics(market, 0.420)["passive_opportunity_quality"], "none")
+
+    def test_missing_bid_ask_edge_fields_are_null_safe(self) -> None:
+        market = MarketView(
+            market_id="m1",
+            question="Will X happen?",
+            description=None,
+            resolution_time=datetime.now(UTC) + timedelta(days=1),
+            yes_bid=None,
+            yes_ask=None,
+            yes_mid=0.42,
+            no_bid=None,
+            no_ask=None,
+            no_mid=0.58,
+            spread=0.04,
+            volume_24h=100,
+        )
+        signals = ForecastSignals(market_id="m1", p_market=0.42, p_stat=0.42, p_final=0.43)
+
+        row = market_debug_row(market, signals, None, BotConfig(), {}, {})
+
+        self.assertIsNone(row["best_taker_edge"])
+        self.assertEqual(row["sizing_result"]["shares"], 0)
+
+    def test_positive_maker_negative_taker_is_surfaced(self) -> None:
+        market = MarketView(
+            market_id="m1",
+            question="Will X happen?",
+            description=None,
+            resolution_time=datetime.now(UTC) + timedelta(days=1),
+            yes_bid=0.40,
+            yes_ask=0.44,
+            yes_mid=0.42,
+            no_bid=0.56,
+            no_ask=0.60,
+            no_mid=0.58,
+            spread=0.04,
+            volume_24h=100,
+        )
+        signals = ForecastSignals(
+            market_id="m1",
+            p_market=0.42,
+            p_stat=0.42,
+            p_final=0.43,
+            p_final_after_blf=0.43,
+            evidence_package={"resolution_check": {"trade_blocker": False, "risk_flags": []}},
+        )
+
+        report = opportunity_report({"m1": market}, {"m1": signals})
+
+        self.assertEqual(report["count_positive_taker_edge"], 0)
+        self.assertEqual(report["count_positive_maker_edge"], 1)
+        self.assertEqual(report["count_positive_mid_edge"], 1)
+        self.assertEqual(report["count_mid_edge_ge_0_005"], 1)
+        self.assertEqual(report["count_mid_edge_ge_0_01"], 1)
+        self.assertEqual(report["count_taker_edge_ge_0_005"], 0)
+        self.assertEqual(report["markets_where_maker_edge_positive_but_taker_edge_negative"][0]["market_id"], "m1")
+
+    def test_live_readiness_blocks_weak_edge_and_requires_blf(self) -> None:
+        row = {
+            "market_id": "m1",
+            "question": "Will X happen?",
+            "market_type": "election_control",
+            "best_taker_side": "YES",
+            "best_mid_side": "YES",
+            "best_taker_edge": 0.002,
+            "best_mid_edge": 0.006,
+            "maker_edge_after_half_spread": 0.01,
+            "best_spread": 0.01,
+            "passive_opportunity_quality": "weak",
+            "evidence_quality": 4,
+            "confidence": "medium",
+            "resolution_trade_blocker": False,
+            "hold_reasons": ["edge_below_policy_threshold"],
+            "normalized_risk_flags": [],
+            "p_market": 0.5,
+            "p_2402_final_after_shrinkage": 0.51,
+            "p_blf_final_after_shrinkage": 0.502,
+            "p_final_after_blf": 0.502,
+        }
+
+        verdict = evaluate_market_live_readiness(row, config=LiveReadinessConfig(), blf_enabled=True)
+        missing_blf = evaluate_market_live_readiness({**row, "p_blf_final_after_shrinkage": None}, blf_enabled=True)
+
+        self.assertFalse(verdict["live_ready"])
+        self.assertIn("edge_below_live_ready_threshold", verdict["live_blockers"])
+        self.assertIn("blf_missing", missing_blf["live_blockers"])
+
+    def test_live_readiness_blocks_blf_disabled_diagnostics(self) -> None:
+        row = {
+            "market_id": "m1",
+            "question": "Will X happen?",
+            "market_type": "election_control",
+            "best_taker_side": "YES",
+            "best_mid_side": "YES",
+            "best_taker_edge": 0.04,
+            "best_mid_edge": 0.03,
+            "maker_edge_after_half_spread": 0.025,
+            "best_spread": 0.01,
+            "passive_opportunity_quality": "strong",
+            "evidence_quality": 5,
+            "confidence": "high",
+            "resolution_trade_blocker": False,
+            "hold_reasons": [],
+            "normalized_risk_flags": [],
+            "p_market": 0.5,
+            "p_2402_final_after_shrinkage": 0.56,
+            "p_blf_final_after_shrinkage": 0.55,
+            "p_final_after_blf": 0.55,
+        }
+
+        verdict = evaluate_tick_live_readiness([row], blf_enabled=False, allow_live_submit=False)
+
+        self.assertFalse(verdict["LIVE_SUBMIT_READY"])
+        self.assertIn("blf_not_enabled", verdict["blockers"])
+
+    def test_live_readiness_blocks_sports_without_quantitative_support(self) -> None:
+        row = {
+            "market_id": "sports",
+            "question": "Will France win?",
+            "market_type": "sports_outcome",
+            "best_taker_side": "YES",
+            "best_mid_side": "YES",
+            "best_taker_edge": 0.04,
+            "best_mid_edge": 0.03,
+            "maker_edge_after_half_spread": 0.025,
+            "best_spread": 0.01,
+            "passive_opportunity_quality": "strong",
+            "evidence_quality": 5,
+            "confidence": "high",
+            "resolution_trade_blocker": False,
+            "hold_reasons": [],
+            "normalized_risk_flags": [],
+            "sports_llm_overconfidence_detected": True,
+            "sports_quantitative_support": False,
+            "sports_support_source_type": "qualitative_news",
+            "p_market": 0.18,
+            "p_2402_final_after_shrinkage": 0.30,
+            "p_blf_final_after_shrinkage": 0.19,
+            "p_final_after_blf": 0.19,
+        }
+
+        verdict = evaluate_market_live_readiness(row, blf_enabled=True)
+
+        self.assertFalse(verdict["live_ready"])
+        self.assertIn("sports_llm_overconfidence", verdict["live_blockers"])
+        self.assertIn("sports_quantitative_support_missing", verdict["live_blockers"])
 
     def test_normalized_risk_flags_are_populated(self) -> None:
         flags = normalize_risk_flags(
