@@ -19,8 +19,8 @@ class BotConfig:
     starting_cash: float = 10_000.0
     dry_run: bool = False
 
-    min_edge: float = 0.06
-    low_confidence_min_edge: float = 0.10
+    min_edge: float = 0.04
+    low_confidence_min_edge: float = 0.08
     exit_edge: float = 0.02
     max_spread: float = 0.20
     min_volume_24h: float = 0.0

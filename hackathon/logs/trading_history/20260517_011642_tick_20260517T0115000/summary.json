@@ -1,0 +1,17 @@
+{
+  "tick": "2026-05-17T01:15:00+00:00",
+  "candidate_count": 256,
+  "processed_count": 20,
+  "intent_count": 2,
+  "submitted": false,
+  "dry_run": true,
+  "errors": [],
+  "markets_touched": [
+    "kalshi:KX2028RRUN-28-TMAS",
+    "kalshi:KXCANAL-29"
+  ],
+  "pnl_before": null,
+  "pnl_after": null,
+  "elapsed_seconds": 203.7,
+  "created_at": "2026-05-17T01:20:04.227632+00:00"
+}

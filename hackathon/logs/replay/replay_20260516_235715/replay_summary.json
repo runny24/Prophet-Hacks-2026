@@ -1,0 +1,14 @@
+{
+  "replayed_at": "2026-05-16T23:57:15.804793+00:00",
+  "tick_count": 1,
+  "total_intents": 0,
+  "config_min_edge": 0.04,
+  "output_dir": "logs/replay/replay_20260516_235715",
+  "ticks": [
+    {
+      "tick_id": "2026-05-17T00:00:00+00:00",
+      "intent_count": 0,
+      "intents": []
+    }
+  ]
+}

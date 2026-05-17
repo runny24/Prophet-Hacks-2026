@@ -1,0 +1,38 @@
+[
+  {
+    "market_id": "kalshi:KX2028RRUN-28-TMAS",
+    "action": "BUY",
+    "side": "YES",
+    "shares": 294,
+    "price": 0.34,
+    "edge": 0.0922035709067191,
+    "expected_value": 27.107849846575416,
+    "confidence": "high",
+    "reason": "market/statistical prior only",
+    "p_final": 0.4322035709067191
+  },
+  {
+    "market_id": "kalshi:KX2028RRUN-28-TUC",
+    "action": "BUY",
+    "side": "YES",
+    "shares": 98,
+    "price": 0.51,
+    "edge": 0.06812351257272464,
+    "expected_value": 6.676104232127015,
+    "confidence": "high",
+    "reason": "market/statistical prior only",
+    "p_final": 0.5781235125727247
+  },
+  {
+    "market_id": "kalshi:KX2028RRUN-28-MRUB",
+    "action": "BUY",
+    "side": "YES",
+    "shares": 75,
+    "price": 0.66,
+    "edge": 0.0501344697529269,
+    "expected_value": 3.7600852314695175,
+    "confidence": "high",
+    "reason": "market/statistical prior only",
+    "p_final": 0.7101344697529269
+  }
+]

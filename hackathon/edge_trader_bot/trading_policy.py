@@ -17,7 +17,7 @@ def decide_trade(
     config: BotConfig,
 ) -> TradeDecision | None:
     p_final = signals.p_final if signals.p_final is not None else signals.p_market
-    threshold = max(config.min_edge, 1.5 * signals.uncertainty)
+    threshold = max(config.min_edge, 0.5 * signals.uncertainty)
     if signals.confidence == "low":
         threshold = max(threshold, config.low_confidence_min_edge)
 

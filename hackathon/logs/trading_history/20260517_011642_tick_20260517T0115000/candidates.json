@@ -1,0 +1,4354 @@
+[
+  {
+    "market_id": "kalshi:CONTROLS-2028-D",
+    "question": "Will the Democratic party win the Senate in 2028?",
+    "short_label": "Democratic party",
+    "description": "If the Democratic party has won control of the Senate in 2028, then the market resolves to Yes.",
+    "resolution_time": "2029-02-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/CONTROLS-2028",
+    "topic": "Elections",
+    "family": "CONTROLS",
+    "quote": {
+      "best_bid": "0.510000",
+      "best_ask": "0.520000",
+      "volume_24h": 908.0,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KX2028RRUN-28-MRUB",
+    "question": "Who will run for the Republican presidential nomination in 2028?",
+    "short_label": "Marco Rubio",
+    "description": "If Marco Rubio announces a presidential campaign to contest the presidential nomination of the Republican party for the 2028 U.S. presidential election before Jan 1, 2028, then the market resolves to Yes.",
+    "resolution_time": "2028-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KX2028RRUN-28",
+    "topic": "Elections",
+    "family": "KX2028RRUN",
+    "quote": {
+      "best_bid": "0.620000",
+      "best_ask": "0.660000",
+      "volume_24h": 1035.27,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KX2028RRUN-28-TMAS",
+    "question": "Who will run for the Republican presidential nomination in 2028?",
+    "short_label": "Thomas Massie",
+    "description": "If Thomas Massie announces a presidential campaign to contest the presidential nomination of the Republican party for the 2028 U.S. presidential election before Jan 1, 2028, then the market resolves to Yes.",
+    "resolution_time": "2028-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KX2028RRUN-28",
+    "topic": "Elections",
+    "family": "KX2028RRUN",
+    "quote": {
+      "best_bid": "0.300000",
+      "best_ask": "0.340000",
+      "volume_24h": 990.72,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KX2028RRUN-28-TUC",
+    "question": "Who will run for the Republican presidential nomination in 2028?",
+    "short_label": "Tucker Carlson",
+    "description": "If Tucker Carlson announces a presidential campaign to contest the presidential nomination of the Republican party for the 2028 U.S. presidential election before Jan 1, 2028, then the market resolves to Yes.",
+    "resolution_time": "2028-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KX2028RRUN-28",
+    "topic": "Elections",
+    "family": "KX2028RRUN",
+    "quote": {
+      "best_bid": "0.500000",
+      "best_ask": "0.510000",
+      "volume_24h": 1038.86,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXACTORWHITELOTUS-27-DEE",
+    "question": "Will Deepika Padukone be cast in The White Lotus: Season 4?",
+    "short_label": "Deepika Padukone",
+    "description": "If Deepika Padukone is cast in The White Lotus: Season 4, then the market resolves to Yes.",
+    "resolution_time": "2027-12-31T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXACTORWHITELOTUS-27",
+    "topic": "Entertainment",
+    "family": "KXACTORWHITELOTUS",
+    "quote": {
+      "best_bid": "0.150000",
+      "best_ask": "0.180000",
+      "volume_24h": 437.56,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXALBERTAREFYES-29",
+    "question": "Will Alberta vote to secede from Canada before the next general election?",
+    "short_label": "Before the next general election",
+    "description": "If Alberta votes to secede from Canada before the date of the next Canadian federal general election, then the market resolves to Yes.",
+    "resolution_time": "2029-10-15T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXALBERTAREFYES-29",
+    "topic": "Elections",
+    "family": "KXALBERTAREFYES",
+    "quote": {
+      "best_bid": "0.200000",
+      "best_ask": "0.240000",
+      "volume_24h": 871.0,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXALIENS-27-28",
+    "question": "Will the U.S. confirm that aliens exist in 2028?",
+    "short_label": "Before 2028",
+    "description": "If the President, any member of the Cabinet, any member of the Joint Chiefs of Staff, or any US federal agency definitively states that extraterrestrial life or technology exists before Jan 1, 2028, then the market resolves to Yes.",
+    "resolution_time": "2027-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXALIENS-27",
+    "topic": "Science and Technology",
+    "family": "KXALIENS",
+    "quote": {
+      "best_bid": "0.260000",
+      "best_ask": "0.290000",
+      "volume_24h": 2122.45,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXALIENS-27-29",
+    "question": "Will the U.S. confirm that aliens exist in 2029?",
+    "short_label": "Before Jan 20, 2029",
+    "description": "If the President, any member of the Cabinet, any member of the Joint Chiefs of Staff, or any US federal agency definitively states that extraterrestrial life or technology exists before Jan 20, 2029, then the market resolves to Yes.",
+    "resolution_time": "2027-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXALIENS-27",
+    "topic": "Science and Technology",
+    "family": "KXALIENS",
+    "quote": {
+      "best_bid": "0.330000",
+      "best_ask": "0.350000",
+      "volume_24h": 2330.09,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXAMEND22-29-JAN01",
+    "question": "Will the 22nd Amendment be repealed or reinterpreted to let Presidents run for a third term before Jan 1, 2029",
+    "short_label": "Before Jan 1, 2029",
+    "description": "If the 22nd Amendment has been repealed by a subsequent Constitutional Amendment, or if the Supreme Court of the United States has ruled in an opinion or judgment that the 22nd Amendment permits individuals to be elected to the Presidency at least thrice under at least some circumstances, before Jan 1, 2029, then the market resolves to Yes.",
+    "resolution_time": "2029-01-21T17:30:30Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXAMEND22-29",
+    "topic": "Elections",
+    "family": "KXAMEND22",
+    "quote": {
+      "best_bid": "0.100000",
+      "best_ask": "0.120000",
+      "volume_24h": 1076.89,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXBOND-30-ATJ",
+    "question": "Will Aaron Taylor-Johnson be the next James Bond?",
+    "short_label": "Aaron Taylor-Johnson",
+    "description": "If Aaron Taylor-Johnson is cast as the next James Bond before Jan 1, 2030, then the market resolves to Yes.",
+    "resolution_time": "2030-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXBOND-30",
+    "topic": "Entertainment",
+    "family": "KXBOND",
+    "quote": {
+      "best_bid": "0.090000",
+      "best_ask": "0.110000",
+      "volume_24h": 568.91,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXBOND-30-CAL",
+    "question": "Will Callum Turner be the next James Bond?",
+    "short_label": "Callum Turner",
+    "description": "If Callum Turner is cast as the next James Bond before Jan 1, 2030, then the market resolves to Yes.",
+    "resolution_time": "2030-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXBOND-30",
+    "topic": "Entertainment",
+    "family": "KXBOND",
+    "quote": {
+      "best_bid": "0.380000",
+      "best_ask": "0.390000",
+      "volume_24h": 5235.09,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXBOND-30-HC",
+    "question": "Will Henry Cavill be the next James Bond?",
+    "short_label": "Henry Cavill",
+    "description": "If Henry Cavill is cast as the next James Bond before Jan 1, 2030, then the market resolves to Yes.",
+    "resolution_time": "2030-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXBOND-30",
+    "topic": "Entertainment",
+    "family": "KXBOND",
+    "quote": {
+      "best_bid": "0.070000",
+      "best_ask": "0.080000",
+      "volume_24h": 200.39,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXBOND-30-JACO",
+    "question": "Will Jacob Elordi be the next James Bond?",
+    "short_label": "Jacob Elordi",
+    "description": "If Jacob Elordi is cast as the next James Bond before Jan 1, 2030, then the market resolves to Yes.",
+    "resolution_time": "2030-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXBOND-30",
+    "topic": "Entertainment",
+    "family": "KXBOND",
+    "quote": {
+      "best_bid": "0.170000",
+      "best_ask": "0.180000",
+      "volume_24h": 464.05,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXBOND-30-JON",
+    "question": "Will Jonathan Bailey be the next James Bond?",
+    "short_label": "Jonathan Bailey",
+    "description": "If Jonathan Bailey is cast as the next James Bond before Jan 1, 2030, then the market resolves to Yes.",
+    "resolution_time": "2030-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXBOND-30",
+    "topic": "Entertainment",
+    "family": "KXBOND",
+    "quote": {
+      "best_bid": "0.020000",
+      "best_ask": "0.050000",
+      "volume_24h": 194.96,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXBOND-30-JOS",
+    "question": "Will Josh O'Connor be the next James Bond?",
+    "short_label": "Josh O'Connor",
+    "description": "If Josh O'Connor is cast as the next James Bond before Jan 1, 2030, then the market resolves to Yes.",
+    "resolution_time": "2030-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXBOND-30",
+    "topic": "Entertainment",
+    "family": "KXBOND",
+    "quote": {
+      "best_bid": "0.060000",
+      "best_ask": "0.080000",
+      "volume_24h": 355.88,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXBOND-30-THEO",
+    "question": "Will Theo James be the next James Bond?",
+    "short_label": "Theo James",
+    "description": "If Theo James is cast as the next James Bond before Jan 1, 2030, then the market resolves to Yes.",
+    "resolution_time": "2030-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXBOND-30",
+    "topic": "Entertainment",
+    "family": "KXBOND",
+    "quote": {
+      "best_bid": "0.040000",
+      "best_ask": "0.060000",
+      "volume_24h": 411.94,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXBOND-30-TOMH",
+    "question": "Will Tom Holland be the next James Bond?",
+    "short_label": "Tom Holland",
+    "description": "If Tom Holland is cast as the next James Bond before Jan 1, 2030, then the market resolves to Yes.",
+    "resolution_time": "2030-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXBOND-30",
+    "topic": "Entertainment",
+    "family": "KXBOND",
+    "quote": {
+      "best_bid": "0.040000",
+      "best_ask": "0.050000",
+      "volume_24h": 226.89,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXCANAL-29",
+    "question": "Will Trump take back the Panama Canal?",
+    "short_label": "During Trump's term",
+    "description": "If the United States government has taken control of at least some part of the Panama Canal before January 20, 2029, then the market resolves to Yes.",
+    "resolution_time": "2029-01-20T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXCANAL-29",
+    "topic": "Politics",
+    "family": "KXCANAL",
+    "quote": {
+      "best_bid": "0.310000",
+      "best_ask": "0.320000",
+      "volume_24h": 710.57,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXCOLLEGERANK-TOP20-EMO",
+    "question": "Will Emory be top 20 on U.S. News & World Report's Best National Universities Rankings in 2027?",
+    "short_label": "Emory",
+    "description": "If Emory achieves top 20 on U.S. News & World Report's Best National Universities Rankings for 2027, then the market resolves to Yes.",
+    "resolution_time": "2028-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXCOLLEGERANK-TOP20",
+    "topic": "Science and Technology",
+    "family": "KXCOLLEGERANK",
+    "quote": {
+      "best_bid": "0.310000",
+      "best_ask": "0.320000",
+      "volume_24h": 302.01,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXEARTHQUAKECALIFORNIA-35",
+    "question": "Will there be an at least 8.0 magnitude earthquake in California before 2035?",
+    "short_label": "Before 2035",
+    "description": "If there is at least an earthquake of 8.0 magnitude with an epicenter in California or its territorial waters before Dec 31, 2035, then the market resolves to Yes.",
+    "resolution_time": "2035-12-31T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXEARTHQUAKECALIFORNIA-35",
+    "topic": "Science and Technology",
+    "family": "KXEARTHQUAKECALIFORNIA",
+    "quote": {
+      "best_bid": "0.310000",
+      "best_ask": "0.330000",
+      "volume_24h": 289.0,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXELONMARS-99",
+    "question": "Will Elon Musk visit Mars before Aug 1, 2099?",
+    "short_label": "Mars",
+    "description": "If Elon Musk visits Mars before the earlier of his death or Aug 1, 2099, then the market resolves to Yes.",
+    "resolution_time": "2099-08-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXELONMARS-99",
+    "topic": "Politics",
+    "family": "KXELONMARS",
+    "quote": {
+      "best_bid": "0.070000",
+      "best_ask": "0.090000",
+      "volume_24h": 460.8,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXFDANOM-29-MOZ",
+    "question": "Will Trump nominate Mehmet Oz as FDA commissioner?",
+    "short_label": "Mehmet Oz",
+    "description": "If Mehmet Oz is nominated for FDA commissioner after Issuance and before Jan 20, 2029. then the market resolves to Yes.",
+    "resolution_time": "2029-01-20T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXFDANOM-29",
+    "topic": "Politics",
+    "family": "KXFDANOM",
+    "quote": {
+      "best_bid": "0.140000",
+      "best_ask": "0.150000",
+      "volume_24h": 377.52,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXFTAPRC-29",
+    "question": "Will Trump make a new free trade agreement with China before Jan 20, 2029?",
+    "short_label": "Before 2029",
+    "description": "If a new free trade agreement with China has become law before January 20, 2029, then the market resolves to Yes.",
+    "resolution_time": "2029-01-20T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXFTAPRC-29",
+    "topic": "Politics",
+    "family": "KXFTAPRC",
+    "quote": {
+      "best_bid": "0.360000",
+      "best_ask": "0.380000",
+      "volume_24h": 546.98,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXFUSION-40-JAN01",
+    "question": "When will nuclear fusion be achieved?",
+    "short_label": "Before 2040",
+    "description": "If nuclear fusion is achieved before Jan 1, 2040, then the market resolves to Yes.",
+    "resolution_time": "2040-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXFUSION",
+    "topic": "Science and Technology",
+    "family": "KXFUSION",
+    "quote": {
+      "best_bid": "0.490000",
+      "best_ask": "0.500000",
+      "volume_24h": 703.0,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXG7LEADEROUT-45JAN01-KSTA",
+    "question": "Will Prime Minister of the United Kingdom be the first to leave office?",
+    "short_label": "Keir Starmer",
+    "description": "If the individual holding the title of Prime Minister of the United Kingdom at the time of Issuance is the first within G7 leaders to leave their position, then the market resolves to Yes.",
+    "resolution_time": "2045-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXG7LEADEROUT-45JAN01",
+    "topic": "Politics",
+    "family": "KXG7LEADEROUT",
+    "quote": {
+      "best_bid": "0.850000",
+      "best_ask": "0.900000",
+      "volume_24h": 262.7,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXG7LEADEROUT-45JAN01-MCAR",
+    "question": "Will Prime Minister of Canada be the first to leave office?",
+    "short_label": "Mark Carney",
+    "description": "If the individual holding the title of Prime Minister of Canada at the time of Issuance is the first within G7 leaders to leave their position, then the market resolves to Yes.",
+    "resolution_time": "2045-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXG7LEADEROUT-45JAN01",
+    "topic": "Politics",
+    "family": "KXG7LEADEROUT",
+    "quote": {
+      "best_bid": "0.001000",
+      "best_ask": "0.007000",
+      "volume_24h": 282.0,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXGAMEAWARDS-2026-CRI",
+    "question": "2026 Game of the Year?",
+    "short_label": "Crimson Desert",
+    "description": "If Crimson Desert has won Game of the Year at the 2026 Game Awards, then the market resolves to Yes.",
+    "resolution_time": "2026-12-31T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXGAMEAWARDS-2026",
+    "topic": "Entertainment",
+    "family": "KXGAMEAWARDS",
+    "quote": {
+      "best_bid": "0.060000",
+      "best_ask": "0.080000",
+      "volume_24h": 846.4,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXGAMEAWARDS-2026-DUS",
+    "question": "2026 Game of the Year?",
+    "short_label": "The Duskbloods",
+    "description": "If The Duskbloods has won Game of the Year at the 2026 Game Awards, then the market resolves to Yes.",
+    "resolution_time": "2026-12-31T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXGAMEAWARDS-2026",
+    "topic": "Entertainment",
+    "family": "KXGAMEAWARDS",
+    "quote": {
+      "best_bid": "0.010000",
+      "best_ask": "0.020000",
+      "volume_24h": 233.95,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXGAMEAWARDS-2026-GTA",
+    "question": "2026 Game of the Year?",
+    "short_label": "Grand Theft Auto VI",
+    "description": "If Grand Theft Auto VI has won Game of the Year at the 2026 Game Awards, then the market resolves to Yes.",
+    "resolution_time": "2026-12-31T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXGAMEAWARDS-2026",
+    "topic": "Entertainment",
+    "family": "KXGAMEAWARDS",
+    "quote": {
+      "best_bid": "0.590000",
+      "best_ask": "0.600000",
+      "volume_24h": 3912.5,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXGAMEAWARDS-2026-HAL",
+    "question": "2026 Game of the Year?",
+    "short_label": "Half-Life 3",
+    "description": "If Half-Life 3 has won Game of the Year at the 2026 Game Awards, then the market resolves to Yes.",
+    "resolution_time": "2026-12-31T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXGAMEAWARDS-2026",
+    "topic": "Entertainment",
+    "family": "KXGAMEAWARDS",
+    "quote": {
+      "best_bid": "0.050000",
+      "best_ask": "0.060000",
+      "volume_24h": 1041.0,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXGAMEAWARDS-2026-MAR",
+    "question": "2026 Game of the Year?",
+    "short_label": "Marvel's Wolverine",
+    "description": "If Marvel's Wolverine has won Game of the Year at the 2026 Game Awards, then the market resolves to Yes.",
+    "resolution_time": "2026-12-31T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXGAMEAWARDS-2026",
+    "topic": "Entertainment",
+    "family": "KXGAMEAWARDS",
+    "quote": {
+      "best_bid": "0.020000",
+      "best_ask": "0.030000",
+      "volume_24h": 1229.54,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXGAMEAWARDS-2026-PHA",
+    "question": "2026 Game of the Year?",
+    "short_label": "Phantom Blade Zero",
+    "description": "If Phantom Blade Zero has won Game of the Year at the 2026 Game Awards, then the market resolves to Yes.",
+    "resolution_time": "2026-12-31T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXGAMEAWARDS-2026",
+    "topic": "Entertainment",
+    "family": "KXGAMEAWARDS",
+    "quote": {
+      "best_bid": "0.020000",
+      "best_ask": "0.030000",
+      "volume_24h": 591.5,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXGAMEAWARDS-2026-PRA",
+    "question": "2026 Game of the Year?",
+    "short_label": "Pragmata",
+    "description": "If Pragmata has won Game of the Year at the 2026 Game Awards, then the market resolves to Yes.",
+    "resolution_time": "2026-12-31T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXGAMEAWARDS-2026",
+    "topic": "Entertainment",
+    "family": "KXGAMEAWARDS",
+    "quote": {
+      "best_bid": "0.030000",
+      "best_ask": "0.040000",
+      "volume_24h": 381.6,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXGAMEAWARDS-2026-RES",
+    "question": "2026 Game of the Year?",
+    "short_label": "Resident Evil Requiem",
+    "description": "If Resident Evil Requiem has won Game of the Year at the 2026 Game Awards, then the market resolves to Yes.",
+    "resolution_time": "2026-12-31T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXGAMEAWARDS-2026",
+    "topic": "Entertainment",
+    "family": "KXGAMEAWARDS",
+    "quote": {
+      "best_bid": "0.100000",
+      "best_ask": "0.110000",
+      "volume_24h": 588.02,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXGREENLAND-29",
+    "question": "Will Trump buy Greenland?",
+    "short_label": "Before January 20, 2029",
+    "description": "If the United States purchases at least part of Greenland from Denmark before January 20, 2029, then the market resolves to Yes.",
+    "resolution_time": "2029-01-20T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXGREENLAND-29",
+    "topic": "Politics",
+    "family": "KXGREENLAND",
+    "quote": {
+      "best_bid": "0.240000",
+      "best_ask": "0.260000",
+      "volume_24h": 493.34,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXGREENLANDPRICE-29JAN21-1049B",
+    "question": "Will the U.S. pay between $900 billion and $1199 billion for Greenland during Trump's term?",
+    "short_label": "$900 billion to $1199 billion",
+    "description": "If the Total Monetary Consideration for a U.S. Acquisition of Greenland is between $900 billion to $1199 billion during Trump's term, then the market resolves to Yes.",
+    "resolution_time": "2029-01-22T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXGREENLANDPRICE-29JAN21",
+    "topic": "Politics",
+    "family": "KXGREENLANDPRICE",
+    "quote": {
+      "best_bid": "0.011000",
+      "best_ask": "0.018000",
+      "volume_24h": 1560.0,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXGREENLANDPRICE-29JAN21-199B",
+    "question": "Will the U.S. pay between $100 billion and $299 billion for Greenland during Trump's term?",
+    "short_label": "$100 billion to $299 billion",
+    "description": "If the Total Monetary Consideration for a U.S. Acquisition of Greenland is between $100 billion to $299 billion during Trump's term, then the market resolves to Yes.",
+    "resolution_time": "2029-01-22T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXGREENLANDPRICE-29JAN21",
+    "topic": "Politics",
+    "family": "KXGREENLANDPRICE",
+    "quote": {
+      "best_bid": "0.033000",
+      "best_ask": "0.040000",
+      "volume_24h": 379.85,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXGREENLANDPRICE-29JAN21-NOACQ",
+    "question": "Will there be no U.S. acquisition of Greenland during Trump's term?",
+    "short_label": "$0 / No Acquisition",
+    "description": "If the Total Monetary Consideration for a U.S. Acquisition of Greenland is exactly $0 / No Acquisition during Trump's term, then the market resolves to Yes.",
+    "resolution_time": "2029-01-22T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXGREENLANDPRICE-29JAN21",
+    "topic": "Politics",
+    "family": "KXGREENLANDPRICE",
+    "quote": {
+      "best_bid": "0.800000",
+      "best_ask": "0.810000",
+      "volume_24h": 194.67,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXGREENTERRITORY-29",
+    "question": "Will the United States acquire any part of Greenland before 2029?",
+    "short_label": "Before January 21, 2029",
+    "description": "If the United States acquires any part of Greenland before Jan 21, 2029, then the market resolves to Yes.",
+    "resolution_time": "2029-01-21T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXGREENTERRITORY-29",
+    "topic": "Politics",
+    "family": "KXGREENTERRITORY",
+    "quote": {
+      "best_bid": "0.330000",
+      "best_ask": "0.340000",
+      "volume_24h": 634.0,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXGTAPRICE-100",
+    "question": "What will the price of GTA VI be?",
+    "short_label": "More than $100",
+    "description": "If the price of the base game of Grand Theft Auto VI for PS5 is above $100 dollars USD, then the market resolves to Yes.",
+    "resolution_time": "2030-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXGTAPRICE",
+    "topic": "Entertainment",
+    "family": "KXGTAPRICE",
+    "quote": {
+      "best_bid": "0.050000",
+      "best_ask": "0.070000",
+      "volume_24h": 724.59,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXGTAPRICE-60",
+    "question": "What will the price of GTA VI be?",
+    "short_label": "More than $60",
+    "description": "If the price of the base game of Grand Theft Auto VI for PS5 is above $60 dollars USD, then the market resolves to Yes.",
+    "resolution_time": "2030-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXGTAPRICE",
+    "topic": "Entertainment",
+    "family": "KXGTAPRICE",
+    "quote": {
+      "best_bid": "0.960000",
+      "best_ask": "0.970000",
+      "volume_24h": 809.72,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXGTAPRICE-70",
+    "question": "What will the price of GTA VI be?",
+    "short_label": "More than $70",
+    "description": "If the price of the base game of Grand Theft Auto VI for PS5 is above $70 dollars USD, then the market resolves to Yes.",
+    "resolution_time": "2030-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXGTAPRICE",
+    "topic": "Entertainment",
+    "family": "KXGTAPRICE",
+    "quote": {
+      "best_bid": "0.330000",
+      "best_ask": "0.360000",
+      "volume_24h": 5969.08,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXGTAPRICE-80",
+    "question": "What will the price of GTA VI be?",
+    "short_label": "More than $80",
+    "description": "If the price of the base game of Grand Theft Auto VI for PS5 is above $80 dollars USD, then the market resolves to Yes.",
+    "resolution_time": "2030-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXGTAPRICE",
+    "topic": "Entertainment",
+    "family": "KXGTAPRICE",
+    "quote": {
+      "best_bid": "0.130000",
+      "best_ask": "0.160000",
+      "volume_24h": 1314.53,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXIMPEACH-29-JAN20",
+    "question": "Will the President be impeached before Jan 20, 2029?",
+    "short_label": "Before Jan 20, 2029",
+    "description": "If the President of the United States has been impeached before Jan 20, 2029, then the market resolves to Yes.",
+    "resolution_time": "2029-01-20T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXIMPEACH-29",
+    "topic": "Politics",
+    "family": "KXIMPEACH",
+    "quote": {
+      "best_bid": "0.620000",
+      "best_ask": "0.650000",
+      "volume_24h": 842.68,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXLAMAYORADVANCE-26JUN02-NRAM",
+    "question": "Will Nithya Raman qualify for the runoff in the 2026 Los Angeles mayoral election?",
+    "short_label": "Nithya Raman",
+    "description": "If Nithya Raman is announced to qualify for the runoff in the 2026 Los Angeles mayoral election, then the market resolves to Yes.",
+    "resolution_time": "2028-06-01T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXLAMAYORADVANCE-26JUN02",
+    "topic": "Elections",
+    "family": "KXLAMAYORADVANCE",
+    "quote": {
+      "best_bid": "0.080000",
+      "best_ask": "0.200000",
+      "volume_24h": 4533.57,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXLAMAYORADVANCE-26JUN02-SPRA",
+    "question": "Will Spencer Pratt qualify for the runoff in the 2026 Los Angeles mayoral election?",
+    "short_label": "Spencer Pratt",
+    "description": "If Spencer Pratt is announced to qualify for the runoff in the 2026 Los Angeles mayoral election, then the market resolves to Yes.",
+    "resolution_time": "2028-06-01T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXLAMAYORADVANCE-26JUN02",
+    "topic": "Elections",
+    "family": "KXLAMAYORADVANCE",
+    "quote": {
+      "best_bid": "0.780000",
+      "best_ask": "0.790000",
+      "volume_24h": 2146.48,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXLATVIAPARLIAMENT-26DEC31-AS",
+    "question": "Will United List win the 2026 Latvia parliamentary elections?",
+    "short_label": "United List",
+    "description": "If United List wins the 2026 Latvia parliamentary elections, then the market resolves to Yes.",
+    "resolution_time": "2026-12-31T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXLATVIAPARLIAMENT-26DEC31",
+    "topic": "Elections",
+    "family": "KXLATVIAPARLIAMENT",
+    "quote": {
+      "best_bid": "0.011000",
+      "best_ask": "0.024000",
+      "volume_24h": 852.0,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMAKERFIELDBY-27JAN01-CON",
+    "question": "Will Conservative win the 2026 Makerfield by-election?",
+    "short_label": "Conservative",
+    "description": "If the Conservative party wins the 2026 Makerfield by-election, then the market resolves to Yes.",
+    "resolution_time": "2028-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMAKERFIELDBY-27JAN01",
+    "topic": "Elections",
+    "family": "KXMAKERFIELDBY",
+    "quote": {
+      "best_bid": "0.010000",
+      "best_ask": "0.020000",
+      "volume_24h": 1604.0,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMAKERFIELDBY-27JAN01-GRE",
+    "question": "Will Green Party win the 2026 Makerfield by-election?",
+    "short_label": "Green Party",
+    "description": "If the Green Party party wins the 2026 Makerfield by-election, then the market resolves to Yes.",
+    "resolution_time": "2028-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMAKERFIELDBY-27JAN01",
+    "topic": "Elections",
+    "family": "KXMAKERFIELDBY",
+    "quote": {
+      "best_bid": "0.010000",
+      "best_ask": "0.020000",
+      "volume_24h": 1598.0,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMAKERFIELDBY-27JAN01-LAB",
+    "question": "Will Labour win the 2026 Makerfield by-election?",
+    "short_label": "Labour",
+    "description": "If the Labour party wins the 2026 Makerfield by-election, then the market resolves to Yes.",
+    "resolution_time": "2028-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMAKERFIELDBY-27JAN01",
+    "topic": "Elections",
+    "family": "KXMAKERFIELDBY",
+    "quote": {
+      "best_bid": "0.600000",
+      "best_ask": "0.610000",
+      "volume_24h": 5688.78,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMAKERFIELDBY-27JAN01-RES",
+    "question": "Will Restore Britain win the 2026 Makerfield by-election?",
+    "short_label": "Restore Britain",
+    "description": "If the Restore Britain party wins the 2026 Makerfield by-election, then the market resolves to Yes.",
+    "resolution_time": "2028-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMAKERFIELDBY-27JAN01",
+    "topic": "Elections",
+    "family": "KXMAKERFIELDBY",
+    "quote": {
+      "best_bid": "0.020000",
+      "best_ask": "0.050000",
+      "volume_24h": 1863.64,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMEDIACOVERSI-27-CHR",
+    "question": "Will Chrissy Teigen be on the cover of 2027 Sports Illustrated Swimsuit Issue?",
+    "short_label": "Chrissy Teigen",
+    "description": "If it is announced that Chrissy Teigen is on the cover of 2027 Sports Illustrated Swimsuit Issue, then the market resolves to Yes.",
+    "resolution_time": "2028-01-03T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMEDIACOVERSI-27",
+    "topic": "Entertainment",
+    "family": "KXMEDIACOVERSI",
+    "quote": {
+      "best_bid": "0.180000",
+      "best_ask": "0.190000",
+      "volume_24h": 200.0,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMEDIACOVERSI-27-ELL",
+    "question": "Will Ella Halikas be on the cover of 2027 Sports Illustrated Swimsuit Issue?",
+    "short_label": "Ella Halikas",
+    "description": "If it is announced that Ella Halikas is on the cover of 2027 Sports Illustrated Swimsuit Issue, then the market resolves to Yes.",
+    "resolution_time": "2028-01-03T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMEDIACOVERSI-27",
+    "topic": "Entertainment",
+    "family": "KXMEDIACOVERSI",
+    "quote": {
+      "best_bid": "0.070000",
+      "best_ask": "0.240000",
+      "volume_24h": 327.0,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMENWORLDCUP-26-AR",
+    "question": "Will the Argentina win the 2026 Men's World Cup?",
+    "short_label": "Argentina",
+    "description": "If Argentina wins the 2026 Men's World Cup, then the market resolves to Yes.",
+    "resolution_time": "2026-07-19T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMENWORLDCUP-26",
+    "topic": "Sports",
+    "family": "KXMENWORLDCUP",
+    "quote": {
+      "best_bid": "0.090000",
+      "best_ask": "0.092000",
+      "volume_24h": 14102.33,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMENWORLDCUP-26-BE",
+    "question": "Will the Belgium win the 2026 Men's World Cup?",
+    "short_label": "Belgium",
+    "description": "If Belgium wins the 2026 Men's World Cup, then the market resolves to Yes.",
+    "resolution_time": "2026-07-19T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMENWORLDCUP-26",
+    "topic": "Sports",
+    "family": "KXMENWORLDCUP",
+    "quote": {
+      "best_bid": "0.020000",
+      "best_ask": "0.021000",
+      "volume_24h": 10459.12,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMENWORLDCUP-26-BR",
+    "question": "Will the Brazil win the 2026 Men's World Cup?",
+    "short_label": "Brazil",
+    "description": "If Brazil wins the 2026 Men's World Cup, then the market resolves to Yes.",
+    "resolution_time": "2026-07-19T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMENWORLDCUP-26",
+    "topic": "Sports",
+    "family": "KXMENWORLDCUP",
+    "quote": {
+      "best_bid": "0.096000",
+      "best_ask": "0.097000",
+      "volume_24h": 8800.18,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMENWORLDCUP-26-CO",
+    "question": "Will the Colombia win the 2026 Men's World Cup?",
+    "short_label": "Colombia",
+    "description": "If Colombia wins the 2026 Men's World Cup, then the market resolves to Yes.",
+    "resolution_time": "2026-07-19T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMENWORLDCUP-26",
+    "topic": "Sports",
+    "family": "KXMENWORLDCUP",
+    "quote": {
+      "best_bid": "0.017000",
+      "best_ask": "0.018000",
+      "volume_24h": 15421.9,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMENWORLDCUP-26-DE",
+    "question": "Will the Germany win the 2026 Men's World Cup?",
+    "short_label": "Germany",
+    "description": "If Germany wins the 2026 Men's World Cup, then the market resolves to Yes.",
+    "resolution_time": "2026-07-19T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMENWORLDCUP-26",
+    "topic": "Sports",
+    "family": "KXMENWORLDCUP",
+    "quote": {
+      "best_bid": "0.051000",
+      "best_ask": "0.052000",
+      "volume_24h": 10619.69,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMENWORLDCUP-26-EC",
+    "question": "Will the Ecuador win the 2026 Men's World Cup?",
+    "short_label": "Ecuador",
+    "description": "If Ecuador wins the 2026 Men's World Cup, then the market resolves to Yes.",
+    "resolution_time": "2026-07-19T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMENWORLDCUP-26",
+    "topic": "Sports",
+    "family": "KXMENWORLDCUP",
+    "quote": {
+      "best_bid": "0.006000",
+      "best_ask": "0.007000",
+      "volume_24h": 22166.13,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMENWORLDCUP-26-ES",
+    "question": "Will the Spain win the 2026 Men's World Cup?",
+    "short_label": "Spain",
+    "description": "If Spain wins the 2026 Men's World Cup, then the market resolves to Yes.",
+    "resolution_time": "2026-07-19T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMENWORLDCUP-26",
+    "topic": "Sports",
+    "family": "KXMENWORLDCUP",
+    "quote": {
+      "best_bid": "0.159000",
+      "best_ask": "0.162000",
+      "volume_24h": 23152.72,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMENWORLDCUP-26-FR",
+    "question": "Will the France win the 2026 Men's World Cup?",
+    "short_label": "France",
+    "description": "If France wins the 2026 Men's World Cup, then the market resolves to Yes.",
+    "resolution_time": "2026-07-19T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMENWORLDCUP-26",
+    "topic": "Sports",
+    "family": "KXMENWORLDCUP",
+    "quote": {
+      "best_bid": "0.176000",
+      "best_ask": "0.180000",
+      "volume_24h": 52500.32,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMENWORLDCUP-26-GB",
+    "question": "Will the England win the 2026 Men's World Cup?",
+    "short_label": "England",
+    "description": "If England wins the 2026 Men's World Cup, then the market resolves to Yes.",
+    "resolution_time": "2026-07-19T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMENWORLDCUP-26",
+    "topic": "Sports",
+    "family": "KXMENWORLDCUP",
+    "quote": {
+      "best_bid": "0.110000",
+      "best_ask": "0.111000",
+      "volume_24h": 11805.65,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMENWORLDCUP-26-HR",
+    "question": "Will the Croatia win the 2026 Men's World Cup?",
+    "short_label": "Croatia",
+    "description": "If Croatia wins the 2026 Men's World Cup, then the market resolves to Yes.",
+    "resolution_time": "2026-07-19T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMENWORLDCUP-26",
+    "topic": "Sports",
+    "family": "KXMENWORLDCUP",
+    "quote": {
+      "best_bid": "0.010000",
+      "best_ask": "0.014000",
+      "volume_24h": 7135.44,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMENWORLDCUP-26-JP",
+    "question": "Will the Japan win the 2026 Men's World Cup?",
+    "short_label": "Japan",
+    "description": "If Japan wins the 2026 Men's World Cup, then the market resolves to Yes.",
+    "resolution_time": "2026-07-19T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMENWORLDCUP-26",
+    "topic": "Sports",
+    "family": "KXMENWORLDCUP",
+    "quote": {
+      "best_bid": "0.018000",
+      "best_ask": "0.019000",
+      "volume_24h": 59698.04,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMENWORLDCUP-26-KR",
+    "question": "Will the South Korea win the 2026 Men's World Cup?",
+    "short_label": "South Korea",
+    "description": "If South Korea wins the 2026 Men's World Cup, then the market resolves to Yes.",
+    "resolution_time": "2026-07-19T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMENWORLDCUP-26",
+    "topic": "Sports",
+    "family": "KXMENWORLDCUP",
+    "quote": {
+      "best_bid": "0.002000",
+      "best_ask": "0.003000",
+      "volume_24h": 190062.75,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMENWORLDCUP-26-MA",
+    "question": "Will the Morocco win the 2026 Men's World Cup?",
+    "short_label": "Morocco",
+    "description": "If Morocco wins the 2026 Men's World Cup, then the market resolves to Yes.",
+    "resolution_time": "2026-07-19T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMENWORLDCUP-26",
+    "topic": "Sports",
+    "family": "KXMENWORLDCUP",
+    "quote": {
+      "best_bid": "0.014000",
+      "best_ask": "0.018000",
+      "volume_24h": 9870.7,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMENWORLDCUP-26-MX",
+    "question": "Will the Mexico win the 2026 Men's World Cup?",
+    "short_label": "Mexico",
+    "description": "If Mexico wins the 2026 Men's World Cup, then the market resolves to Yes.",
+    "resolution_time": "2026-07-19T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMENWORLDCUP-26",
+    "topic": "Sports",
+    "family": "KXMENWORLDCUP",
+    "quote": {
+      "best_bid": "0.010000",
+      "best_ask": "0.013000",
+      "volume_24h": 9226.39,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMENWORLDCUP-26-NL",
+    "question": "Will the Netherlands win the 2026 Men's World Cup?",
+    "short_label": "Netherlands",
+    "description": "If Netherlands wins the 2026 Men's World Cup, then the market resolves to Yes.",
+    "resolution_time": "2026-07-19T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMENWORLDCUP-26",
+    "topic": "Sports",
+    "family": "KXMENWORLDCUP",
+    "quote": {
+      "best_bid": "0.037000",
+      "best_ask": "0.038000",
+      "volume_24h": 29230.08,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMENWORLDCUP-26-NO",
+    "question": "Will the Norway win the 2026 Men's World Cup?",
+    "short_label": "Norway",
+    "description": "If Norway wins the 2026 Men's World Cup, then the market resolves to Yes.",
+    "resolution_time": "2026-07-19T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMENWORLDCUP-26",
+    "topic": "Sports",
+    "family": "KXMENWORLDCUP",
+    "quote": {
+      "best_bid": "0.019000",
+      "best_ask": "0.020000",
+      "volume_24h": 10208.11,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMENWORLDCUP-26-PT",
+    "question": "Will the Portugal win the 2026 Men's World Cup?",
+    "short_label": "Portugal",
+    "description": "If Portugal wins the 2026 Men's World Cup, then the market resolves to Yes.",
+    "resolution_time": "2026-07-19T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMENWORLDCUP-26",
+    "topic": "Sports",
+    "family": "KXMENWORLDCUP",
+    "quote": {
+      "best_bid": "0.081000",
+      "best_ask": "0.082000",
+      "volume_24h": 20081.57,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMENWORLDCUP-26-US",
+    "question": "Will the USA win the 2026 Men's World Cup?",
+    "short_label": "USA",
+    "description": "If USA wins the 2026 Men's World Cup, then the market resolves to Yes.",
+    "resolution_time": "2026-07-19T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMENWORLDCUP-26",
+    "topic": "Sports",
+    "family": "KXMENWORLDCUP",
+    "quote": {
+      "best_bid": "0.013000",
+      "best_ask": "0.014000",
+      "volume_24h": 15954.26,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMENWORLDCUP-26-UY",
+    "question": "Will the Uruguay win the 2026 Men's World Cup?",
+    "short_label": "Uruguay",
+    "description": "If Uruguay wins the 2026 Men's World Cup, then the market resolves to Yes.",
+    "resolution_time": "2026-07-19T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMENWORLDCUP-26",
+    "topic": "Sports",
+    "family": "KXMENWORLDCUP",
+    "quote": {
+      "best_bid": "0.009000",
+      "best_ask": "0.010000",
+      "volume_24h": 6140.89,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMLB-26-ATH",
+    "question": "Will A's win the 2026 Pro Baseball Championship?",
+    "short_label": "A's",
+    "description": "If A's wins the 2026 Pro Baseball Championship, then the market resolves to Yes.",
+    "resolution_time": "2026-11-01T04:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMLB-26",
+    "topic": "Sports",
+    "family": "KXMLB",
+    "quote": {
+      "best_bid": "0.005000",
+      "best_ask": "0.014000",
+      "volume_24h": 9375.55,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMLB-26-ATL",
+    "question": "Will Atlanta win the 2026 Pro Baseball Championship?",
+    "short_label": "Atlanta",
+    "description": "If Atlanta wins the 2026 Pro Baseball Championship, then the market resolves to Yes.",
+    "resolution_time": "2026-11-01T04:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMLB-26",
+    "topic": "Sports",
+    "family": "KXMLB",
+    "quote": {
+      "best_bid": "0.114000",
+      "best_ask": "0.118000",
+      "volume_24h": 18344.43,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMLB-26-CHC",
+    "question": "Will Chicago C win the 2026 Pro Baseball Championship?",
+    "short_label": "Chicago C",
+    "description": "If Chicago C wins the 2026 Pro Baseball Championship, then the market resolves to Yes.",
+    "resolution_time": "2026-11-01T04:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMLB-26",
+    "topic": "Sports",
+    "family": "KXMLB",
+    "quote": {
+      "best_bid": "0.060000",
+      "best_ask": "0.069000",
+      "volume_24h": 44731.57,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMLB-26-CLE",
+    "question": "Will Cleveland win the 2026 Pro Baseball Championship?",
+    "short_label": "Cleveland",
+    "description": "If Cleveland wins the 2026 Pro Baseball Championship, then the market resolves to Yes.",
+    "resolution_time": "2026-11-01T04:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMLB-26",
+    "topic": "Sports",
+    "family": "KXMLB",
+    "quote": {
+      "best_bid": "0.015000",
+      "best_ask": "0.016000",
+      "volume_24h": 6981.95,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMLB-26-CWS",
+    "question": "Will Chicago WS win the 2026 Pro Baseball Championship?",
+    "short_label": "Chicago WS",
+    "description": "If Chicago WS wins the 2026 Pro Baseball Championship, then the market resolves to Yes.",
+    "resolution_time": "2026-11-01T04:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMLB-26",
+    "topic": "Sports",
+    "family": "KXMLB",
+    "quote": {
+      "best_bid": "0.002000",
+      "best_ask": "0.005000",
+      "volume_24h": 5400.0,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMLB-26-HOU",
+    "question": "Will Houston win the 2026 Pro Baseball Championship?",
+    "short_label": "Houston",
+    "description": "If Houston wins the 2026 Pro Baseball Championship, then the market resolves to Yes.",
+    "resolution_time": "2026-11-01T04:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMLB-26",
+    "topic": "Sports",
+    "family": "KXMLB",
+    "quote": {
+      "best_bid": "0.003000",
+      "best_ask": "0.009000",
+      "volume_24h": 28974.03,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMLB-26-LAD",
+    "question": "Will Los Angeles D win the 2026 Pro Baseball Championship?",
+    "short_label": "Los Angeles D",
+    "description": "If Los Angeles D wins the 2026 Pro Baseball Championship, then the market resolves to Yes.",
+    "resolution_time": "2026-11-01T04:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMLB-26",
+    "topic": "Sports",
+    "family": "KXMLB",
+    "quote": {
+      "best_bid": "0.263000",
+      "best_ask": "0.283000",
+      "volume_24h": 14415.36,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMLB-26-MIL",
+    "question": "Will Milwaukee win the 2026 Pro Baseball Championship?",
+    "short_label": "Milwaukee",
+    "description": "If Milwaukee wins the 2026 Pro Baseball Championship, then the market resolves to Yes.",
+    "resolution_time": "2026-11-01T04:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMLB-26",
+    "topic": "Sports",
+    "family": "KXMLB",
+    "quote": {
+      "best_bid": "0.030000",
+      "best_ask": "0.032000",
+      "volume_24h": 12290.61,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMLB-26-MIN",
+    "question": "Will Minnesota win the 2026 Pro Baseball Championship?",
+    "short_label": "Minnesota",
+    "description": "If Minnesota wins the 2026 Pro Baseball Championship, then the market resolves to Yes.",
+    "resolution_time": "2026-11-01T04:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMLB-26",
+    "topic": "Sports",
+    "family": "KXMLB",
+    "quote": {
+      "best_bid": "0.002000",
+      "best_ask": "0.004000",
+      "volume_24h": 29400.0,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMLB-26-NYY",
+    "question": "Will New York Y win the 2026 Pro Baseball Championship?",
+    "short_label": "New York Y",
+    "description": "If New York Y wins the 2026 Pro Baseball Championship, then the market resolves to Yes.",
+    "resolution_time": "2026-11-01T04:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMLB-26",
+    "topic": "Sports",
+    "family": "KXMLB",
+    "quote": {
+      "best_bid": "0.140000",
+      "best_ask": "0.147000",
+      "volume_24h": 8631.99,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMLB-26-PHI",
+    "question": "Will Philadelphia win the 2026 Pro Baseball Championship?",
+    "short_label": "Philadelphia",
+    "description": "If Philadelphia wins the 2026 Pro Baseball Championship, then the market resolves to Yes.",
+    "resolution_time": "2026-11-01T04:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMLB-26",
+    "topic": "Sports",
+    "family": "KXMLB",
+    "quote": {
+      "best_bid": "0.027000",
+      "best_ask": "0.032000",
+      "volume_24h": 18644.11,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMLB-26-PIT",
+    "question": "Will Pittsburgh win the 2026 Pro Baseball Championship?",
+    "short_label": "Pittsburgh",
+    "description": "If Pittsburgh wins the 2026 Pro Baseball Championship, then the market resolves to Yes.",
+    "resolution_time": "2026-11-01T04:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMLB-26",
+    "topic": "Sports",
+    "family": "KXMLB",
+    "quote": {
+      "best_bid": "0.014000",
+      "best_ask": "0.015000",
+      "volume_24h": 7447.41,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMLB-26-SD",
+    "question": "Will San Diego win the 2026 Pro Baseball Championship?",
+    "short_label": "San Diego",
+    "description": "If San Diego wins the 2026 Pro Baseball Championship, then the market resolves to Yes.",
+    "resolution_time": "2026-11-01T04:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMLB-26",
+    "topic": "Sports",
+    "family": "KXMLB",
+    "quote": {
+      "best_bid": "0.025000",
+      "best_ask": "0.028000",
+      "volume_24h": 6896.24,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMLB-26-STL",
+    "question": "Will St. Louis win the 2026 Pro Baseball Championship?",
+    "short_label": "St. Louis",
+    "description": "If St. Louis wins the 2026 Pro Baseball Championship, then the market resolves to Yes.",
+    "resolution_time": "2026-11-01T04:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMLB-26",
+    "topic": "Sports",
+    "family": "KXMLB",
+    "quote": {
+      "best_bid": "0.005000",
+      "best_ask": "0.012000",
+      "volume_24h": 42114.01,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMLB-26-TB",
+    "question": "Will Tampa Bay win the 2026 Pro Baseball Championship?",
+    "short_label": "Tampa Bay",
+    "description": "If Tampa Bay wins the 2026 Pro Baseball Championship, then the market resolves to Yes.",
+    "resolution_time": "2026-11-01T04:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMLB-26",
+    "topic": "Sports",
+    "family": "KXMLB",
+    "quote": {
+      "best_bid": "0.035000",
+      "best_ask": "0.042000",
+      "volume_24h": 40536.06,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMLB-26-TEX",
+    "question": "Will Texas win the 2026 Pro Baseball Championship?",
+    "short_label": "Texas",
+    "description": "If Texas wins the 2026 Pro Baseball Championship, then the market resolves to Yes.",
+    "resolution_time": "2026-11-01T04:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMLB-26",
+    "topic": "Sports",
+    "family": "KXMLB",
+    "quote": {
+      "best_bid": "0.022000",
+      "best_ask": "0.023000",
+      "volume_24h": 5500.0,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMLBNL-26-PHI",
+    "question": "Will Philadelphia win the 2026 Pro Baseball National League Championship?",
+    "short_label": "Philadelphia",
+    "description": "If Philadelphia win the 2026 Pro Baseball National League Championship, then the market resolves to Yes.",
+    "resolution_time": "2026-11-01T04:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMLBNL-26",
+    "topic": "Sports",
+    "family": "KXMLBNL",
+    "quote": {
+      "best_bid": "0.070000",
+      "best_ask": "0.080000",
+      "volume_24h": 7301.32,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMLBNL-26-SD",
+    "question": "Will San Diego win the 2026 Pro Baseball National League Championship?",
+    "short_label": "San Diego",
+    "description": "If San Diego win the 2026 Pro Baseball National League Championship, then the market resolves to Yes.",
+    "resolution_time": "2026-11-01T04:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMLBNL-26",
+    "topic": "Sports",
+    "family": "KXMLBNL",
+    "quote": {
+      "best_bid": "0.050000",
+      "best_ask": "0.060000",
+      "volume_24h": 5012.39,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMTRUSHMORE-29",
+    "question": "Will Trump add himself to Mt. Rushmore?",
+    "short_label": "Before 2029",
+    "description": "If an executive action has been taken or a bill has become law directing President Trump\u2019s likeness be sculpted into Mt. Rushmore before Jan 21, 2029, then the market resolves to Yes.",
+    "resolution_time": "2029-01-21T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMTRUSHMORE-29",
+    "topic": "Politics",
+    "family": "KXMTRUSHMORE",
+    "quote": {
+      "best_bid": "0.120000",
+      "best_ask": "0.130000",
+      "volume_24h": 215.25,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMUSKTRILLION-28",
+    "question": "Will Elon Musk be a trillionaire before 2028?",
+    "short_label": "Before 2028",
+    "description": "If Elon Musk has a net worth more than $1 trillion before Jan 1, 2028, then the market resolves to Yes.",
+    "resolution_time": "2030-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMUSKTRILLION",
+    "topic": "Economics",
+    "family": "KXMUSKTRILLION",
+    "quote": {
+      "best_bid": "0.910000",
+      "best_ask": "0.920000",
+      "volume_24h": 2062.26,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXMUSKTRILLION-29",
+    "question": "Will Elon Musk be a trillionaire before 2029?",
+    "short_label": "Before 2029",
+    "description": "If Elon Musk has a net worth more than $1 trillion before Jan 1, 2029, then the market resolves to Yes.",
+    "resolution_time": "2030-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXMUSKTRILLION",
+    "topic": "Economics",
+    "family": "KXMUSKTRILLION",
+    "quote": {
+      "best_bid": "0.960000",
+      "best_ask": "0.970000",
+      "volume_24h": 402.0,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXNBA-26-CLE",
+    "question": "Will the Cleveland win the 2026 Pro Basketball Finals?",
+    "short_label": "Cleveland",
+    "description": "If Cleveland win the 2026 Pro Basketball Finals, then the market resolves to Yes.",
+    "resolution_time": "2026-06-30T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXNBA-26",
+    "topic": "Sports",
+    "family": "KXNBA",
+    "quote": {
+      "best_bid": "0.010000",
+      "best_ask": "0.020000",
+      "volume_24h": 342985.8,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXNBA-26-DET",
+    "question": "Will the Detroit win the 2026 Pro Basketball Finals?",
+    "short_label": "Detroit",
+    "description": "If Detroit win the 2026 Pro Basketball Finals, then the market resolves to Yes.",
+    "resolution_time": "2026-06-30T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXNBA-26",
+    "topic": "Sports",
+    "family": "KXNBA",
+    "quote": {
+      "best_bid": "0.030000",
+      "best_ask": "0.040000",
+      "volume_24h": 384047.2,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXNBA-26-NYK",
+    "question": "Will the New York win the 2026 Pro Basketball Finals?",
+    "short_label": "New York",
+    "description": "If New York win the 2026 Pro Basketball Finals, then the market resolves to Yes.",
+    "resolution_time": "2026-06-30T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXNBA-26",
+    "topic": "Sports",
+    "family": "KXNBA",
+    "quote": {
+      "best_bid": "0.130000",
+      "best_ask": "0.140000",
+      "volume_24h": 366205.36,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXNBA-26-OKC",
+    "question": "Will the Oklahoma City win the 2026 Pro Basketball Finals?",
+    "short_label": "Oklahoma City",
+    "description": "If Oklahoma City win the 2026 Pro Basketball Finals, then the market resolves to Yes.",
+    "resolution_time": "2026-06-30T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXNBA-26",
+    "topic": "Sports",
+    "family": "KXNBA",
+    "quote": {
+      "best_bid": "0.580000",
+      "best_ask": "0.590000",
+      "volume_24h": 232049.83,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXNBA-26-SAS",
+    "question": "Will the San Antonio win the 2026 Pro Basketball Finals?",
+    "short_label": "San Antonio",
+    "description": "If San Antonio win the 2026 Pro Basketball Finals, then the market resolves to Yes.",
+    "resolution_time": "2026-06-30T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXNBA-26",
+    "topic": "Sports",
+    "family": "KXNBA",
+    "quote": {
+      "best_bid": "0.220000",
+      "best_ask": "0.240000",
+      "volume_24h": 1025177.61,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXNBAEAST-26-CLE",
+    "question": "Will the Cleveland win the 2026 Pro Basketball Eastern Conference Championship?",
+    "short_label": "Cleveland",
+    "description": "If Cleveland wins the 2026 Pro Basketball Eastern Conference Championship, then the market resolves to Yes.",
+    "resolution_time": "2026-06-30T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXNBAEAST-26",
+    "topic": "Sports",
+    "family": "KXNBAEAST",
+    "quote": {
+      "best_bid": "0.110000",
+      "best_ask": "0.120000",
+      "volume_24h": 55180.6,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXNBAEAST-26-DET",
+    "question": "Will Detroit win the 2026 Pro Basketball Eastern Conference Championship?",
+    "short_label": "Detroit",
+    "description": "If Detroit wins the 2026 Pro Basketball Eastern Conference Championship, then the market resolves to Yes.",
+    "resolution_time": "2026-06-30T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXNBAEAST-26",
+    "topic": "Sports",
+    "family": "KXNBAEAST",
+    "quote": {
+      "best_bid": "0.230000",
+      "best_ask": "0.240000",
+      "volume_24h": 196484.7,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXNBAEAST-26-NYK",
+    "question": "Will the New York win the 2026 Pro Basketball Eastern Conference Championship?",
+    "short_label": "New York",
+    "description": "If New York wins the 2026 Pro Basketball Eastern Conference Championship, then the market resolves to Yes.",
+    "resolution_time": "2026-06-30T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXNBAEAST-26",
+    "topic": "Sports",
+    "family": "KXNBAEAST",
+    "quote": {
+      "best_bid": "0.660000",
+      "best_ask": "0.670000",
+      "volume_24h": 184264.68,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXNBAWEST-26-OKC",
+    "question": "Will the Oklahoma City win the 2026 Pro Basketball Western Conference Championship?",
+    "short_label": "Oklahoma City",
+    "description": "If Oklahoma City wins the 2026 Pro Basketball Western Conference Championship, then the market resolves to Yes.",
+    "resolution_time": "2026-06-30T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXNBAWEST-26",
+    "topic": "Sports",
+    "family": "KXNBAWEST",
+    "quote": {
+      "best_bid": "0.680000",
+      "best_ask": "0.700000",
+      "volume_24h": 94736.11,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXNBAWEST-26-SAS",
+    "question": "Will the San Antonio win the 2026 Pro Basketball Western Conference Championship?",
+    "short_label": "San Antonio",
+    "description": "If San Antonio wins the 2026 Pro Basketball Western Conference Championship, then the market resolves to Yes.",
+    "resolution_time": "2026-06-30T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXNBAWEST-26",
+    "topic": "Sports",
+    "family": "KXNBAWEST",
+    "quote": {
+      "best_bid": "0.310000",
+      "best_ask": "0.320000",
+      "volume_24h": 361505.98,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXNEXTAG-29-HDHI",
+    "question": "Who will be Trump's next Attorney General?",
+    "short_label": "Harmeet Dhillon",
+    "description": "If the first new person to be Attorney General is Harmeet Dhillon before Jan 20, 2029, then the market resolves to Yes.",
+    "resolution_time": "2029-01-20T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXNEXTAG-29",
+    "topic": "Politics",
+    "family": "KXNEXTAG",
+    "quote": {
+      "best_bid": "0.013000",
+      "best_ask": "0.029000",
+      "volume_24h": 200.08,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXNEXTAG-29-JPIR",
+    "question": "Who will be Trump's next Attorney General?",
+    "short_label": "Jeanine Pirro",
+    "description": "If the first new person to be Attorney General is Jeanine Pirro before Jan 20, 2029, then the market resolves to Yes.",
+    "resolution_time": "2029-01-20T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXNEXTAG-29",
+    "topic": "Politics",
+    "family": "KXNEXTAG",
+    "quote": {
+      "best_bid": "0.020000",
+      "best_ask": "0.042000",
+      "volume_24h": 417.18,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXNEXTAG-29-KPAX",
+    "question": "Who will be Trump's next Attorney General?",
+    "short_label": "Ken Paxton",
+    "description": "If the first new person to be Attorney General is Ken Paxton before Jan 20, 2029, then the market resolves to Yes.",
+    "resolution_time": "2029-01-20T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXNEXTAG-29",
+    "topic": "Politics",
+    "family": "KXNEXTAG",
+    "quote": {
+      "best_bid": "0.035000",
+      "best_ask": "0.050000",
+      "volume_24h": 1164.28,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXNEXTAG-29-LZEL",
+    "question": "Who will be Trump's next Attorney General?",
+    "short_label": "Lee Zeldin",
+    "description": "If the first new person to be Attorney General is Lee Zeldin before Jan 20, 2029, then the market resolves to Yes.",
+    "resolution_time": "2029-01-20T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXNEXTAG-29",
+    "topic": "Politics",
+    "family": "KXNEXTAG",
+    "quote": {
+      "best_bid": "0.210000",
+      "best_ask": "0.230000",
+      "volume_24h": 589.87,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXNEXTAG-29-RDES",
+    "question": "Who will be Trump's next Attorney General?",
+    "short_label": "Ron DeSantis",
+    "description": "If the first new person to be Attorney General is Ron DeSantis before Jan 20, 2029, then the market resolves to Yes.",
+    "resolution_time": "2029-01-20T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXNEXTAG-29",
+    "topic": "Politics",
+    "family": "KXNEXTAG",
+    "quote": {
+      "best_bid": "0.017000",
+      "best_ask": "0.036000",
+      "volume_24h": 726.77,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXNEXTAG-29-TBLA",
+    "question": "Who will be Trump's next Attorney General?",
+    "short_label": "Todd Blanche",
+    "description": "If the first new person to be Attorney General is Todd Blanche before Jan 20, 2029, then the market resolves to Yes.",
+    "resolution_time": "2029-01-20T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXNEXTAG-29",
+    "topic": "Politics",
+    "family": "KXNEXTAG",
+    "quote": {
+      "best_bid": "0.520000",
+      "best_ask": "0.540000",
+      "volume_24h": 3141.44,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXNEXTUKPM-30-ABUR",
+    "question": "Will Andy Burnham be the next Prime Minister of United Kingdom?",
+    "short_label": "Andy Burnham",
+    "description": "If Andy Burnham is the next Prime Minister of the United Kingdom before Jan 1, 2030, then the market resolves to Yes.",
+    "resolution_time": "2030-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXNEXTUKPM-30",
+    "topic": "Elections",
+    "family": "KXNEXTUKPM",
+    "quote": {
+      "best_bid": "0.650000",
+      "best_ask": "0.660000",
+      "volume_24h": 1718.77,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXNEXTUKPM-30-AR",
+    "question": "Will Angela Rayner be the next Prime Minister of United Kingdom?",
+    "short_label": "Angela Rayner",
+    "description": "If Angela Rayner is the next Prime Minister of United Kingdom before 2030, then the market resolves to Yes.",
+    "resolution_time": "2030-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXNEXTUKPM-30",
+    "topic": "Elections",
+    "family": "KXNEXTUKPM",
+    "quote": {
+      "best_bid": "0.078000",
+      "best_ask": "0.080000",
+      "volume_24h": 1100.23,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXNFLMVP-27-JDAR",
+    "question": "Will Jaxson Dart win the MVP?",
+    "short_label": "Jaxson Dart",
+    "description": "If Jaxson Dart wins the Pro Football AP Regular Season MVP in the 2026-27 season, then the market resolves to Yes.",
+    "resolution_time": "2027-03-14T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXNFLMVP-27",
+    "topic": "Sports",
+    "family": "KXNFLMVP",
+    "quote": {
+      "best_bid": "0.010000",
+      "best_ask": "0.020000",
+      "volume_24h": 7018.52,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXNHL-26-BUF",
+    "question": "Will Buffalo Sabres win the 2025-26 Stanley Cup Finals?",
+    "short_label": "Buffalo Sabres",
+    "description": "If the Buffalo Sabres win the 2025-26 Stanley Cup Finals, then the market resolves to Yes.",
+    "resolution_time": "2026-07-01T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXNHL-26",
+    "topic": "Sports",
+    "family": "KXNHL",
+    "quote": {
+      "best_bid": "0.010000",
+      "best_ask": "0.020000",
+      "volume_24h": 119546.34,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXNHL-26-CAR",
+    "question": "Will Carolina Hurricanes win the 2025-26 Stanley Cup Finals?",
+    "short_label": "Carolina Hurricanes",
+    "description": "If the Carolina Hurricanes win the 2025-26 Stanley Cup Finals, then the market resolves to Yes.",
+    "resolution_time": "2026-07-01T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXNHL-26",
+    "topic": "Sports",
+    "family": "KXNHL",
+    "quote": {
+      "best_bid": "0.360000",
+      "best_ask": "0.370000",
+      "volume_24h": 22876.39,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXNHL-26-COL",
+    "question": "Will Colorado Avalanche win the 2025-26 Stanley Cup Finals?",
+    "short_label": "Colorado Avalanche",
+    "description": "If the Colorado Avalanche win the 2025-26 Stanley Cup Finals, then the market resolves to Yes.",
+    "resolution_time": "2026-07-01T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXNHL-26",
+    "topic": "Sports",
+    "family": "KXNHL",
+    "quote": {
+      "best_bid": "0.400000",
+      "best_ask": "0.410000",
+      "volume_24h": 57837.56,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXNHL-26-MTL",
+    "question": "Will Montr\u00e9al Canadiens win the 2025-26 Stanley Cup Finals?",
+    "short_label": "Montr\u00e9al Canadiens",
+    "description": "If the Montr\u00e9al Canadiens win the 2025-26 Stanley Cup Finals, then the market resolves to Yes.",
+    "resolution_time": "2026-07-01T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXNHL-26",
+    "topic": "Sports",
+    "family": "KXNHL",
+    "quote": {
+      "best_bid": "0.100000",
+      "best_ask": "0.110000",
+      "volume_24h": 27622.19,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXNHL-26-VGK",
+    "question": "Will Vegas Golden Knights win the 2025-26 Stanley Cup Finals?",
+    "short_label": "Vegas Golden Knights",
+    "description": "If the Vegas Golden Knights win the 2025-26 Stanley Cup Finals, then the market resolves to Yes.",
+    "resolution_time": "2026-07-01T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXNHL-26",
+    "topic": "Sports",
+    "family": "KXNHL",
+    "quote": {
+      "best_bid": "0.120000",
+      "best_ask": "0.140000",
+      "volume_24h": 22900.88,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXNJPRIMARY-06D26-JHSU",
+    "question": "Will John Hsu be the Democratic nominee for NJ-06?",
+    "short_label": "John Hsu",
+    "description": "If John Hsu wins the nomination for the Democratic Party to contest the 2026 NJ-06 House seat, then the market resolves to Yes.",
+    "resolution_time": "2026-11-03T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXNJPRIMARY-06D26",
+    "topic": "Elections",
+    "family": "KXNJPRIMARY",
+    "quote": {
+      "best_bid": "0.010000",
+      "best_ask": "0.030000",
+      "volume_24h": 1624.46,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXOAIANTH-40-ANTH",
+    "question": "Will Open AI or Anthropic IPO first?",
+    "short_label": "Anthropic",
+    "description": "If Anthropic confirms an IPO first, before Jan 1, 2040, then the market resolves to Yes.",
+    "resolution_time": "2040-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXOAIANTH-40",
+    "topic": "Financials",
+    "family": "KXOAIANTH",
+    "quote": {
+      "best_bid": "0.780000",
+      "best_ask": "0.810000",
+      "volume_24h": 1004.98,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXORPRIMARY-04D26-MSMI",
+    "question": "Will Melvin Smith be the Democratic nominee for OR-04?",
+    "short_label": "Melvin Smith",
+    "description": "If Melvin Smith wins the nomination for the Democratic Party to contest the 2026 OR-04 House seat, then the market resolves to Yes.",
+    "resolution_time": "2026-11-03T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXORPRIMARY-04D26",
+    "topic": "Elections",
+    "family": "KXORPRIMARY",
+    "quote": {
+      "best_bid": "0.000000",
+      "best_ask": "0.018000",
+      "volume_24h": 1000.0,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXOSCARACTO-27-TOM",
+    "question": "Will Tom Cruise win Best Actor at the Oscars?",
+    "short_label": "Tom Cruise",
+    "description": "If Tom Cruise has won Best Actor at the 99th Academy Awards, then the market resolves to Yes.",
+    "resolution_time": "2027-12-31T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXOSCARACTO-27",
+    "topic": "Entertainment",
+    "family": "KXOSCARACTO",
+    "quote": {
+      "best_bid": "0.310000",
+      "best_ask": "0.330000",
+      "volume_24h": 373.58,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXOSCARNOMACTO-27-ADA",
+    "question": "2027 Best Actor Oscar nominations?",
+    "short_label": "Adam Driver",
+    "description": "If Adam Driver has been nominated for Best Actor at the 99th Academy Awards, then the market resolves to Yes.",
+    "resolution_time": "2027-01-21T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXOSCARNOMACTO-27",
+    "topic": "Entertainment",
+    "family": "KXOSCARNOMACTO",
+    "quote": {
+      "best_bid": "0.210000",
+      "best_ask": "0.290000",
+      "volume_24h": 273.61,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXOSCARNOMACTO-27-JAA",
+    "question": "2027 Best Actor Oscar nominations?",
+    "short_label": "Jaafar Jackson",
+    "description": "If Jaafar Jackson has been nominated for Best Actor at the 99th Academy Awards, then the market resolves to Yes.",
+    "resolution_time": "2027-01-21T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXOSCARNOMACTO-27",
+    "topic": "Entertainment",
+    "family": "KXOSCARNOMACTO",
+    "quote": {
+      "best_bid": "0.170000",
+      "best_ask": "0.240000",
+      "volume_24h": 294.66,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXOSCARNOMACTO-27-JAVI",
+    "question": "2027 Best Actor Oscar nominations?",
+    "short_label": "Javier Bardem",
+    "description": "If Javier Bardem has been nominated for Best Actor at the 99th Academy Awards, then the market resolves to Yes.",
+    "resolution_time": "2027-01-21T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXOSCARNOMACTO-27",
+    "topic": "Entertainment",
+    "family": "KXOSCARNOMACTO",
+    "quote": {
+      "best_bid": "0.260000",
+      "best_ask": "0.330000",
+      "volume_24h": 300.0,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXOSCARNOMACTO-27-JER",
+    "question": "2027 Best Actor Oscar nominations?",
+    "short_label": "Jeremy Strong",
+    "description": "If Jeremy Strong has been nominated for Best Actor at the 99th Academy Awards, then the market resolves to Yes.",
+    "resolution_time": "2027-01-21T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXOSCARNOMACTO-27",
+    "topic": "Entertainment",
+    "family": "KXOSCARNOMACTO",
+    "quote": {
+      "best_bid": "0.240000",
+      "best_ask": "0.300000",
+      "volume_24h": 300.0,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXOSCARNOMACTR-27-SCA",
+    "question": "2027 Best Actress Oscar nominations?",
+    "short_label": "Scarlett Johansson",
+    "description": "If Scarlett Johansson has been nominated for Best Actress at the 99th Academy Awards, then the market resolves to Yes.",
+    "resolution_time": "2027-01-21T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXOSCARNOMACTR-27",
+    "topic": "Entertainment",
+    "family": "KXOSCARNOMACTR",
+    "quote": {
+      "best_bid": "0.240000",
+      "best_ask": "0.320000",
+      "volume_24h": 395.05,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXOSCARNOMBCASTING-27-CLA",
+    "question": "2027 Achievement in Casting Oscar nominations?",
+    "short_label": "Clarissa",
+    "description": "If Clarissa has been nominated for Achievement in Casting at the 99th Academy Awards, then the market resolves to Yes.",
+    "resolution_time": "2027-12-31T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXOSCARNOMBCASTING-27",
+    "topic": "Entertainment",
+    "family": "KXOSCARNOMBCASTING",
+    "quote": {
+      "best_bid": "0.210000",
+      "best_ask": "0.270000",
+      "volume_24h": 300.0,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXOSCARNOMINTERFILM-27-HOP",
+    "question": "2027 Best International Feature Film Oscar nominations?",
+    "short_label": "Hope",
+    "description": "If Hope has been nominated for Best International Feature Film at the 99th Academy Awards, then the market resolves to Yes.",
+    "resolution_time": "2027-12-31T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXOSCARNOMINTERFILM-27",
+    "topic": "Entertainment",
+    "family": "KXOSCARNOMINTERFILM",
+    "quote": {
+      "best_bid": "0.340000",
+      "best_ask": "0.420000",
+      "volume_24h": 300.0,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXOSCARNOMPIC-27-PAP",
+    "question": "2027 Best Picture Oscar nominations?",
+    "short_label": "Paper Tiger",
+    "description": "If Paper Tiger has been nominated for Best Picture at the 99th Academy Awards, then the market resolves to Yes.",
+    "resolution_time": "2027-01-21T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXOSCARNOMPIC-27",
+    "topic": "Entertainment",
+    "family": "KXOSCARNOMPIC",
+    "quote": {
+      "best_bid": "0.080000",
+      "best_ask": "0.120000",
+      "volume_24h": 378.0,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXOSCARNOMPIC-27-PAR",
+    "question": "2027 Best Picture Oscar nominations?",
+    "short_label": "Parallel Tales",
+    "description": "If Parallel Tales has been nominated for Best Picture at the 99th Academy Awards, then the market resolves to Yes.",
+    "resolution_time": "2027-01-21T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXOSCARNOMPIC-27",
+    "topic": "Entertainment",
+    "family": "KXOSCARNOMPIC",
+    "quote": {
+      "best_bid": "0.040000",
+      "best_ask": "0.050000",
+      "volume_24h": 325.0,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXOSCARNOMSPLAY-27-FAT",
+    "question": "2027 Best Original Screenplay Oscar nominations?",
+    "short_label": "Fatherland",
+    "description": "If Fatherland has been nominated for Best Original Screenplay at the 99th Academy Awards, then the market resolves to Yes.",
+    "resolution_time": "2027-12-31T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXOSCARNOMSPLAY-27",
+    "topic": "Entertainment",
+    "family": "KXOSCARNOMSPLAY",
+    "quote": {
+      "best_bid": "0.300000",
+      "best_ask": "0.370000",
+      "volume_24h": 300.0,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXOSCARPIC-27-DIG",
+    "question": "Will Digger win Best Picture at the Oscars?",
+    "short_label": "Digger",
+    "description": "If Digger has won Best Picture at the 99th Academy Awards, then the market resolves to Yes.",
+    "resolution_time": "2027-12-31T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXOSCARPIC-27",
+    "topic": "Entertainment",
+    "family": "KXOSCARPIC",
+    "quote": {
+      "best_bid": "0.130000",
+      "best_ask": "0.140000",
+      "volume_24h": 905.26,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXOSCARPIC-27-DIS",
+    "question": "Will Disclosure Day win Best Picture at the Oscars?",
+    "short_label": "Disclosure Day",
+    "description": "If Disclosure Day has won Best Picture at the 99th Academy Awards, then the market resolves to Yes.",
+    "resolution_time": "2027-12-31T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXOSCARPIC-27",
+    "topic": "Entertainment",
+    "family": "KXOSCARPIC",
+    "quote": {
+      "best_bid": "0.000000",
+      "best_ask": "0.020000",
+      "volume_24h": 1871.79,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXOSCARPIC-27-DUN",
+    "question": "Will Dune: Part Three win Best Picture at the Oscars?",
+    "short_label": "Dune: Part Three",
+    "description": "If Dune: Part Three has won Best Picture at the 99th Academy Awards, then the market resolves to Yes.",
+    "resolution_time": "2027-12-31T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXOSCARPIC-27",
+    "topic": "Entertainment",
+    "family": "KXOSCARPIC",
+    "quote": {
+      "best_bid": "0.110000",
+      "best_ask": "0.120000",
+      "volume_24h": 1508.52,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXOSCARPIC-27-MIC",
+    "question": "Will Michael win Best Picture at the Oscars?",
+    "short_label": "Michael",
+    "description": "If Michael has won Best Picture at the 99th Academy Awards, then the market resolves to Yes.",
+    "resolution_time": "2027-12-31T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXOSCARPIC-27",
+    "topic": "Entertainment",
+    "family": "KXOSCARPIC",
+    "quote": {
+      "best_bid": "0.000000",
+      "best_ask": "0.010000",
+      "volume_24h": 654.61,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXOSCARPIC-27-ODY",
+    "question": "Will The Odyssey win Best Picture at the Oscars?",
+    "short_label": "The Odyssey",
+    "description": "If The Odyssey has won Best Picture at the 99th Academy Awards, then the market resolves to Yes.",
+    "resolution_time": "2027-12-31T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXOSCARPIC-27",
+    "topic": "Entertainment",
+    "family": "KXOSCARPIC",
+    "quote": {
+      "best_bid": "0.210000",
+      "best_ask": "0.220000",
+      "volume_24h": 1414.49,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXOSCARPIC-27-PRO",
+    "question": "Will Project Hail Mary win Best Picture at the Oscars?",
+    "short_label": "Project Hail Mary",
+    "description": "If Project Hail Mary has won Best Picture at the 99th Academy Awards, then the market resolves to Yes.",
+    "resolution_time": "2027-12-31T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXOSCARPIC-27",
+    "topic": "Entertainment",
+    "family": "KXOSCARPIC",
+    "quote": {
+      "best_bid": "0.090000",
+      "best_ask": "0.100000",
+      "volume_24h": 479.08,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXOSCARPIC-27-SOC",
+    "question": "Will The Social Reckoning win Best Picture at the Oscars?",
+    "short_label": "The Social Reckoning",
+    "description": "If The Social Reckoning has won Best Picture at the 99th Academy Awards, then the market resolves to Yes.",
+    "resolution_time": "2027-12-31T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXOSCARPIC-27",
+    "topic": "Entertainment",
+    "family": "KXOSCARPIC",
+    "quote": {
+      "best_bid": "0.030000",
+      "best_ask": "0.040000",
+      "volume_24h": 257.67,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXOSCARPIC-27-WIL",
+    "question": "Will Wild Horse Nine win Best Picture at the Oscars?",
+    "short_label": "Wild Horse Nine",
+    "description": "If Wild Horse Nine has won Best Picture at the 99th Academy Awards, then the market resolves to Yes.",
+    "resolution_time": "2027-12-31T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXOSCARPIC-27",
+    "topic": "Entertainment",
+    "family": "KXOSCARPIC",
+    "quote": {
+      "best_bid": "0.080000",
+      "best_ask": "0.090000",
+      "volume_24h": 1858.22,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPERFORMROLEJEANGREY-SAD",
+    "question": "Will Sadie Sink perform as Jean Grey in The first Marvel Studios live-action film in the Marvel Cinematic Universe to feature Jean Grey?",
+    "short_label": "Sadie Sink",
+    "description": "If Sadie Sink performs/ is announced as Jean Grey in The first Marvel Studios live-action film in the Marvel Cinematic Universe to feature Jean Grey, then the market resolves to Yes.",
+    "resolution_time": "2027-01-02T04:59:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPERFORMROLEJEANGREY",
+    "topic": "Entertainment",
+    "family": "KXPERFORMROLEJEANGREY",
+    "quote": {
+      "best_bid": "0.710000",
+      "best_ask": "0.730000",
+      "volume_24h": 330.84,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPREMIERLEAGUE-26-ARS",
+    "question": "Will Arsenal win the English Premier League?",
+    "short_label": "Arsenal",
+    "description": "If Arsenal wins the English Premier League, then the market resolves to Yes.",
+    "resolution_time": "2026-05-24T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPREMIERLEAGUE-26",
+    "topic": "Sports",
+    "family": "KXPREMIERLEAGUE",
+    "quote": {
+      "best_bid": "0.810000",
+      "best_ask": "0.820000",
+      "volume_24h": 10838.41,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPREMIERLEAGUE-26-MCI",
+    "question": "Will Man City win the English Premier League?",
+    "short_label": "Man City",
+    "description": "If Man City wins the English Premier League, then the market resolves to Yes.",
+    "resolution_time": "2026-05-24T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPREMIERLEAGUE-26",
+    "topic": "Sports",
+    "family": "KXPREMIERLEAGUE",
+    "quote": {
+      "best_bid": "0.180000",
+      "best_ask": "0.190000",
+      "volume_24h": 27124.12,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESNOMD-28-AB",
+    "question": "Will Andy Beshear be the Democratic Presidential nominee in 2028?",
+    "short_label": "Andy Beshear",
+    "description": "If Andy Beshear wins and accepts the nomination for the Presidency for the Democratic party, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESNOMD-28",
+    "topic": "Elections",
+    "family": "KXPRESNOMD",
+    "quote": {
+      "best_bid": "0.035000",
+      "best_ask": "0.038000",
+      "volume_24h": 5149.81,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESNOMD-28-AOC",
+    "question": "Will Alexandria Ocasio-Cortez be the Democratic Presidential nominee in 2028?",
+    "short_label": "Alexandria Ocasio-Cortez",
+    "description": "If Alexandria Ocasio-Cortez wins and accepts the nomination for the Presidency for the Democratic party, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESNOMD-28",
+    "topic": "Elections",
+    "family": "KXPRESNOMD",
+    "quote": {
+      "best_bid": "0.100000",
+      "best_ask": "0.110000",
+      "volume_24h": 6007.36,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESNOMD-28-AYAN",
+    "question": "Will Andrew Yang be the nominee for the Presidency for the Democratic party?",
+    "short_label": "Andrew Yang",
+    "description": "If Andrew Yang wins and accepts the nomination for the Presidency for the Democratic party, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESNOMD-28",
+    "topic": "Elections",
+    "family": "KXPRESNOMD",
+    "quote": {
+      "best_bid": "0.004000",
+      "best_ask": "0.005000",
+      "volume_24h": 60931.5,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESNOMD-28-BOBA",
+    "question": "Will Barack Obama be the Democratic Presidential nominee in 2028?",
+    "short_label": "Barack Obama",
+    "description": "If Barack Obama wins and accepts the nomination for the Presidency for the Democratic party, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESNOMD-28",
+    "topic": "Elections",
+    "family": "KXPRESNOMD",
+    "quote": {
+      "best_bid": "0.001000",
+      "best_ask": "0.002000",
+      "volume_24h": 5681.81,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESNOMD-28-CBOO",
+    "question": "Will Cory Booker be the Democratic Presidential nominee in 2028?",
+    "short_label": "Cory Booker",
+    "description": "If Cory Booker wins and accepts the nomination for the Presidency for the Democratic party, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESNOMD-28",
+    "topic": "Elections",
+    "family": "KXPRESNOMD",
+    "quote": {
+      "best_bid": "0.007000",
+      "best_ask": "0.008000",
+      "volume_24h": 8837.15,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESNOMD-28-CMUR",
+    "question": "Will Chris Murphy be the Democratic Presidential nominee in 2028?",
+    "short_label": "Chris Murphy",
+    "description": "If Chris Murphy wins and accepts the nomination for the Presidency for the Democratic party, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESNOMD-28",
+    "topic": "Elections",
+    "family": "KXPRESNOMD",
+    "quote": {
+      "best_bid": "0.006000",
+      "best_ask": "0.007000",
+      "volume_24h": 2671.42,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESNOMD-28-ESLO",
+    "question": "Will Elissa Slotkin be the Democratic Presidential nominee in 2028?",
+    "short_label": "Elissa Slotkin",
+    "description": "If Elissa Slotkin wins and accepts the nomination for the Presidency for the Democratic party, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESNOMD-28",
+    "topic": "Elections",
+    "family": "KXPRESNOMD",
+    "quote": {
+      "best_bid": "0.004000",
+      "best_ask": "0.006000",
+      "volume_24h": 343006.46,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESNOMD-28-EWAR",
+    "question": "Will Elizabeth Warren be the nominee for the Presidency for the Democratic party?",
+    "short_label": "Elizabeth Warren",
+    "description": "If Elizabeth Warren wins and accepts the nomination for the Presidency for the Democratic party, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESNOMD-28",
+    "topic": "Elections",
+    "family": "KXPRESNOMD",
+    "quote": {
+      "best_bid": "0.001000",
+      "best_ask": "0.002000",
+      "volume_24h": 930.65,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESNOMD-28-GN",
+    "question": "Will Gavin Newsom be the Democratic Presidential nominee in 2028?",
+    "short_label": "Gavin Newsom",
+    "description": "If Gavin Newsom wins and accepts the nomination for the Presidency for the Democratic party, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESNOMD-28",
+    "topic": "Elections",
+    "family": "KXPRESNOMD",
+    "quote": {
+      "best_bid": "0.230000",
+      "best_ask": "0.240000",
+      "volume_24h": 22027.88,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESNOMD-28-GPLA",
+    "question": "Will Graham Platner be the nominee for the Presidency for the Democratic party?",
+    "short_label": "Graham Platner",
+    "description": "If Graham Platner wins and accepts the nomination for the Presidency for the Democratic party, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESNOMD-28",
+    "topic": "Elections",
+    "family": "KXPRESNOMD",
+    "quote": {
+      "best_bid": "0.020000",
+      "best_ask": "0.021000",
+      "volume_24h": 19819.79,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESNOMD-28-GR",
+    "question": "Will Gina Raimondo be the Democratic Presidential nominee in 2028?",
+    "short_label": "Gina Raimondo",
+    "description": "If Gina Raimondo wins and accepts the nomination for the Presidency for the Democratic party, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESNOMD-28",
+    "topic": "Elections",
+    "family": "KXPRESNOMD",
+    "quote": {
+      "best_bid": "0.001000",
+      "best_ask": "0.002000",
+      "volume_24h": 5000.0,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESNOMD-28-GW",
+    "question": "Will Gretchen Whitmer be the Democratic Presidential nominee in 2028?",
+    "short_label": "Gretchen Whitmer",
+    "description": "If Gretchen Whitmer wins and accepts the nomination for the Presidency for the Democratic party, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESNOMD-28",
+    "topic": "Elections",
+    "family": "KXPRESNOMD",
+    "quote": {
+      "best_bid": "0.012000",
+      "best_ask": "0.014000",
+      "volume_24h": 9162.96,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESNOMD-28-JAM",
+    "question": "Will Jamie Dimon be the Democratic Presidential nominee in 2028?",
+    "short_label": "Jamie Dimon",
+    "description": "If Jamie Dimon wins and accepts the nomination for the Presidency for the Democratic party, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESNOMD-28",
+    "topic": "Elections",
+    "family": "KXPRESNOMD",
+    "quote": {
+      "best_bid": "0.002000",
+      "best_ask": "0.004000",
+      "volume_24h": 4356.29,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESNOMD-28-JBP",
+    "question": "Will J.B. Pritzker be the Democratic Presidential nominee in 2028?",
+    "short_label": "J.B. Pritzker",
+    "description": "If J.B. Pritzker wins and accepts the nomination for the Presidency for the Democratic party, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESNOMD-28",
+    "topic": "Elections",
+    "family": "KXPRESNOMD",
+    "quote": {
+      "best_bid": "0.028000",
+      "best_ask": "0.029000",
+      "volume_24h": 8731.22,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESNOMD-28-JOSS",
+    "question": "Will Jon Ossoff be the Democratic Presidential nominee in 2028?",
+    "short_label": "Jon Ossoff",
+    "description": "If Jon Ossoff wins and accepts the nomination for the Presidency for the Democratic party, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESNOMD-28",
+    "topic": "Elections",
+    "family": "KXPRESNOMD",
+    "quote": {
+      "best_bid": "0.076000",
+      "best_ask": "0.081000",
+      "volume_24h": 2052.1,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESNOMD-28-JP",
+    "question": "Will Jared Polis be the Democratic Presidential nominee in 2028?",
+    "short_label": "Jared Polis",
+    "description": "If Jared Polis wins and accepts the nomination for the Presidency for the Democratic party, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESNOMD-28",
+    "topic": "Elections",
+    "family": "KXPRESNOMD",
+    "quote": {
+      "best_bid": "0.002000",
+      "best_ask": "0.003000",
+      "volume_24h": 5616.06,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESNOMD-28-JS",
+    "question": "Will Josh Shapiro be the Democratic Presidential nominee in 2028?",
+    "short_label": "Josh Shapiro",
+    "description": "If Josh Shapiro wins and accepts the nomination for the Presidency for the Democratic party, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESNOMD-28",
+    "topic": "Elections",
+    "family": "KXPRESNOMD",
+    "quote": {
+      "best_bid": "0.046000",
+      "best_ask": "0.047000",
+      "volume_24h": 5709.13,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESNOMD-28-JSTE",
+    "question": "Will Jon Stewart be the Democratic Presidential nominee in 2028?",
+    "short_label": "Jon Stewart",
+    "description": "If Jon Stewart wins and accepts the nomination for the Presidency for the Democratic party, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESNOMD-28",
+    "topic": "Elections",
+    "family": "KXPRESNOMD",
+    "quote": {
+      "best_bid": "0.015000",
+      "best_ask": "0.020000",
+      "volume_24h": 13332.11,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESNOMD-28-JTAL",
+    "question": "Will James Talarico be the Democratic Presidential nominee in 2028?",
+    "short_label": "James Talarico",
+    "description": "If James Talarico wins and accepts the nomination for the Presidency for the Democratic party, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESNOMD-28",
+    "topic": "Elections",
+    "family": "KXPRESNOMD",
+    "quote": {
+      "best_bid": "0.028000",
+      "best_ask": "0.030000",
+      "volume_24h": 4762.07,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESNOMD-28-KH",
+    "question": "Will Kamala Harris be the Democratic Presidential nominee in 2028?",
+    "short_label": "Kamala Harris",
+    "description": "If Kamala Harris wins and accepts the nomination for the Presidency for the Democratic party, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESNOMD-28",
+    "topic": "Elections",
+    "family": "KXPRESNOMD",
+    "quote": {
+      "best_bid": "0.095000",
+      "best_ask": "0.097000",
+      "volume_24h": 5082.91,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESNOMD-28-MK",
+    "question": "Will Mark Kelly be the Democratic Presidential nominee in 2028?",
+    "short_label": "Mark Kelly",
+    "description": "If Mark Kelly wins and accepts the nomination for the Presidency for the Democratic party, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESNOMD-28",
+    "topic": "Elections",
+    "family": "KXPRESNOMD",
+    "quote": {
+      "best_bid": "0.033000",
+      "best_ask": "0.035000",
+      "volume_24h": 4391.4,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESNOMD-28-PB",
+    "question": "Will Pete Buttigieg be the Democratic Presidential nominee in 2028?",
+    "short_label": "Pete Buttigieg",
+    "description": "If Pete Buttigieg wins and accepts the nomination for the Presidency for the Democratic party, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESNOMD-28",
+    "topic": "Elections",
+    "family": "KXPRESNOMD",
+    "quote": {
+      "best_bid": "0.046000",
+      "best_ask": "0.047000",
+      "volume_24h": 3592.75,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESNOMD-28-REMA",
+    "question": "Will Rahm Emanuel be the Democratic Presidential nominee in 2028?",
+    "short_label": "Rahm Emanuel",
+    "description": "If Rahm Emanuel wins and accepts the nomination for the Presidency for the Democratic party, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESNOMD-28",
+    "topic": "Elections",
+    "family": "KXPRESNOMD",
+    "quote": {
+      "best_bid": "0.046000",
+      "best_ask": "0.051000",
+      "volume_24h": 6563.77,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESNOMD-28-RGAL",
+    "question": "Will Ruben Gallego be the Democratic Presidential nominee in 2028?",
+    "short_label": "Ruben Gallego",
+    "description": "If Ruben Gallego wins and accepts the nomination for the Presidency for the Democratic party, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESNOMD-28",
+    "topic": "Elections",
+    "family": "KXPRESNOMD",
+    "quote": {
+      "best_bid": "0.006000",
+      "best_ask": "0.007000",
+      "volume_24h": 40312.0,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESNOMD-28-SAS",
+    "question": "Will Stephen A. Smith be the Democratic Presidential nominee in 2028?",
+    "short_label": "Stephen A. Smith",
+    "description": "If Stephen A. Smith wins and accepts the nomination for the Presidency for the Democratic party, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESNOMD-28",
+    "topic": "Elections",
+    "family": "KXPRESNOMD",
+    "quote": {
+      "best_bid": "0.008000",
+      "best_ask": "0.009000",
+      "volume_24h": 33974.33,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESNOMD-28-WM",
+    "question": "Will Wes Moore be the Democratic Presidential nominee in 2028?",
+    "short_label": "Wes Moore",
+    "description": "If Wes Moore wins and accepts the nomination for the Presidency for the Democratic party, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESNOMD-28",
+    "topic": "Elections",
+    "family": "KXPRESNOMD",
+    "quote": {
+      "best_bid": "0.021000",
+      "best_ask": "0.025000",
+      "volume_24h": 2507.23,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESNOMR-28-DJT",
+    "question": "Will Donald J. Trump be the nominee for the Presidency for the Republican party?",
+    "short_label": "Donald J. Trump",
+    "description": "If Donald J. Trump wins and accepts the nomination for the Presidency for the Republican party, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESNOMR-28",
+    "topic": "Elections",
+    "family": "KXPRESNOMR",
+    "quote": {
+      "best_bid": "0.033000",
+      "best_ask": "0.037000",
+      "volume_24h": 12887.06,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESNOMR-28-DJTJR",
+    "question": "Will Donald J. Trump Jr. be the nominee for the Presidency for the Republican party?",
+    "short_label": "Donald J. Trump Jr.",
+    "description": "If Donald J. Trump Jr. wins and accepts the nomination for the Presidency for the Republican party, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESNOMR-28",
+    "topic": "Elections",
+    "family": "KXPRESNOMR",
+    "quote": {
+      "best_bid": "0.047000",
+      "best_ask": "0.048000",
+      "volume_24h": 1042.11,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESNOMR-28-EM",
+    "question": "Will Elon Musk be the nominee for the Presidency for the Republican party?",
+    "short_label": "Elon Musk",
+    "description": "If Elon Musk wins and accepts the nomination for the Presidency for the Republican party, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESNOMR-28",
+    "topic": "Elections",
+    "family": "KXPRESNOMR",
+    "quote": {
+      "best_bid": "0.000000",
+      "best_ask": "0.001000",
+      "volume_24h": 4663.9,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESNOMR-28-JDV",
+    "question": "Will J.D. Vance be the nominee for the Presidency for the Republican party?",
+    "short_label": "J.D. Vance",
+    "description": "If J.D. Vance wins and accepts the nomination for the Presidency for the Republican party, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESNOMR-28",
+    "topic": "Elections",
+    "family": "KXPRESNOMR",
+    "quote": {
+      "best_bid": "0.340000",
+      "best_ask": "0.350000",
+      "volume_24h": 2939.78,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESNOMR-28-LTRU",
+    "question": "Will Lara Trump be the nominee for the Presidency for the Republican party?",
+    "short_label": "Lara Trump",
+    "description": "If Lara Trump wins and accepts the nomination for the Presidency for the Republican party, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESNOMR-28",
+    "topic": "Elections",
+    "family": "KXPRESNOMR",
+    "quote": {
+      "best_bid": "0.000000",
+      "best_ask": "0.010000",
+      "volume_24h": 3273.16,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESNOMR-28-MR",
+    "question": "Will Marco Rubio be the nominee for the Presidency for the Republican party?",
+    "short_label": "Marco Rubio",
+    "description": "If Marco Rubio wins and accepts the nomination for the Presidency for the Republican party, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESNOMR-28",
+    "topic": "Elections",
+    "family": "KXPRESNOMR",
+    "quote": {
+      "best_bid": "0.290000",
+      "best_ask": "0.300000",
+      "volume_24h": 29060.38,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESNOMR-28-MTG",
+    "question": "Will Marjorie Taylor Greene be the nominee for the Presidency for the Republican party?",
+    "short_label": "Marjorie Taylor Greene",
+    "description": "If Marjorie Taylor Greene wins and accepts the nomination for the Presidency for the Republican party, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESNOMR-28",
+    "topic": "Elections",
+    "family": "KXPRESNOMR",
+    "quote": {
+      "best_bid": "0.012000",
+      "best_ask": "0.013000",
+      "volume_24h": 15315.07,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESNOMR-28-RDS",
+    "question": "Will Ron DeSantis be the nominee for the Presidency for the Republican party?",
+    "short_label": "Ron DeSantis",
+    "description": "If Ron DeSantis wins and accepts the nomination for the Presidency for the Republican party, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESNOMR-28",
+    "topic": "Elections",
+    "family": "KXPRESNOMR",
+    "quote": {
+      "best_bid": "0.049000",
+      "best_ask": "0.050000",
+      "volume_24h": 9804.22,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESNOMR-28-TCAR",
+    "question": "Will Tucker Carlson be the nominee for the Presidency for the Republican party?",
+    "short_label": "Tucker Carlson",
+    "description": "If Tucker Carlson wins and accepts the nomination for the Presidency for the Republican party, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESNOMR-28",
+    "topic": "Elections",
+    "family": "KXPRESNOMR",
+    "quote": {
+      "best_bid": "0.059000",
+      "best_ask": "0.060000",
+      "volume_24h": 12206.57,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESNOMR-28-TMAS",
+    "question": "Will Thomas Massie be the nominee for the Presidency for the Republican party?",
+    "short_label": "Thomas Massie",
+    "description": "If Thomas Massie wins and accepts the nomination for the Presidency for the Republican party, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESNOMR-28",
+    "topic": "Elections",
+    "family": "KXPRESNOMR",
+    "quote": {
+      "best_bid": "0.016000",
+      "best_ask": "0.017000",
+      "volume_24h": 19174.97,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESOUTCOME-28NOV07-GNEWJVAND",
+    "question": "Will Gavin Newsom defeat JD Vance in the 2028 presidential election, with Gavin Newsom as the Democratic nominee and JD Vance as the Republican nominee?",
+    "short_label": "Gavin Newsom defeats JD Vance",
+    "description": "If Gavin Newsom defeats JD Vance in the 2028 presidential election, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T10:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESOUTCOME-28NOV07",
+    "topic": "Elections",
+    "family": "KXPRESOUTCOME",
+    "quote": {
+      "best_bid": "0.150000",
+      "best_ask": "0.180000",
+      "volume_24h": 1480.82,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESPERSON-28-AOCA",
+    "question": "Who will win the next presidential election?",
+    "short_label": "Alexandria Ocasio-Cortez",
+    "description": "If Alexandria Ocasio-Cortez is the next person inaugurated as President for the term beginning in 2029, then the market resolves to Yes.",
+    "resolution_time": "2029-01-21T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESPERSON-28",
+    "topic": "Elections",
+    "family": "KXPRESPERSON",
+    "quote": {
+      "best_bid": "0.058000",
+      "best_ask": "0.059000",
+      "volume_24h": 3262.24,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESPERSON-28-DTRU",
+    "question": "Who will win the next presidential election?",
+    "short_label": "Donald J. Trump",
+    "description": "If Donald J. Trump is the next person inaugurated as President for the term beginning in 2029, then the market resolves to Yes.",
+    "resolution_time": "2029-01-21T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESPERSON-28",
+    "topic": "Elections",
+    "family": "KXPRESPERSON",
+    "quote": {
+      "best_bid": "0.035000",
+      "best_ask": "0.045000",
+      "volume_24h": 2888.51,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESPERSON-28-GNEWS",
+    "question": "Who will win the next presidential election?",
+    "short_label": "Gavin Newsom",
+    "description": "If Gavin Newsom is the next person inaugurated as President for the term beginning in 2029, then the market resolves to Yes.",
+    "resolution_time": "2029-01-21T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESPERSON-28",
+    "topic": "Elections",
+    "family": "KXPRESPERSON",
+    "quote": {
+      "best_bid": "0.150000",
+      "best_ask": "0.160000",
+      "volume_24h": 4986.35,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESPERSON-28-JOSS",
+    "question": "Who will win the next presidential election?",
+    "short_label": "Jon Ossoff",
+    "description": "If Jon Ossoff is the next person inaugurated as President for the term beginning in 2029, then the market resolves to Yes.",
+    "resolution_time": "2029-01-21T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESPERSON-28",
+    "topic": "Elections",
+    "family": "KXPRESPERSON",
+    "quote": {
+      "best_bid": "0.043000",
+      "best_ask": "0.044000",
+      "volume_24h": 10223.42,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESPERSON-28-JVAN",
+    "question": "Who will win the next presidential election?",
+    "short_label": "J.D. Vance",
+    "description": "If J.D. Vance is the next person inaugurated as President for the term beginning in 2029, then the market resolves to Yes.",
+    "resolution_time": "2029-01-21T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESPERSON-28",
+    "topic": "Elections",
+    "family": "KXPRESPERSON",
+    "quote": {
+      "best_bid": "0.180000",
+      "best_ask": "0.190000",
+      "volume_24h": 8492.51,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESPERSON-28-KHAR",
+    "question": "Who will win the next presidential election?",
+    "short_label": "Kamala Harris",
+    "description": "If Kamala Harris is the next person inaugurated as President for the term beginning in 2029, then the market resolves to Yes.",
+    "resolution_time": "2029-01-21T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESPERSON-28",
+    "topic": "Elections",
+    "family": "KXPRESPERSON",
+    "quote": {
+      "best_bid": "0.046000",
+      "best_ask": "0.048000",
+      "volume_24h": 5367.04,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESPERSON-28-MRUB",
+    "question": "Who will win the next presidential election?",
+    "short_label": "Marco Rubio",
+    "description": "If Marco Rubio is the next person inaugurated as President for the term beginning in 2029, then the market resolves to Yes.",
+    "resolution_time": "2029-01-21T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESPERSON-28",
+    "topic": "Elections",
+    "family": "KXPRESPERSON",
+    "quote": {
+      "best_bid": "0.180000",
+      "best_ask": "0.190000",
+      "volume_24h": 3668.68,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESPERSON-28-PBUT",
+    "question": "Who will win the next presidential election?",
+    "short_label": "Pete Buttigieg",
+    "description": "If Pete Buttigieg is the next person inaugurated as President for the term beginning in 2029, then the market resolves to Yes.",
+    "resolution_time": "2029-01-21T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESPERSON-28",
+    "topic": "Elections",
+    "family": "KXPRESPERSON",
+    "quote": {
+      "best_bid": "0.029000",
+      "best_ask": "0.030000",
+      "volume_24h": 1167.6,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXPRESPERSON-28-TCAR",
+    "question": "Who will win the next presidential election?",
+    "short_label": "Tucker Carlson",
+    "description": "If Tucker Carlson is the next person inaugurated as President for the term beginning in 2029, then the market resolves to Yes.",
+    "resolution_time": "2029-01-21T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXPRESPERSON-28",
+    "topic": "Elections",
+    "family": "KXPRESPERSON",
+    "quote": {
+      "best_bid": "0.023000",
+      "best_ask": "0.026000",
+      "volume_24h": 15269.9,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXRECSSNBER-27",
+    "question": "Will there be a recession in 2027?",
+    "short_label": "Yes",
+    "description": "If there are two consecutive quarters of negative GDP growth in Q4 2026 through Q4 2027, according to the Bureau of Economic Analysis, then the market resolves to Yes.",
+    "resolution_time": "2028-01-31T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXRECSSNBER-27",
+    "topic": "Economics",
+    "family": "KXRECSSNBER",
+    "quote": {
+      "best_bid": "0.410000",
+      "best_ask": "0.450000",
+      "volume_24h": 276.0,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXROLEATEVENTCOACHELLA-27DEC31-DAF",
+    "question": "Will Daft Punk be a Headliner at Coachella 2027?",
+    "short_label": "Daft Punk",
+    "description": "If Daft Punk is or if it is announced that Daft Punk is the Headliner at Coachella 2027, then the market resolves to Yes.",
+    "resolution_time": "2028-01-01T04:59:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXROLEATEVENTCOACHELLA-27DEC31",
+    "topic": "Entertainment",
+    "family": "KXROLEATEVENTCOACHELLA",
+    "quote": {
+      "best_bid": "0.130000",
+      "best_ask": "0.260000",
+      "volume_24h": 390.66,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXROLEATEVENTCOACHELLA-27DEC31-DRA",
+    "question": "Will Drake be a Headliner at Coachella 2027?",
+    "short_label": "Drake",
+    "description": "If Drake is or if it is announced that Drake is the Headliner at Coachella 2027, then the market resolves to Yes.",
+    "resolution_time": "2028-01-01T04:59:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXROLEATEVENTCOACHELLA-27DEC31",
+    "topic": "Entertainment",
+    "family": "KXROLEATEVENTCOACHELLA",
+    "quote": {
+      "best_bid": "0.180000",
+      "best_ask": "0.200000",
+      "volume_24h": 286.01,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXROLEINPRODUCTIONDOOMSDAY-HAL",
+    "question": "Will Halle Berry perform as Storm in Avengers: Doomsday?",
+    "short_label": "Halle Berry as Storm?",
+    "description": "If Halle Berry performs / is announced as Storm in Avengers: Doomsday, then the market resolves to Yes.",
+    "resolution_time": "2027-01-02T04:59:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXROLEINPRODUCTIONDOOMSDAY",
+    "topic": "Entertainment",
+    "family": "KXROLEINPRODUCTIONDOOMSDAY",
+    "quote": {
+      "best_bid": "0.400000",
+      "best_ask": "0.600000",
+      "volume_24h": 1019.61,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXROLEINPRODUCTIONDOOMSDAY-HUG",
+    "question": "Will Hugh Jackman perform as Wolverine in Avengers: Doomsday?",
+    "short_label": "Hugh Jackman as Wolverine?",
+    "description": "If Hugh Jackman performs / is announced as Wolverine in Avengers: Doomsday, then the market resolves to Yes.",
+    "resolution_time": "2027-01-02T04:59:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXROLEINPRODUCTIONDOOMSDAY",
+    "topic": "Entertainment",
+    "family": "KXROLEINPRODUCTIONDOOMSDAY",
+    "quote": {
+      "best_bid": "0.820000",
+      "best_ask": "0.830000",
+      "volume_24h": 209.08,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXROLEINPRODUCTIONDOOMSDAY-XOC",
+    "question": "Will Xochitl Gomez perform as America Chavez in Avengers: Doomsday?",
+    "short_label": "Xochitl Gomez as America Chavez?",
+    "description": "If Xochitl Gomez performs / is announced as America Chavez in Avengers: Doomsday, then the market resolves to Yes.",
+    "resolution_time": "2027-01-02T04:59:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXROLEINPRODUCTIONDOOMSDAY",
+    "topic": "Entertainment",
+    "family": "KXROLEINPRODUCTIONDOOMSDAY",
+    "quote": {
+      "best_bid": "0.590000",
+      "best_ask": "0.600000",
+      "volume_24h": 641.2,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXSB-27-BAL",
+    "question": "Will Baltimore win the 2027 Pro Football Championship?",
+    "short_label": "Baltimore",
+    "description": "If Baltimore wins the 2027 Pro Football Championship, then the market resolves to Yes.",
+    "resolution_time": "2027-02-14T23:30:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXSB-27",
+    "topic": "Sports",
+    "family": "KXSB",
+    "quote": {
+      "best_bid": "0.050000",
+      "best_ask": "0.060000",
+      "volume_24h": 5462.77,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXSB-27-BUF",
+    "question": "Will Buffalo win the 2027 Pro Football Championship?",
+    "short_label": "Buffalo",
+    "description": "If Buffalo wins the 2027 Pro Football Championship, then the market resolves to Yes.",
+    "resolution_time": "2027-02-14T23:30:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXSB-27",
+    "topic": "Sports",
+    "family": "KXSB",
+    "quote": {
+      "best_bid": "0.060000",
+      "best_ask": "0.070000",
+      "volume_24h": 8191.96,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXSB-27-CAR",
+    "question": "Will Carolina win the 2027 Pro Football Championship?",
+    "short_label": "Carolina",
+    "description": "If Carolina wins the 2027 Pro Football Championship, then the market resolves to Yes.",
+    "resolution_time": "2027-02-14T23:30:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXSB-27",
+    "topic": "Sports",
+    "family": "KXSB",
+    "quote": {
+      "best_bid": "0.000000",
+      "best_ask": "0.010000",
+      "volume_24h": 9482.83,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXSB-27-CHI",
+    "question": "Will Chicago win the 2027 Pro Football Championship?",
+    "short_label": "Chicago",
+    "description": "If Chicago wins the 2027 Pro Football Championship, then the market resolves to Yes.",
+    "resolution_time": "2027-02-14T23:30:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXSB-27",
+    "topic": "Sports",
+    "family": "KXSB",
+    "quote": {
+      "best_bid": "0.040000",
+      "best_ask": "0.050000",
+      "volume_24h": 17367.95,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXSB-27-CIN",
+    "question": "Will Cincinnati win the 2027 Pro Football Championship?",
+    "short_label": "Cincinnati",
+    "description": "If Cincinnati wins the 2027 Pro Football Championship, then the market resolves to Yes.",
+    "resolution_time": "2027-02-14T23:30:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXSB-27",
+    "topic": "Sports",
+    "family": "KXSB",
+    "quote": {
+      "best_bid": "0.030000",
+      "best_ask": "0.040000",
+      "volume_24h": 9476.42,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXSB-27-DAL",
+    "question": "Will Dallas win the 2027 Pro Football Championship?",
+    "short_label": "Dallas",
+    "description": "If Dallas wins the 2027 Pro Football Championship, then the market resolves to Yes.",
+    "resolution_time": "2027-02-14T23:30:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXSB-27",
+    "topic": "Sports",
+    "family": "KXSB",
+    "quote": {
+      "best_bid": "0.030000",
+      "best_ask": "0.040000",
+      "volume_24h": 22014.82,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXSB-27-DEN",
+    "question": "Will Denver win the 2027 Pro Football Championship?",
+    "short_label": "Denver",
+    "description": "If Denver wins the 2027 Pro Football Championship, then the market resolves to Yes.",
+    "resolution_time": "2027-02-14T23:30:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXSB-27",
+    "topic": "Sports",
+    "family": "KXSB",
+    "quote": {
+      "best_bid": "0.050000",
+      "best_ask": "0.060000",
+      "volume_24h": 22021.99,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXSB-27-GB",
+    "question": "Will Green Bay win the 2027 Pro Football Championship?",
+    "short_label": "Green Bay",
+    "description": "If Green Bay wins the 2027 Pro Football Championship, then the market resolves to Yes.",
+    "resolution_time": "2027-02-14T23:30:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXSB-27",
+    "topic": "Sports",
+    "family": "KXSB",
+    "quote": {
+      "best_bid": "0.040000",
+      "best_ask": "0.050000",
+      "volume_24h": 12108.3,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXSB-27-HOU",
+    "question": "Will Houston win the 2027 Pro Football Championship?",
+    "short_label": "Houston",
+    "description": "If Houston wins the 2027 Pro Football Championship, then the market resolves to Yes.",
+    "resolution_time": "2027-02-14T23:30:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXSB-27",
+    "topic": "Sports",
+    "family": "KXSB",
+    "quote": {
+      "best_bid": "0.030000",
+      "best_ask": "0.040000",
+      "volume_24h": 10748.32,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXSB-27-KC",
+    "question": "Will Kansas City win the 2027 Pro Football Championship?",
+    "short_label": "Kansas City",
+    "description": "If Kansas City wins the 2027 Pro Football Championship, then the market resolves to Yes.",
+    "resolution_time": "2027-02-14T23:30:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXSB-27",
+    "topic": "Sports",
+    "family": "KXSB",
+    "quote": {
+      "best_bid": "0.060000",
+      "best_ask": "0.070000",
+      "volume_24h": 8504.12,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXSB-27-LAC",
+    "question": "Will Los Angeles C win the 2027 Pro Football Championship?",
+    "short_label": "Los Angeles C",
+    "description": "If Los Angeles C wins the 2027 Pro Football Championship, then the market resolves to Yes.",
+    "resolution_time": "2027-02-14T23:30:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXSB-27",
+    "topic": "Sports",
+    "family": "KXSB",
+    "quote": {
+      "best_bid": "0.050000",
+      "best_ask": "0.060000",
+      "volume_24h": 13938.41,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXSB-27-LAR",
+    "question": "Will Los Angeles R win the 2027 Pro Football Championship?",
+    "short_label": "Los Angeles R",
+    "description": "If Los Angeles R wins the 2027 Pro Football Championship, then the market resolves to Yes.",
+    "resolution_time": "2027-02-14T23:30:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXSB-27",
+    "topic": "Sports",
+    "family": "KXSB",
+    "quote": {
+      "best_bid": "0.100000",
+      "best_ask": "0.110000",
+      "volume_24h": 11625.55,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXSB-27-NE",
+    "question": "Will New England win the 2027 Pro Football Championship?",
+    "short_label": "New England",
+    "description": "If New England wins the 2027 Pro Football Championship, then the market resolves to Yes.",
+    "resolution_time": "2027-02-14T23:30:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXSB-27",
+    "topic": "Sports",
+    "family": "KXSB",
+    "quote": {
+      "best_bid": "0.030000",
+      "best_ask": "0.040000",
+      "volume_24h": 15137.72,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXSB-27-NYG",
+    "question": "Will New York G win the 2027 Pro Football Championship?",
+    "short_label": "New York G",
+    "description": "If New York G wins the 2027 Pro Football Championship, then the market resolves to Yes.",
+    "resolution_time": "2027-02-14T23:30:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXSB-27",
+    "topic": "Sports",
+    "family": "KXSB",
+    "quote": {
+      "best_bid": "0.010000",
+      "best_ask": "0.020000",
+      "volume_24h": 34209.13,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXSB-27-PHI",
+    "question": "Will Philadelphia win the 2027 Pro Football Championship?",
+    "short_label": "Philadelphia",
+    "description": "If Philadelphia wins the 2027 Pro Football Championship, then the market resolves to Yes.",
+    "resolution_time": "2027-02-14T23:30:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXSB-27",
+    "topic": "Sports",
+    "family": "KXSB",
+    "quote": {
+      "best_bid": "0.050000",
+      "best_ask": "0.060000",
+      "volume_24h": 13349.46,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXSB-27-SEA",
+    "question": "Will Seattle win the 2027 Pro Football Championship?",
+    "short_label": "Seattle",
+    "description": "If Seattle wins the 2027 Pro Football Championship, then the market resolves to Yes.",
+    "resolution_time": "2027-02-14T23:30:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXSB-27",
+    "topic": "Sports",
+    "family": "KXSB",
+    "quote": {
+      "best_bid": "0.080000",
+      "best_ask": "0.090000",
+      "volume_24h": 31075.69,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXSB-27-SF",
+    "question": "Will San Francisco win the 2027 Pro Football Championship?",
+    "short_label": "San Francisco",
+    "description": "If San Francisco wins the 2027 Pro Football Championship, then the market resolves to Yes.",
+    "resolution_time": "2027-02-14T23:30:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXSB-27",
+    "topic": "Sports",
+    "family": "KXSB",
+    "quote": {
+      "best_bid": "0.050000",
+      "best_ask": "0.060000",
+      "volume_24h": 12531.68,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXSENATELAD-26-JDAV",
+    "question": "Will Jamie Davis be the Democratic nominee for the Senate in Louisiana?",
+    "short_label": "Jamie Davis",
+    "description": "If Jamie Davis wins the nomination for the Democratic Party to contest the 2026 Class II Louisiana Senate seat, then the market resolves to Yes.",
+    "resolution_time": "2026-11-03T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXSENATELAD-26",
+    "topic": "Elections",
+    "family": "KXSENATELAD",
+    "quote": {
+      "best_bid": "0.930000",
+      "best_ask": "0.987000",
+      "volume_24h": 1237.99,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXSNL-28-SH",
+    "question": "Who will be announced as Lorne Michaels' successor at SNL?",
+    "short_label": "Steve Higgins",
+    "description": "If Steve Higgins is announced to be succeeding Lorne Michaels as showrunner of SNL before Jan 1, 2028, then the market resolves to Yes.",
+    "resolution_time": "2028-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXSNL-28",
+    "topic": "Entertainment",
+    "family": "KXSNL",
+    "quote": {
+      "best_bid": "0.370000",
+      "best_ask": "0.390000",
+      "volume_24h": 439.33,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXSNL-28-TFEY",
+    "question": "Who will be announced as Lorne Michaels' successor at SNL?",
+    "short_label": "Tina Fey",
+    "description": "If Tina Fey is announced to be succeeding Lorne Michaels as showrunner of SNL before Jan 1, 2028, then the market resolves to Yes.",
+    "resolution_time": "2028-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXSNL-28",
+    "topic": "Entertainment",
+    "family": "KXSNL",
+    "quote": {
+      "best_bid": "0.300000",
+      "best_ask": "0.370000",
+      "volume_24h": 438.92,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXSPACEXBANKPUBLIC-28JAN01-BOAX",
+    "question": "Will Bank of America take SpaceX public before Jan 1, 2028?",
+    "short_label": "Bank of America",
+    "description": "If Bank of America serves as a lead underwriter for SpaceX's initial public offering in the United States before ||date||, then the market resolves to Yes.",
+    "resolution_time": "2028-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXSPACEXBANKPUBLIC-28JAN01",
+    "topic": "Companies",
+    "family": "KXSPACEXBANKPUBLIC",
+    "quote": {
+      "best_bid": "0.930000",
+      "best_ask": "0.950000",
+      "volume_24h": 769.26,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXSPACEXBANKPUBLIC-28JAN01-CITIX",
+    "question": "Will Citigroup take SpaceX public before Jan 1, 2028?",
+    "short_label": "Citigroup",
+    "description": "If Citigroup serves as a lead underwriter for SpaceX's initial public offering in the United States before ||date||, then the market resolves to Yes.",
+    "resolution_time": "2028-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXSPACEXBANKPUBLIC-28JAN01",
+    "topic": "Companies",
+    "family": "KXSPACEXBANKPUBLIC",
+    "quote": {
+      "best_bid": "0.930000",
+      "best_ask": "0.950000",
+      "volume_24h": 570.6,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXSPACEXBANKPUBLIC-28JAN01-GSX",
+    "question": "Will Goldman Sachs take SpaceX public before Jan 1, 2028?",
+    "short_label": "Goldman Sachs",
+    "description": "If Goldman Sachs serves as a lead underwriter for SpaceX's initial public offering in the United States before ||date||, then the market resolves to Yes.",
+    "resolution_time": "2028-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXSPACEXBANKPUBLIC-28JAN01",
+    "topic": "Companies",
+    "family": "KXSPACEXBANKPUBLIC",
+    "quote": {
+      "best_bid": "0.930000",
+      "best_ask": "0.950000",
+      "volume_24h": 630.56,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXSPACEXBANKPUBLIC-28JAN01-JPMX",
+    "question": "Will JPMorgan Chase take SpaceX public before Jan 1, 2028?",
+    "short_label": "JPMorgan Chase",
+    "description": "If JPMorgan Chase serves as a lead underwriter for SpaceX's initial public offering in the United States before ||date||, then the market resolves to Yes.",
+    "resolution_time": "2028-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXSPACEXBANKPUBLIC-28JAN01",
+    "topic": "Companies",
+    "family": "KXSPACEXBANKPUBLIC",
+    "quote": {
+      "best_bid": "0.910000",
+      "best_ask": "0.940000",
+      "volume_24h": 889.26,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXSPACEXBANKPUBLIC-28JAN01-MSX",
+    "question": "Will Morgan Stanley take SpaceX public before Jan 1, 2028?",
+    "short_label": "Morgan Stanley",
+    "description": "If Morgan Stanley serves as a lead underwriter for SpaceX's initial public offering in the United States before ||date||, then the market resolves to Yes.",
+    "resolution_time": "2028-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXSPACEXBANKPUBLIC-28JAN01",
+    "topic": "Companies",
+    "family": "KXSPACEXBANKPUBLIC",
+    "quote": {
+      "best_bid": "0.940000",
+      "best_ask": "0.960000",
+      "volume_24h": 220.18,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXSTATE51-29-CO",
+    "question": "Will any part of Colombia be the 51st U.S. state before Jan 20, 2029?",
+    "short_label": "Colombia",
+    "description": "If the 51st state is any part of Colombia before Jan 20, 2029, then the market resolves to Yes.",
+    "resolution_time": "2029-01-20T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXSTATE51-29",
+    "topic": "Politics",
+    "family": "KXSTATE51",
+    "quote": {
+      "best_bid": "0.005000",
+      "best_ask": "0.007000",
+      "volume_24h": 1725.65,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXSTATE51-29-CU",
+    "question": "Will any part of Cuba be the 51st U.S. state before Jan 20, 2029?",
+    "short_label": "Cuba",
+    "description": "If the 51st state is any part of Cuba before Jan 20, 2029, then the market resolves to Yes.",
+    "resolution_time": "2029-01-20T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXSTATE51-29",
+    "topic": "Politics",
+    "family": "KXSTATE51",
+    "quote": {
+      "best_bid": "0.060000",
+      "best_ask": "0.070000",
+      "volume_24h": 10789.13,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXSTATE51-29-DC",
+    "question": "Will D.C. be the 51st U.S. state before Jan 20, 2029?",
+    "short_label": "District of Columbia",
+    "description": "If the 51st state is District of Columbia before Jan 20, 2029, then the market resolves to Yes.",
+    "resolution_time": "2029-01-20T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXSTATE51-29",
+    "topic": "Politics",
+    "family": "KXSTATE51",
+    "quote": {
+      "best_bid": "0.008000",
+      "best_ask": "0.012000",
+      "volume_24h": 3030.0,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXSTATE51-29-GL",
+    "question": "Will Any part of Greenland be the 51st U.S. state before Jan 20, 2029?",
+    "short_label": "Greenland",
+    "description": "If the 51st state is any part of Greenland before Jan 20, 2029, then the market resolves to Yes.",
+    "resolution_time": "2029-01-20T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXSTATE51-29",
+    "topic": "Politics",
+    "family": "KXSTATE51",
+    "quote": {
+      "best_bid": "0.034000",
+      "best_ask": "0.050000",
+      "volume_24h": 497.84,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXSTATE51-29-GU",
+    "question": "Will Guam be the 51st U.S. state before Jan 20, 2029?",
+    "short_label": "Guam",
+    "description": "If the 51st state is Guam before Jan 20, 2029, then the market resolves to Yes.",
+    "resolution_time": "2029-01-20T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXSTATE51-29",
+    "topic": "Politics",
+    "family": "KXSTATE51",
+    "quote": {
+      "best_bid": "0.006000",
+      "best_ask": "0.010000",
+      "volume_24h": 856.0,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXSTATE51-29-PR",
+    "question": "Will Puerto Rico be the 51st U.S. state before Jan 20, 2029?",
+    "short_label": "Puerto Rico",
+    "description": "If the 51st state is Puerto Rico before Jan 20, 2029, then the market resolves to Yes.",
+    "resolution_time": "2029-01-20T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXSTATE51-29",
+    "topic": "Politics",
+    "family": "KXSTATE51",
+    "quote": {
+      "best_bid": "0.041000",
+      "best_ask": "0.049000",
+      "volume_24h": 1372.33,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXSTATE51-29-VE",
+    "question": "Will any part of Venezuela be the 51st U.S. state before Jan 20, 2029?",
+    "short_label": "Venezuela",
+    "description": "If the 51st state is any part of Venezuela before Jan 20, 2029, then the market resolves to Yes.",
+    "resolution_time": "2029-01-20T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXSTATE51-29",
+    "topic": "Politics",
+    "family": "KXSTATE51",
+    "quote": {
+      "best_bid": "0.059000",
+      "best_ask": "0.066000",
+      "volume_24h": 4907.12,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXSWIFTKELCEWEDDINGLOCATION-30-NEW",
+    "question": "Where will Taylor Swift and Travis Kelce\u2019s Wedding occur?",
+    "short_label": "New York",
+    "description": "If Taylor Swift and Travis Kelce\u2019s Wedding happens in New York before Jan 1, 2030, then the market resolves to Yes.",
+    "resolution_time": "2030-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXSWIFTKELCEWEDDINGLOCATION-30",
+    "topic": "Entertainment",
+    "family": "KXSWIFTKELCEWEDDINGLOCATION",
+    "quote": {
+      "best_bid": "0.720000",
+      "best_ask": "0.750000",
+      "volume_24h": 5113.49,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXSWIFTKELCEWEDDINGLOCATION-30-OHI",
+    "question": "Where will Taylor Swift and Travis Kelce\u2019s Wedding occur?",
+    "short_label": "Ohio",
+    "description": "If Taylor Swift and Travis Kelce\u2019s Wedding happens in Ohio before Jan 1, 2030, then the market resolves to Yes.",
+    "resolution_time": "2030-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXSWIFTKELCEWEDDINGLOCATION-30",
+    "topic": "Entertainment",
+    "family": "KXSWIFTKELCEWEDDINGLOCATION",
+    "quote": {
+      "best_bid": "0.010000",
+      "best_ask": "0.020000",
+      "volume_24h": 374.32,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXSWIFTKELCEWEDDINGLOCATION-30-PEN",
+    "question": "Where will Taylor Swift and Travis Kelce\u2019s Wedding occur?",
+    "short_label": "Pennsylvania",
+    "description": "If Taylor Swift and Travis Kelce\u2019s Wedding happens in Pennsylvania before Jan 1, 2030, then the market resolves to Yes.",
+    "resolution_time": "2030-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXSWIFTKELCEWEDDINGLOCATION-30",
+    "topic": "Entertainment",
+    "family": "KXSWIFTKELCEWEDDINGLOCATION",
+    "quote": {
+      "best_bid": "0.020000",
+      "best_ask": "0.030000",
+      "volume_24h": 218.37,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXSWIFTKELCEWEDDINGLOCATION-30-RHO",
+    "question": "Where will Taylor Swift and Travis Kelce\u2019s Wedding occur?",
+    "short_label": "Rhode Island",
+    "description": "If Taylor Swift and Travis Kelce\u2019s Wedding happens in Rhode Island before Jan 1, 2030, then the market resolves to Yes.",
+    "resolution_time": "2030-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXSWIFTKELCEWEDDINGLOCATION-30",
+    "topic": "Entertainment",
+    "family": "KXSWIFTKELCEWEDDINGLOCATION",
+    "quote": {
+      "best_bid": "0.240000",
+      "best_ask": "0.280000",
+      "volume_24h": 3374.34,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXSWIFTKELCEWEDDINGLOCATION-30-TEN",
+    "question": "Where will Taylor Swift and Travis Kelce\u2019s Wedding occur?",
+    "short_label": "Tennessee",
+    "description": "If Taylor Swift and Travis Kelce\u2019s Wedding happens in Tennessee before Jan 1, 2030, then the market resolves to Yes.",
+    "resolution_time": "2030-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXSWIFTKELCEWEDDINGLOCATION-30",
+    "topic": "Entertainment",
+    "family": "KXSWIFTKELCEWEDDINGLOCATION",
+    "quote": {
+      "best_bid": "0.030000",
+      "best_ask": "0.040000",
+      "volume_24h": 739.93,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXTAIWANLVL4-28JAN01",
+    "question": "Will the U.S. State Department issue a Level 4 warning for Taiwan before Jan 1, 2028?",
+    "short_label": "Before Jan 1, 2028",
+    "description": "If the U.S. State Department issues, updates, or reaffirms a Level 4 travel advisory for Taiwan after Issuance and before Jan 1, 2028, then the market resolves to Yes.",
+    "resolution_time": "2030-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXTAIWANLVL4",
+    "topic": "Politics",
+    "family": "KXTAIWANLVL4",
+    "quote": {
+      "best_bid": "0.350000",
+      "best_ask": "0.360000",
+      "volume_24h": 208.01,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXTAYLORSWIFTWEDDINGATTEND-28DEC31-BLA",
+    "question": "Will Blake Lively attend Taylor Swift and Travis Kelce's Wedding?",
+    "short_label": "Blake Lively",
+    "description": "If Blake Lively attended Taylor Swift and Travis Kelce's Wedding, then the market resolves to Yes.",
+    "resolution_time": "2028-12-31T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXTAYLORSWIFTWEDDINGATTEND-28DEC31",
+    "topic": "Politics",
+    "family": "KXTAYLORSWIFTWEDDINGATTEND",
+    "quote": {
+      "best_bid": "0.220000",
+      "best_ask": "0.240000",
+      "volume_24h": 295.76,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXTRILLIONAIRE-30-JB",
+    "question": "Will Jeff Bezos be the world's first trillionaire?",
+    "short_label": "Jeff Bezos",
+    "description": "If Jeff Bezos is the world's first trillionare before Jan 1, 2030 then the market resolves to Yes.",
+    "resolution_time": "2030-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXTRILLIONAIRE-30",
+    "topic": "Economics",
+    "family": "KXTRILLIONAIRE",
+    "quote": {
+      "best_bid": "0.020000",
+      "best_ask": "0.030000",
+      "volume_24h": 211.01,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXTRUMPOUT27-27-28",
+    "question": "Will Donald Trump leave office before 2028?",
+    "short_label": "Before 2028",
+    "description": "If Donald Trump leaves office before January 1, 2028, then the market resolves to Yes.",
+    "resolution_time": "2027-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXTRUMPOUT27-27",
+    "topic": "Elections",
+    "family": "KXTRUMPOUT27",
+    "quote": {
+      "best_bid": "0.250000",
+      "best_ask": "0.260000",
+      "volume_24h": 3877.99,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXTRUMPRESIGN",
+    "question": "Will President Trump resign before his term is up?",
+    "short_label": "Before his term ends",
+    "description": "If the President of the United States elected for the 2025-2029 term resigns the office, then the market resolves to Yes.",
+    "resolution_time": "2029-01-21T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXTRUMPRESIGN",
+    "topic": "Politics",
+    "family": "KXTRUMPRESIGN",
+    "quote": {
+      "best_bid": "0.190000",
+      "best_ask": "0.210000",
+      "volume_24h": 436.8,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXTX33D-26-CALL",
+    "question": "Will Colin Allred be the Democratic nominee for TX-33?",
+    "short_label": "Colin Allred",
+    "description": "If Colin Allred wins the nomination for the Democratic Party to contest the 2026 TX-33 House seat, then the market resolves to Yes.",
+    "resolution_time": "2026-11-03T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXTX33D-26",
+    "topic": "Elections",
+    "family": "KXTX33D",
+    "quote": {
+      "best_bid": "0.840000",
+      "best_ask": "0.850000",
+      "volume_24h": 1254.8,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXTXPRIMARY-35D26-JGAR",
+    "question": "Will Johnny Garcia be the Democratic nominee for TX-35?",
+    "short_label": "Johnny Garcia",
+    "description": "If Johnny Garcia wins the nomination for the Democratic Party to contest the 2026 TX-35 House seat, then the market resolves to Yes.",
+    "resolution_time": "2026-11-03T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXTXPRIMARY-35D26",
+    "topic": "Elections",
+    "family": "KXTXPRIMARY",
+    "quote": {
+      "best_bid": "0.730000",
+      "best_ask": "0.770000",
+      "volume_24h": 4186.0,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXTXPRIMARY-35D26-MGAL",
+    "question": "Will Maureen Galindo be the Democratic nominee for TX-35?",
+    "short_label": "Maureen Galindo",
+    "description": "If Maureen Galindo wins the nomination for the Democratic Party to contest the 2026 TX-35 House seat, then the market resolves to Yes.",
+    "resolution_time": "2026-11-03T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXTXPRIMARY-35D26",
+    "topic": "Elections",
+    "family": "KXTXPRIMARY",
+    "quote": {
+      "best_bid": "0.240000",
+      "best_ask": "0.270000",
+      "volume_24h": 2132.88,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXTXSENOUTCOME-27JAN-PAXTAL",
+    "question": "Will GOP Nominee be Ken Paxton AND General Election Winner be Republican for Jan 2027?",
+    "short_label": "Paxton defeats Talarico",
+    "description": "If ALL of the following occur before Jan 2027: GOP Nominee: Ken Paxton, General Election Winner: Republican, then the market resolves to Yes.",
+    "resolution_time": "2028-01-03T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXTXSENOUTCOME-27JAN",
+    "topic": "Elections",
+    "family": "KXTXSENOUTCOME",
+    "quote": {
+      "best_bid": "0.340000",
+      "best_ask": "0.470000",
+      "volume_24h": 2924.35,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXUCL-26-ARS",
+    "question": "Will Arsenal win the Champions League Winner?",
+    "short_label": "Arsenal",
+    "description": "If the Arsenal win the Champions League Winner, then the market resolves to Yes.",
+    "resolution_time": "2026-05-30T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXUCL-26",
+    "topic": "Sports",
+    "family": "KXUCL",
+    "quote": {
+      "best_bid": "0.410000",
+      "best_ask": "0.420000",
+      "volume_24h": 10247.78,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXUCL-26-PSG",
+    "question": "Will PSG win the Champions League Winner?",
+    "short_label": "PSG",
+    "description": "If the PSG win the Champions League Winner, then the market resolves to Yes.",
+    "resolution_time": "2026-05-30T14:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXUCL-26",
+    "topic": "Sports",
+    "family": "KXUCL",
+    "quote": {
+      "best_bid": "0.580000",
+      "best_ask": "0.590000",
+      "volume_24h": 53241.28,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXUSTESTSMATH-26-NSD",
+    "question": "Will US test scores in Math decline?",
+    "short_label": "No significant difference",
+    "description": "If US average test scores for eighth graders experienced No significant difference in 2026, then the market resolves to Yes.",
+    "resolution_time": "2027-12-31T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXUSTESTSMATH-26",
+    "topic": "Science and Technology",
+    "family": "KXUSTESTSMATH",
+    "quote": {
+      "best_bid": "0.270000",
+      "best_ask": "0.320000",
+      "volume_24h": 720.28,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXUSTESTSREADING-26-NSD",
+    "question": "Will US test scores in Reading decline?",
+    "short_label": "No significant difference",
+    "description": "If US average test scores for eighth graders experienced No significant difference in 2026, then the market resolves to Yes.",
+    "resolution_time": "2027-12-31T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXUSTESTSREADING-26",
+    "topic": "Science and Technology",
+    "family": "KXUSTESTSREADING",
+    "quote": {
+      "best_bid": "0.280000",
+      "best_ask": "0.290000",
+      "volume_24h": 410.06,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXUSTESTSREADING-26-SD",
+    "question": "Will US test scores in Reading decline?",
+    "short_label": "Significant decrease",
+    "description": "If US average test scores for eighth graders experienced Significant decrease in 2026, then the market resolves to Yes.",
+    "resolution_time": "2027-12-31T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXUSTESTSREADING-26",
+    "topic": "Science and Technology",
+    "family": "KXUSTESTSREADING",
+    "quote": {
+      "best_bid": "0.640000",
+      "best_ask": "0.660000",
+      "volume_24h": 307.4,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXVOTELAKE-28-LMUR",
+    "question": "Will Lisa Murkowski vote for Kari Lake?",
+    "short_label": "Lisa Murkowski",
+    "description": "If Lisa Murkowski votes Yea for Kari Lake for United States Ambassador to Jamaica before Jan 1, 2028, then the market resolves to Yes.",
+    "resolution_time": "2028-01-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXVOTELAKE-28",
+    "topic": "Politics",
+    "family": "KXVOTELAKE",
+    "quote": {
+      "best_bid": "0.270000",
+      "best_ask": "0.320000",
+      "volume_24h": 734.0,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXVPRESNOMR-28-JDV",
+    "question": "Will J.D. Vance be the nominee for the Vice Presidency for the Republican party?",
+    "short_label": "J.D. Vance",
+    "description": "If J.D. Vance accepts the nomination for the Vice Presidency for the Republican party in 2028, then the market resolves to Yes.",
+    "resolution_time": "2028-11-07T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXVPRESNOMR-28",
+    "topic": "Elections",
+    "family": "KXVPRESNOMR",
+    "quote": {
+      "best_bid": "0.070000",
+      "best_ask": "0.083000",
+      "volume_24h": 2735.67,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXWNBA-26-WSH",
+    "question": "Will Washington win the 2026 Women's Pro Basketball Championship?",
+    "short_label": "Washington",
+    "description": "If Washington wins the 2026 Women's Pro Basketball Championship, then the market resolves to Yes.",
+    "resolution_time": "2026-12-01T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXWNBA-26",
+    "topic": "Sports",
+    "family": "KXWNBA",
+    "quote": {
+      "best_bid": "0.000000",
+      "best_ask": "0.020000",
+      "volume_24h": 19434.2,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXWNBAMVP-26-AWIL",
+    "question": "Will A'ja Wilson win MVP?",
+    "short_label": "A'ja Wilson",
+    "description": "If A'ja Wilson wins the Women's Pro Basketball Most Valuable Player in the 2026 season, then the market resolves to Yes.",
+    "resolution_time": "2026-12-31T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXWNBAMVP-26",
+    "topic": "Sports",
+    "family": "KXWNBAMVP",
+    "quote": {
+      "best_bid": "0.400000",
+      "best_ask": "0.420000",
+      "volume_24h": 10144.25,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:KXZELENSKYPUTIN-29-VPUT",
+    "question": "Volodymyr Zelenskyy and Vladimir Putin meet before Jan 20, 2029?",
+    "short_label": "Before Jan 20, 2029",
+    "description": "If Volodymyr Zelenskyy and Vladimir Putin  meet before Jan 20, 2029, then the market resolves to Yes.",
+    "resolution_time": "2029-01-20T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/KXZELENSKYPUTIN-29",
+    "topic": "Politics",
+    "family": "KXZELENSKYPUTIN",
+    "quote": {
+      "best_bid": "0.520000",
+      "best_ask": "0.580000",
+      "volume_24h": 521.0,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:SENATEAK-26-R",
+    "question": "Will Republicans win the Senate race in Alaska?",
+    "short_label": "Republican party",
+    "description": "If a representative of the Republican party is sworn in as a Senator of Alaska for the term beginning in 2027, then the market resolves to Yes.",
+    "resolution_time": "2027-01-04T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/SENATEAK-26",
+    "topic": "Elections",
+    "family": "SENATEAK",
+    "quote": {
+      "best_bid": "0.390000",
+      "best_ask": "0.420000",
+      "volume_24h": 1067.34,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:SENATEME-26-D",
+    "question": "Will Democratics win the Senate race in Maine?",
+    "short_label": "Democratic party",
+    "description": "If a representative of the Democratic party is sworn in as a Senator of Maine for the term beginning in 2027, then the market resolves to Yes.",
+    "resolution_time": "2027-01-04T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/SENATEME-26",
+    "topic": "Elections",
+    "family": "SENATEME",
+    "quote": {
+      "best_bid": "0.710000",
+      "best_ask": "0.720000",
+      "volume_24h": 1012.32,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:SENATEME-26-R",
+    "question": "Will Republicans win the Senate race in Maine?",
+    "short_label": "Republican party",
+    "description": "If a representative of the Republican party is sworn in as a Senator of Maine for the term beginning in 2027, then the market resolves to Yes.",
+    "resolution_time": "2027-01-04T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/SENATEME-26",
+    "topic": "Elections",
+    "family": "SENATEME",
+    "quote": {
+      "best_bid": "0.280000",
+      "best_ask": "0.290000",
+      "volume_24h": 1336.13,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:SENATENE-26-DOSB",
+    "question": "Will Dan Osborn (as an independent)s win the Senate race in Nebraska?",
+    "short_label": "Dan Osborn",
+    "description": "If a representative of Dan Osborn (as an independent) is sworn in as a Senator of Nebraska for the term beginning in 2027, then the market resolves to Yes.",
+    "resolution_time": "2027-01-04T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/SENATENE-26",
+    "topic": "Elections",
+    "family": "SENATENE",
+    "quote": {
+      "best_bid": "0.350000",
+      "best_ask": "0.370000",
+      "volume_24h": 1411.09,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:SENATETX-26-D",
+    "question": "Will Democratics win the Senate race in Texas?",
+    "short_label": "James Talarico",
+    "description": "If a representative of the Democratic party is sworn in as a Senator of Texas for the term beginning in 2027, then the market resolves to Yes.",
+    "resolution_time": "2027-01-04T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/SENATETX-26",
+    "topic": "Elections",
+    "family": "SENATETX",
+    "quote": {
+      "best_bid": "0.460000",
+      "best_ask": "0.470000",
+      "volume_24h": 1531.6,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  },
+  {
+    "market_id": "kalshi:SENATETX-26-R",
+    "question": "Will Republicans win the Senate race in Texas?",
+    "short_label": "Republican party",
+    "description": "If a representative of the Republican party is sworn in as a Senator of Texas for the term beginning in 2027, then the market resolves to Yes.",
+    "resolution_time": "2027-01-04T15:00:00Z",
+    "source": "kalshi",
+    "source_url": "https://kalshi.com/markets/SENATETX-26",
+    "topic": "Elections",
+    "family": "SENATETX",
+    "quote": {
+      "best_bid": "0.530000",
+      "best_ask": "0.540000",
+      "volume_24h": 1125.68,
+      "ts": "2026-05-17T01:14:17.639200Z"
+    }
+  }
+]

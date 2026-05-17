@@ -1,0 +1,26 @@
+[
+  {
+    "market_id": "kalshi:KX2028RRUN-28-TMAS",
+    "action": "BUY",
+    "side": "YES",
+    "shares": 147,
+    "price": 0.34,
+    "edge": 0.04214355131742459,
+    "expected_value": 6.195102043661414,
+    "confidence": "medium",
+    "reason": "market/statistical prior only",
+    "p_final": 0.3821435513174246
+  },
+  {
+    "market_id": "kalshi:KXCANAL-29",
+    "action": "BUY",
+    "side": "NO",
+    "shares": 72,
+    "price": 0.69,
+    "edge": 0.040007170238839374,
+    "expected_value": 2.880516257196435,
+    "confidence": "high",
+    "reason": "market/statistical prior only",
+    "p_final": 0.2699928297611606
+  }
+]

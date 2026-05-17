@@ -1,0 +1,42 @@
+{
+  "dry_run": true,
+  "hypothetical_intents_count": 3,
+  "decisions": [
+    {
+      "market_id": "kalshi:KXCO2LEVEL-30-450",
+      "action": "BUY",
+      "side": "YES",
+      "shares": 454,
+      "price": 0.22,
+      "edge": 0.08303172004892903,
+      "expected_value": 37.69640090221378,
+      "confidence": "high",
+      "reason": "market/statistical prior only",
+      "p_final": 0.30303172004892903
+    },
+    {
+      "market_id": "kalshi:KX2028RRUN-28-TMAS",
+      "action": "BUY",
+      "side": "YES",
+      "shares": 294,
+      "price": 0.34,
+      "edge": 0.10128161037722966,
+      "expected_value": 29.77679345090552,
+      "confidence": "high",
+      "reason": "market/statistical prior only",
+      "p_final": 0.4412816103772297
+    },
+    {
+      "market_id": "kalshi:KXLAMAYORADVANCE-26JUN02-SPRA",
+      "action": "BUY",
+      "side": "NO",
+      "shares": 227,
+      "price": 0.21999999999999997,
+      "edge": 0.04361079952516278,
+      "expected_value": 9.899651492211952,
+      "confidence": "medium",
+      "reason": "market/statistical prior only",
+      "p_final": 0.7363892004748372
+    }
+  ]
+}

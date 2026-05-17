@@ -1,0 +1,23 @@
+[
+  {
+    "market_id": "kalshi:KXCO2LEVEL-30-450",
+    "action": "BUY",
+    "side": "YES",
+    "shares": "454",
+    "rationale": "market/statistical prior only"
+  },
+  {
+    "market_id": "kalshi:KX2028RRUN-28-TMAS",
+    "action": "BUY",
+    "side": "YES",
+    "shares": "294",
+    "rationale": "market/statistical prior only"
+  },
+  {
+    "market_id": "kalshi:KXLAMAYORADVANCE-26JUN02-SPRA",
+    "action": "BUY",
+    "side": "NO",
+    "shares": "227",
+    "rationale": "market/statistical prior only"
+  }
+]

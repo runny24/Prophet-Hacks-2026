@@ -1,0 +1,42 @@
+{
+  "accepted": 3,
+  "rejected": 0,
+  "dry_run": false,
+  "submit_called": true,
+  "fills": [
+    {
+      "fill_id": "3e030bad-1a85-4583-95aa-70484e73541f",
+      "intent_id": "ea3ac914-e978-4f04-84a7-0772205f2c0c",
+      "market_id": "kalshi:KX2028RRUN-28-TMAS",
+      "action": "BUY",
+      "side": "YES",
+      "shares": "294.000000",
+      "price": "0.340000",
+      "notional": "99.96",
+      "filled_at": "2026-05-17T01:34:06.976700Z"
+    },
+    {
+      "fill_id": "eb35a202-d71f-494b-a4bd-358741f84858",
+      "intent_id": "0f91ba0a-e9a7-49a1-805f-5c3624f24b3e",
+      "market_id": "kalshi:KX2028RRUN-28-TUC",
+      "action": "BUY",
+      "side": "YES",
+      "shares": "98.000000",
+      "price": "0.510000",
+      "notional": "49.98",
+      "filled_at": "2026-05-17T01:34:06.976700Z"
+    },
+    {
+      "fill_id": "93638ca0-0b35-4c15-b3b8-275b3a650777",
+      "intent_id": "75a4d0df-94a9-444d-99b8-022155372819",
+      "market_id": "kalshi:KX2028RRUN-28-MRUB",
+      "action": "BUY",
+      "side": "YES",
+      "shares": "75.000000",
+      "price": "0.660000",
+      "notional": "49.50",
+      "filled_at": "2026-05-17T01:34:06.976700Z"
+    }
+  ],
+  "rejections": []
+}

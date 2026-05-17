@@ -1,0 +1,3021 @@
+{
+  "selected_markets": [
+    {
+      "market_id": "kalshi:CONTROLS-2028-D",
+      "question": "Will the Democratic party win the Senate in 2028?",
+      "description": "If the Democratic party has won control of the Senate in 2028, then the market resolves to Yes.",
+      "resolution_time": "2029-02-01T15:00:00+00:00",
+      "yes_bid": 0.51,
+      "yes_ask": 0.52,
+      "yes_mid": 0.515,
+      "no_bid": 0.48,
+      "no_ask": 0.49,
+      "no_mid": 0.485,
+      "spread": 0.010000000000000009,
+      "volume_24h": 908.0,
+      "topic": "Elections",
+      "family": "CONTROLS",
+      "source_url": "https://kalshi.com/markets/CONTROLS-2028"
+    },
+    {
+      "market_id": "kalshi:KX2028RRUN-28-MRUB",
+      "question": "Who will run for the Republican presidential nomination in 2028?",
+      "description": "If Marco Rubio announces a presidential campaign to contest the presidential nomination of the Republican party for the 2028 U.S. presidential election before Jan 1, 2028, then the market resolves to Yes.",
+      "resolution_time": "2028-01-01T15:00:00+00:00",
+      "yes_bid": 0.62,
+      "yes_ask": 0.66,
+      "yes_mid": 0.64,
+      "no_bid": 0.33999999999999997,
+      "no_ask": 0.38,
+      "no_mid": 0.36,
+      "spread": 0.040000000000000036,
+      "volume_24h": 1035.27,
+      "topic": "Elections",
+      "family": "KX2028RRUN",
+      "source_url": "https://kalshi.com/markets/KX2028RRUN-28"
+    },
+    {
+      "market_id": "kalshi:KX2028RRUN-28-TMAS",
+      "question": "Who will run for the Republican presidential nomination in 2028?",
+      "description": "If Thomas Massie announces a presidential campaign to contest the presidential nomination of the Republican party for the 2028 U.S. presidential election before Jan 1, 2028, then the market resolves to Yes.",
+      "resolution_time": "2028-01-01T15:00:00+00:00",
+      "yes_bid": 0.3,
+      "yes_ask": 0.34,
+      "yes_mid": 0.32,
+      "no_bid": 0.6599999999999999,
+      "no_ask": 0.7,
+      "no_mid": 0.6799999999999999,
+      "spread": 0.040000000000000036,
+      "volume_24h": 990.72,
+      "topic": "Elections",
+      "family": "KX2028RRUN",
+      "source_url": "https://kalshi.com/markets/KX2028RRUN-28"
+    },
+    {
+      "market_id": "kalshi:KX2028RRUN-28-TUC",
+      "question": "Who will run for the Republican presidential nomination in 2028?",
+      "description": "If Tucker Carlson announces a presidential campaign to contest the presidential nomination of the Republican party for the 2028 U.S. presidential election before Jan 1, 2028, then the market resolves to Yes.",
+      "resolution_time": "2028-01-01T15:00:00+00:00",
+      "yes_bid": 0.5,
+      "yes_ask": 0.51,
+      "yes_mid": 0.505,
+      "no_bid": 0.49,
+      "no_ask": 0.5,
+      "no_mid": 0.495,
+      "spread": 0.010000000000000009,
+      "volume_24h": 1038.86,
+      "topic": "Elections",
+      "family": "KX2028RRUN",
+      "source_url": "https://kalshi.com/markets/KX2028RRUN-28"
+    },
+    {
+      "market_id": "kalshi:KXACTORWHITELOTUS-27-DEE",
+      "question": "Will Deepika Padukone be cast in The White Lotus: Season 4?",
+      "description": "If Deepika Padukone is cast in The White Lotus: Season 4, then the market resolves to Yes.",
+      "resolution_time": "2027-12-31T15:00:00+00:00",
+      "yes_bid": 0.15,
+      "yes_ask": 0.18,
+      "yes_mid": 0.16499999999999998,
+      "no_bid": 0.8200000000000001,
+      "no_ask": 0.85,
+      "no_mid": 0.835,
+      "spread": 0.03,
+      "volume_24h": 437.56,
+      "topic": "Entertainment",
+      "family": "KXACTORWHITELOTUS",
+      "source_url": "https://kalshi.com/markets/KXACTORWHITELOTUS-27"
+    },
+    {
+      "market_id": "kalshi:KXALIENS-27-28",
+      "question": "Will the U.S. confirm that aliens exist in 2028?",
+      "description": "If the President, any member of the Cabinet, any member of the Joint Chiefs of Staff, or any US federal agency definitively states that extraterrestrial life or technology exists before Jan 1, 2028, then the market resolves to Yes.",
+      "resolution_time": "2027-01-01T15:00:00+00:00",
+      "yes_bid": 0.26,
+      "yes_ask": 0.29,
+      "yes_mid": 0.275,
+      "no_bid": 0.71,
+      "no_ask": 0.74,
+      "no_mid": 0.725,
+      "spread": 0.02999999999999997,
+      "volume_24h": 2122.45,
+      "topic": "Science and Technology",
+      "family": "KXALIENS",
+      "source_url": "https://kalshi.com/markets/KXALIENS-27"
+    },
+    {
+      "market_id": "kalshi:KXALIENS-27-29",
+      "question": "Will the U.S. confirm that aliens exist in 2029?",
+      "description": "If the President, any member of the Cabinet, any member of the Joint Chiefs of Staff, or any US federal agency definitively states that extraterrestrial life or technology exists before Jan 20, 2029, then the market resolves to Yes.",
+      "resolution_time": "2027-01-01T15:00:00+00:00",
+      "yes_bid": 0.33,
+      "yes_ask": 0.35,
+      "yes_mid": 0.33999999999999997,
+      "no_bid": 0.65,
+      "no_ask": 0.6699999999999999,
+      "no_mid": 0.66,
+      "spread": 0.019999999999999962,
+      "volume_24h": 2302.05,
+      "topic": "Science and Technology",
+      "family": "KXALIENS",
+      "source_url": "https://kalshi.com/markets/KXALIENS-27"
+    },
+    {
+      "market_id": "kalshi:KXAMEND22-29-JAN01",
+      "question": "Will the 22nd Amendment be repealed or reinterpreted to let Presidents run for a third term before Jan 1, 2029",
+      "description": "If the 22nd Amendment has been repealed by a subsequent Constitutional Amendment, or if the Supreme Court of the United States has ruled in an opinion or judgment that the 22nd Amendment permits individuals to be elected to the Presidency at least thrice under at least some circumstances, before Jan 1, 2029, then the market resolves to Yes.",
+      "resolution_time": "2029-01-21T17:30:30+00:00",
+      "yes_bid": 0.1,
+      "yes_ask": 0.12,
+      "yes_mid": 0.11,
+      "no_bid": 0.88,
+      "no_ask": 0.9,
+      "no_mid": 0.89,
+      "spread": 0.01999999999999999,
+      "volume_24h": 1076.89,
+      "topic": "Elections",
+      "family": "KXAMEND22",
+      "source_url": "https://kalshi.com/markets/KXAMEND22-29"
+    },
+    {
+      "market_id": "kalshi:KXBOND-30-ATJ",
+      "question": "Will Aaron Taylor-Johnson be the next James Bond?",
+      "description": "If Aaron Taylor-Johnson is cast as the next James Bond before Jan 1, 2030, then the market resolves to Yes.",
+      "resolution_time": "2030-01-01T15:00:00+00:00",
+      "yes_bid": 0.09,
+      "yes_ask": 0.11,
+      "yes_mid": 0.1,
+      "no_bid": 0.89,
+      "no_ask": 0.91,
+      "no_mid": 0.9,
+      "spread": 0.020000000000000004,
+      "volume_24h": 568.91,
+      "topic": "Entertainment",
+      "family": "KXBOND",
+      "source_url": "https://kalshi.com/markets/KXBOND-30"
+    },
+    {
+      "market_id": "kalshi:KXBOND-30-CAL",
+      "question": "Will Callum Turner be the next James Bond?",
+      "description": "If Callum Turner is cast as the next James Bond before Jan 1, 2030, then the market resolves to Yes.",
+      "resolution_time": "2030-01-01T15:00:00+00:00",
+      "yes_bid": 0.38,
+      "yes_ask": 0.39,
+      "yes_mid": 0.385,
+      "no_bid": 0.61,
+      "no_ask": 0.62,
+      "no_mid": 0.615,
+      "spread": 0.010000000000000009,
+      "volume_24h": 4604.57,
+      "topic": "Entertainment",
+      "family": "KXBOND",
+      "source_url": "https://kalshi.com/markets/KXBOND-30"
+    },
+    {
+      "market_id": "kalshi:KXBOND-30-HC",
+      "question": "Will Henry Cavill be the next James Bond?",
+      "description": "If Henry Cavill is cast as the next James Bond before Jan 1, 2030, then the market resolves to Yes.",
+      "resolution_time": "2030-01-01T15:00:00+00:00",
+      "yes_bid": 0.07,
+      "yes_ask": 0.08,
+      "yes_mid": 0.07500000000000001,
+      "no_bid": 0.92,
+      "no_ask": 0.9299999999999999,
+      "no_mid": 0.925,
+      "spread": 0.009999999999999995,
+      "volume_24h": 200.39,
+      "topic": "Entertainment",
+      "family": "KXBOND",
+      "source_url": "https://kalshi.com/markets/KXBOND-30"
+    },
+    {
+      "market_id": "kalshi:KXBOND-30-JACO",
+      "question": "Will Jacob Elordi be the next James Bond?",
+      "description": "If Jacob Elordi is cast as the next James Bond before Jan 1, 2030, then the market resolves to Yes.",
+      "resolution_time": "2030-01-01T15:00:00+00:00",
+      "yes_bid": 0.17,
+      "yes_ask": 0.18,
+      "yes_mid": 0.175,
+      "no_bid": 0.8200000000000001,
+      "no_ask": 0.83,
+      "no_mid": 0.825,
+      "spread": 0.009999999999999981,
+      "volume_24h": 464.05,
+      "topic": "Entertainment",
+      "family": "KXBOND",
+      "source_url": "https://kalshi.com/markets/KXBOND-30"
+    },
+    {
+      "market_id": "kalshi:KXBOND-30-JON",
+      "question": "Will Jonathan Bailey be the next James Bond?",
+      "description": "If Jonathan Bailey is cast as the next James Bond before Jan 1, 2030, then the market resolves to Yes.",
+      "resolution_time": "2030-01-01T15:00:00+00:00",
+      "yes_bid": 0.02,
+      "yes_ask": 0.05,
+      "yes_mid": 0.035,
+      "no_bid": 0.95,
+      "no_ask": 0.98,
+      "no_mid": 0.965,
+      "spread": 0.030000000000000002,
+      "volume_24h": 194.96,
+      "topic": "Entertainment",
+      "family": "KXBOND",
+      "source_url": "https://kalshi.com/markets/KXBOND-30"
+    },
+    {
+      "market_id": "kalshi:KXBOND-30-JOS",
+      "question": "Will Josh O'Connor be the next James Bond?",
+      "description": "If Josh O'Connor is cast as the next James Bond before Jan 1, 2030, then the market resolves to Yes.",
+      "resolution_time": "2030-01-01T15:00:00+00:00",
+      "yes_bid": 0.06,
+      "yes_ask": 0.08,
+      "yes_mid": 0.07,
+      "no_bid": 0.92,
+      "no_ask": 0.94,
+      "no_mid": 0.9299999999999999,
+      "spread": 0.020000000000000004,
+      "volume_24h": 355.88,
+      "topic": "Entertainment",
+      "family": "KXBOND",
+      "source_url": "https://kalshi.com/markets/KXBOND-30"
+    },
+    {
+      "market_id": "kalshi:KXBOND-30-THEO",
+      "question": "Will Theo James be the next James Bond?",
+      "description": "If Theo James is cast as the next James Bond before Jan 1, 2030, then the market resolves to Yes.",
+      "resolution_time": "2030-01-01T15:00:00+00:00",
+      "yes_bid": 0.04,
+      "yes_ask": 0.06,
+      "yes_mid": 0.05,
+      "no_bid": 0.94,
+      "no_ask": 0.96,
+      "no_mid": 0.95,
+      "spread": 0.019999999999999997,
+      "volume_24h": 411.94,
+      "topic": "Entertainment",
+      "family": "KXBOND",
+      "source_url": "https://kalshi.com/markets/KXBOND-30"
+    },
+    {
+      "market_id": "kalshi:KXBOND-30-TOMH",
+      "question": "Will Tom Holland be the next James Bond?",
+      "description": "If Tom Holland is cast as the next James Bond before Jan 1, 2030, then the market resolves to Yes.",
+      "resolution_time": "2030-01-01T15:00:00+00:00",
+      "yes_bid": 0.04,
+      "yes_ask": 0.05,
+      "yes_mid": 0.045,
+      "no_bid": 0.95,
+      "no_ask": 0.96,
+      "no_mid": 0.955,
+      "spread": 0.010000000000000002,
+      "volume_24h": 226.89,
+      "topic": "Entertainment",
+      "family": "KXBOND",
+      "source_url": "https://kalshi.com/markets/KXBOND-30"
+    },
+    {
+      "market_id": "kalshi:KXCANAL-29",
+      "question": "Will Trump take back the Panama Canal?",
+      "description": "If the United States government has taken control of at least some part of the Panama Canal before January 20, 2029, then the market resolves to Yes.",
+      "resolution_time": "2029-01-20T15:00:00+00:00",
+      "yes_bid": 0.31,
+      "yes_ask": 0.32,
+      "yes_mid": 0.315,
+      "no_bid": 0.6799999999999999,
+      "no_ask": 0.69,
+      "no_mid": 0.685,
+      "spread": 0.010000000000000009,
+      "volume_24h": 710.57,
+      "topic": "Politics",
+      "family": "KXCANAL",
+      "source_url": "https://kalshi.com/markets/KXCANAL-29"
+    },
+    {
+      "market_id": "kalshi:KXCOLLEGERANK-TOP20-EMO",
+      "question": "Will Emory be top 20 on U.S. News & World Report's Best National Universities Rankings in 2027?",
+      "description": "If Emory achieves top 20 on U.S. News & World Report's Best National Universities Rankings for 2027, then the market resolves to Yes.",
+      "resolution_time": "2028-01-01T15:00:00+00:00",
+      "yes_bid": 0.31,
+      "yes_ask": 0.32,
+      "yes_mid": 0.315,
+      "no_bid": 0.6799999999999999,
+      "no_ask": 0.69,
+      "no_mid": 0.685,
+      "spread": 0.010000000000000009,
+      "volume_24h": 302.01,
+      "topic": "Science and Technology",
+      "family": "KXCOLLEGERANK",
+      "source_url": "https://kalshi.com/markets/KXCOLLEGERANK-TOP20"
+    },
+    {
+      "market_id": "kalshi:KXEARTHQUAKECALIFORNIA-35",
+      "question": "Will there be an at least 8.0 magnitude earthquake in California before 2035?",
+      "description": "If there is at least an earthquake of 8.0 magnitude with an epicenter in California or its territorial waters before Dec 31, 2035, then the market resolves to Yes.",
+      "resolution_time": "2035-12-31T15:00:00+00:00",
+      "yes_bid": 0.31,
+      "yes_ask": 0.33,
+      "yes_mid": 0.32,
+      "no_bid": 0.6699999999999999,
+      "no_ask": 0.69,
+      "no_mid": 0.6799999999999999,
+      "spread": 0.020000000000000018,
+      "volume_24h": 289.0,
+      "topic": "Science and Technology",
+      "family": "KXEARTHQUAKECALIFORNIA",
+      "source_url": "https://kalshi.com/markets/KXEARTHQUAKECALIFORNIA-35"
+    },
+    {
+      "market_id": "kalshi:KXELONMARS-99",
+      "question": "Will Elon Musk visit Mars before Aug 1, 2099?",
+      "description": "If Elon Musk visits Mars before the earlier of his death or Aug 1, 2099, then the market resolves to Yes.",
+      "resolution_time": "2099-08-01T15:00:00+00:00",
+      "yes_bid": 0.07,
+      "yes_ask": 0.09,
+      "yes_mid": 0.08,
+      "no_bid": 0.91,
+      "no_ask": 0.9299999999999999,
+      "no_mid": 0.92,
+      "spread": 0.01999999999999999,
+      "volume_24h": 460.8,
+      "topic": "Politics",
+      "family": "KXELONMARS",
+      "source_url": "https://kalshi.com/markets/KXELONMARS-99"
+    }
+  ],
+  "skipped_markets": [
+    {
+      "market_id": "kalshi:KXFDANOM-29-MOZ",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXFTAPRC-29",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXFUSION-40-JAN01",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXG7LEADEROUT-45JAN01-KSTA",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXG7LEADEROUT-45JAN01-MCAR",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXGAMEAWARDS-2026-CRI",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXGAMEAWARDS-2026-DUS",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXGAMEAWARDS-2026-GTA",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXGAMEAWARDS-2026-HAL",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXGAMEAWARDS-2026-MAR",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXGAMEAWARDS-2026-PHA",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXGAMEAWARDS-2026-PRA",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXGAMEAWARDS-2026-RES",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXGREENLAND-29",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXGREENLANDPRICE-29JAN21-1049B",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXGREENLANDPRICE-29JAN21-199B",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXGREENLANDPRICE-29JAN21-NOACQ",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXGREENTERRITORY-29",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXGTAPRICE-100",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXGTAPRICE-60",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXGTAPRICE-70",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXGTAPRICE-80",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXIMPEACH-29-JAN20",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXLAMAYORADVANCE-26JUN02-NRAM",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXLAMAYORADVANCE-26JUN02-SPRA",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMAKERFIELDBY-27JAN01-CON",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMAKERFIELDBY-27JAN01-GRE",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMAKERFIELDBY-27JAN01-LAB",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMAKERFIELDBY-27JAN01-RES",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMEDIACOVERSI-27-CHR",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMEDIACOVERSI-27-ELL",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMENWORLDCUP-26-AR",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMENWORLDCUP-26-BE",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMENWORLDCUP-26-BR",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMENWORLDCUP-26-CO",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMENWORLDCUP-26-DE",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMENWORLDCUP-26-EC",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMENWORLDCUP-26-ES",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMENWORLDCUP-26-FR",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMENWORLDCUP-26-GB",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMENWORLDCUP-26-HR",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMENWORLDCUP-26-JP",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMENWORLDCUP-26-KR",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMENWORLDCUP-26-MA",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMENWORLDCUP-26-MX",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMENWORLDCUP-26-NL",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMENWORLDCUP-26-NO",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMENWORLDCUP-26-PT",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMENWORLDCUP-26-US",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMENWORLDCUP-26-UY",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMLB-26-ATH",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMLB-26-ATL",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMLB-26-BAL",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMLB-26-CHC",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMLB-26-CLE",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMLB-26-CWS",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMLB-26-HOU",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMLB-26-LAD",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMLB-26-MIL",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMLB-26-MIN",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMLB-26-NYY",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMLB-26-PHI",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMLB-26-PIT",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMLB-26-SD",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMLB-26-STL",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMLB-26-TB",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMLB-26-TEX",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMLBNL-26-PHI",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMTRUSHMORE-29",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMUSKTRILLION-28",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXMUSKTRILLION-29",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXNBA-26-CLE",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXNBA-26-DET",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXNBA-26-NYK",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXNBA-26-OKC",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXNBA-26-SAS",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXNBAEAST-26-CLE",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXNBAEAST-26-DET",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXNBAEAST-26-NYK",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXNBAWEST-26-OKC",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXNBAWEST-26-SAS",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXNEXTAG-29-HDHI",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXNEXTAG-29-JPIR",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXNEXTAG-29-KPAX",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXNEXTAG-29-LZEL",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXNEXTAG-29-RDES",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXNEXTAG-29-TBLA",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXNEXTUKPM-30-ABUR",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXNEXTUKPM-30-AR",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXNFLMVP-27-JDAR",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXNHL-26-BUF",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXNHL-26-CAR",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXNHL-26-COL",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXNHL-26-MTL",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXNHL-26-VGK",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXNJPRIMARY-06D26-JHSU",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXOAIANTH-40-ANTH",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXORPRIMARY-04D26-MSMI",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXOSCARACTO-27-TOM",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXOSCARNOMACTO-27-ADA",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXOSCARNOMACTO-27-JAA",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXOSCARNOMACTO-27-JAVI",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXOSCARNOMACTO-27-JER",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXOSCARNOMACTR-27-SCA",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXOSCARNOMBCASTING-27-CLA",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXOSCARNOMINTERFILM-27-HOP",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXOSCARNOMPIC-27-PAP",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXOSCARNOMPIC-27-PAR",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXOSCARNOMSPLAY-27-FAT",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXOSCARPIC-27-DIG",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXOSCARPIC-27-DIS",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXOSCARPIC-27-DUN",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXOSCARPIC-27-MIC",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXOSCARPIC-27-ODY",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXOSCARPIC-27-PRO",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXOSCARPIC-27-SOC",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXOSCARPIC-27-WIL",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPERFORMROLEJEANGREY-SAD",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPREMIERLEAGUE-26-ARS",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPREMIERLEAGUE-26-MCI",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESNOMD-28-AB",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESNOMD-28-AOC",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESNOMD-28-AYAN",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESNOMD-28-BOBA",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESNOMD-28-CBOO",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESNOMD-28-CMUR",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESNOMD-28-ESLO",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESNOMD-28-EWAR",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESNOMD-28-GN",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESNOMD-28-GPLA",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESNOMD-28-GR",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESNOMD-28-GW",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESNOMD-28-JAM",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESNOMD-28-JBP",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESNOMD-28-JOSS",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESNOMD-28-JP",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESNOMD-28-JS",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESNOMD-28-JSTE",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESNOMD-28-JTAL",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESNOMD-28-KH",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESNOMD-28-LJAM",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESNOMD-28-MK",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESNOMD-28-PB",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESNOMD-28-REMA",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESNOMD-28-RGAL",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESNOMD-28-SAS",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESNOMD-28-WM",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESNOMR-28-DJT",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESNOMR-28-DJTJR",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESNOMR-28-EM",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESNOMR-28-JDV",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESNOMR-28-LTRU",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESNOMR-28-MR",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESNOMR-28-MTG",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESNOMR-28-RDS",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESNOMR-28-TCAR",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESNOMR-28-TMAS",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESOUTCOME-28NOV07-GNEWJVAND",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESPERSON-28-AOCA",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESPERSON-28-DTRU",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESPERSON-28-GNEWS",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESPERSON-28-JOSS",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESPERSON-28-JVAN",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESPERSON-28-KHAR",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESPERSON-28-MRUB",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESPERSON-28-PBUT",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXPRESPERSON-28-TCAR",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXRECSSNBER-27",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXROLEATEVENTCOACHELLA-27DEC31-DAF",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXROLEATEVENTCOACHELLA-27DEC31-DRA",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXROLEINPRODUCTIONDOOMSDAY-HAL",
+      "reasons": [
+        "spread_too_wide"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXROLEINPRODUCTIONDOOMSDAY-HUG",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXROLEINPRODUCTIONDOOMSDAY-XOC",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXSB-27-BAL",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXSB-27-BUF",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXSB-27-CAR",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXSB-27-CHI",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXSB-27-CIN",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXSB-27-DAL",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXSB-27-DEN",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXSB-27-GB",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXSB-27-HOU",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXSB-27-KC",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXSB-27-LAC",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXSB-27-LAR",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXSB-27-NE",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXSB-27-NYG",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXSB-27-PHI",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXSB-27-SEA",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXSB-27-SF",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXSENATELAD-26-JDAV",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXSNL-28-SH",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXSNL-28-TFEY",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXSPACEXBANKPUBLIC-28JAN01-BOAX",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXSPACEXBANKPUBLIC-28JAN01-CITIX",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXSPACEXBANKPUBLIC-28JAN01-GSX",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXSPACEXBANKPUBLIC-28JAN01-JPMX",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXSPACEXBANKPUBLIC-28JAN01-MSX",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXSTATE51-29-CO",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXSTATE51-29-CU",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXSTATE51-29-DC",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXSTATE51-29-GL",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXSTATE51-29-GU",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXSTATE51-29-PR",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXSTATE51-29-VE",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXSWIFTKELCEWEDDINGLOCATION-30-NEW",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXSWIFTKELCEWEDDINGLOCATION-30-OHI",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXSWIFTKELCEWEDDINGLOCATION-30-PEN",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXSWIFTKELCEWEDDINGLOCATION-30-RHO",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXSWIFTKELCEWEDDINGLOCATION-30-TEN",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXTAIWANLVL4-28JAN01",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXTAYLORSWIFTWEDDINGATTEND-28DEC31-BLA",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXTRILLIONAIRE-30-JB",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXTRUMPOUT27-27-28",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXTRUMPRESIGN",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXTX33D-26-CALL",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXTXPRIMARY-35D26-JGAR",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXTXPRIMARY-35D26-MGAL",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXTXSENOUTCOME-27JAN-PAXTAL",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXUCL-26-ARS",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXUCL-26-PSG",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXUSTESTSMATH-26-NSD",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXUSTESTSREADING-26-NSD",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXUSTESTSREADING-26-SD",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXVOTELAKE-28-LMUR",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXVPRESNOMD-28-RW",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXVPRESNOMR-28-JDV",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXWNBA-26-WSH",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXWNBAMVP-26-AWIL",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:KXZELENSKYPUTIN-29-VPUT",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:SENATEAK-26-R",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:SENATEME-26-D",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:SENATEME-26-R",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:SENATENE-26-DOSB",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:SENATETX-26-D",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    },
+    {
+      "market_id": "kalshi:SENATETX-26-R",
+      "reasons": [
+        "consideration_limit"
+      ],
+      "skipped_before_rag": true
+    }
+  ],
+  "signals": {
+    "kalshi:CONTROLS-2028-D": {
+      "market_id": "kalshi:CONTROLS-2028-D",
+      "p_market": 0.515,
+      "p_stat": 0.515,
+      "p_2402": null,
+      "p_blf": 0.5366698425296674,
+      "p_final": 0.515986572846781,
+      "confidence": "low",
+      "uncertainty": 0.02,
+      "evidence_quality": 0,
+      "risk_flags": [
+        "rag_disabled"
+      ],
+      "reason": "market/statistical prior only",
+      "evidence_package": {
+        "market_id": "kalshi:CONTROLS-2028-D",
+        "question": "Will the Democratic party win the Senate in 2028?",
+        "p_2402": null,
+        "evidence_quality": 0,
+        "confidence": "low",
+        "evidence_for_yes": [],
+        "evidence_for_no": [],
+        "open_questions": [
+          "No external RAG evidence available."
+        ],
+        "resolution_check": {},
+        "risk_flags": [
+          "rag_disabled"
+        ],
+        "scanner_error": null,
+        "queries": [],
+        "search_queries": [],
+        "result_count": 0,
+        "raw_search_result_count": 0,
+        "deduped_search_result_count": 0,
+        "llm_summary_used": false,
+        "reasoning_summary": "",
+        "llm_attempted": false,
+        "llm_succeeded": false,
+        "llm_failed": false,
+        "llm_fallback": false,
+        "llm_error_category": null,
+        "llm_elapsed_ms": 0,
+        "p_2402_raw": null,
+        "p_2402_final_after_shrinkage": null,
+        "json_parse_error": null,
+        "fallback_reason": null,
+        "llm_prompt_metadata": {},
+        "scanner_elapsed_ms": 0
+      }
+    },
+    "kalshi:KX2028RRUN-28-MRUB": {
+      "market_id": "kalshi:KX2028RRUN-28-MRUB",
+      "p_market": 0.64,
+      "p_stat": 0.64,
+      "p_2402": null,
+      "p_blf": 0.9643903264686148,
+      "p_final": 0.7101344697529269,
+      "confidence": "high",
+      "uncertainty": 0.02,
+      "evidence_quality": 0,
+      "risk_flags": [
+        "rag_disabled"
+      ],
+      "reason": "market/statistical prior only",
+      "evidence_package": {
+        "market_id": "kalshi:KX2028RRUN-28-MRUB",
+        "question": "Who will run for the Republican presidential nomination in 2028?",
+        "p_2402": null,
+        "evidence_quality": 0,
+        "confidence": "low",
+        "evidence_for_yes": [],
+        "evidence_for_no": [],
+        "open_questions": [
+          "No external RAG evidence available."
+        ],
+        "resolution_check": {},
+        "risk_flags": [
+          "rag_disabled"
+        ],
+        "scanner_error": null,
+        "queries": [],
+        "search_queries": [],
+        "result_count": 0,
+        "raw_search_result_count": 0,
+        "deduped_search_result_count": 0,
+        "llm_summary_used": false,
+        "reasoning_summary": "",
+        "llm_attempted": false,
+        "llm_succeeded": false,
+        "llm_failed": false,
+        "llm_fallback": false,
+        "llm_error_category": null,
+        "llm_elapsed_ms": 0,
+        "p_2402_raw": null,
+        "p_2402_final_after_shrinkage": null,
+        "json_parse_error": null,
+        "fallback_reason": null,
+        "llm_prompt_metadata": {},
+        "scanner_elapsed_ms": 0
+      }
+    },
+    "kalshi:KX2028RRUN-28-TMAS": {
+      "market_id": "kalshi:KX2028RRUN-28-TMAS",
+      "p_market": 0.32,
+      "p_stat": 0.32,
+      "p_2402": null,
+      "p_blf": 0.9519222337201645,
+      "p_final": 0.4322035709067191,
+      "confidence": "high",
+      "uncertainty": 0.03511884584284244,
+      "evidence_quality": 0,
+      "risk_flags": [
+        "rag_disabled"
+      ],
+      "reason": "market/statistical prior only",
+      "evidence_package": {
+        "market_id": "kalshi:KX2028RRUN-28-TMAS",
+        "question": "Who will run for the Republican presidential nomination in 2028?",
+        "p_2402": null,
+        "evidence_quality": 0,
+        "confidence": "low",
+        "evidence_for_yes": [],
+        "evidence_for_no": [],
+        "open_questions": [
+          "No external RAG evidence available."
+        ],
+        "resolution_check": {},
+        "risk_flags": [
+          "rag_disabled"
+        ],
+        "scanner_error": null,
+        "queries": [],
+        "search_queries": [],
+        "result_count": 0,
+        "raw_search_result_count": 0,
+        "deduped_search_result_count": 0,
+        "llm_summary_used": false,
+        "reasoning_summary": "",
+        "llm_attempted": false,
+        "llm_succeeded": false,
+        "llm_failed": false,
+        "llm_fallback": false,
+        "llm_error_category": null,
+        "llm_elapsed_ms": 0,
+        "p_2402_raw": null,
+        "p_2402_final_after_shrinkage": null,
+        "json_parse_error": null,
+        "fallback_reason": null,
+        "llm_prompt_metadata": {},
+        "scanner_elapsed_ms": 0
+      }
+    },
+    "kalshi:KX2028RRUN-28-TUC": {
+      "market_id": "kalshi:KX2028RRUN-28-TUC",
+      "p_market": 0.505,
+      "p_stat": 0.505,
+      "p_2402": null,
+      "p_blf": 0.9186791272403847,
+      "p_final": 0.5781235125727247,
+      "confidence": "high",
+      "uncertainty": 0.12503332889007365,
+      "evidence_quality": 0,
+      "risk_flags": [
+        "rag_disabled"
+      ],
+      "reason": "market/statistical prior only",
+      "evidence_package": {
+        "market_id": "kalshi:KX2028RRUN-28-TUC",
+        "question": "Who will run for the Republican presidential nomination in 2028?",
+        "p_2402": null,
+        "evidence_quality": 0,
+        "confidence": "low",
+        "evidence_for_yes": [],
+        "evidence_for_no": [],
+        "open_questions": [
+          "No external RAG evidence available."
+        ],
+        "resolution_check": {},
+        "risk_flags": [
+          "rag_disabled"
+        ],
+        "scanner_error": null,
+        "queries": [],
+        "search_queries": [],
+        "result_count": 0,
+        "raw_search_result_count": 0,
+        "deduped_search_result_count": 0,
+        "llm_summary_used": false,
+        "reasoning_summary": "",
+        "llm_attempted": false,
+        "llm_succeeded": false,
+        "llm_failed": false,
+        "llm_fallback": false,
+        "llm_error_category": null,
+        "llm_elapsed_ms": 0,
+        "p_2402_raw": null,
+        "p_2402_final_after_shrinkage": null,
+        "json_parse_error": null,
+        "fallback_reason": null,
+        "llm_prompt_metadata": {},
+        "scanner_elapsed_ms": 0
+      }
+    },
+    "kalshi:KXACTORWHITELOTUS-27-DEE": {
+      "market_id": "kalshi:KXACTORWHITELOTUS-27-DEE",
+      "p_market": 0.16499999999999998,
+      "p_stat": 0.16499999999999998,
+      "p_2402": null,
+      "p_blf": 0.04490088305872678,
+      "p_final": 0.14288515300666033,
+      "confidence": "high",
+      "uncertainty": 0.02,
+      "evidence_quality": 0,
+      "risk_flags": [
+        "rag_disabled"
+      ],
+      "reason": "market/statistical prior only",
+      "evidence_package": {
+        "market_id": "kalshi:KXACTORWHITELOTUS-27-DEE",
+        "question": "Will Deepika Padukone be cast in The White Lotus: Season 4?",
+        "p_2402": null,
+        "evidence_quality": 0,
+        "confidence": "low",
+        "evidence_for_yes": [],
+        "evidence_for_no": [],
+        "open_questions": [
+          "No external RAG evidence available."
+        ],
+        "resolution_check": {},
+        "risk_flags": [
+          "rag_disabled"
+        ],
+        "scanner_error": null,
+        "queries": [],
+        "search_queries": [],
+        "result_count": 0,
+        "raw_search_result_count": 0,
+        "deduped_search_result_count": 0,
+        "llm_summary_used": false,
+        "reasoning_summary": "",
+        "llm_attempted": false,
+        "llm_succeeded": false,
+        "llm_failed": false,
+        "llm_fallback": false,
+        "llm_error_category": null,
+        "llm_elapsed_ms": 0,
+        "p_2402_raw": null,
+        "p_2402_final_after_shrinkage": null,
+        "json_parse_error": null,
+        "fallback_reason": null,
+        "llm_prompt_metadata": {},
+        "scanner_elapsed_ms": 0
+      }
+    },
+    "kalshi:KXALIENS-27-28": {
+      "market_id": "kalshi:KXALIENS-27-28",
+      "p_market": 0.275,
+      "p_stat": 0.275,
+      "p_2402": null,
+      "p_blf": 0.1115487775343649,
+      "p_final": 0.2584860542702035,
+      "confidence": "medium",
+      "uncertainty": 0.05291502622129182,
+      "evidence_quality": 0,
+      "risk_flags": [
+        "rag_disabled"
+      ],
+      "reason": "market/statistical prior only",
+      "evidence_package": {
+        "market_id": "kalshi:KXALIENS-27-28",
+        "question": "Will the U.S. confirm that aliens exist in 2028?",
+        "p_2402": null,
+        "evidence_quality": 0,
+        "confidence": "low",
+        "evidence_for_yes": [],
+        "evidence_for_no": [],
+        "open_questions": [
+          "No external RAG evidence available."
+        ],
+        "resolution_check": {},
+        "risk_flags": [
+          "rag_disabled"
+        ],
+        "scanner_error": null,
+        "queries": [],
+        "search_queries": [],
+        "result_count": 0,
+        "raw_search_result_count": 0,
+        "deduped_search_result_count": 0,
+        "llm_summary_used": false,
+        "reasoning_summary": "",
+        "llm_attempted": false,
+        "llm_succeeded": false,
+        "llm_failed": false,
+        "llm_fallback": false,
+        "llm_error_category": null,
+        "llm_elapsed_ms": 0,
+        "p_2402_raw": null,
+        "p_2402_final_after_shrinkage": null,
+        "json_parse_error": null,
+        "fallback_reason": null,
+        "llm_prompt_metadata": {},
+        "scanner_elapsed_ms": 0
+      }
+    },
+    "kalshi:KXALIENS-27-29": {
+      "market_id": "kalshi:KXALIENS-27-29",
+      "p_market": 0.33999999999999997,
+      "p_stat": 0.33999999999999997,
+      "p_2402": null,
+      "p_blf": 0.16628451443095157,
+      "p_final": 0.3236881917489919,
+      "confidence": "medium",
+      "uncertainty": 0.02,
+      "evidence_quality": 0,
+      "risk_flags": [
+        "rag_disabled"
+      ],
+      "reason": "market/statistical prior only",
+      "evidence_package": {
+        "market_id": "kalshi:KXALIENS-27-29",
+        "question": "Will the U.S. confirm that aliens exist in 2029?",
+        "p_2402": null,
+        "evidence_quality": 0,
+        "confidence": "low",
+        "evidence_for_yes": [],
+        "evidence_for_no": [],
+        "open_questions": [
+          "No external RAG evidence available."
+        ],
+        "resolution_check": {},
+        "risk_flags": [
+          "rag_disabled"
+        ],
+        "scanner_error": null,
+        "queries": [],
+        "search_queries": [],
+        "result_count": 0,
+        "raw_search_result_count": 0,
+        "deduped_search_result_count": 0,
+        "llm_summary_used": false,
+        "reasoning_summary": "",
+        "llm_attempted": false,
+        "llm_succeeded": false,
+        "llm_failed": false,
+        "llm_fallback": false,
+        "llm_error_category": null,
+        "llm_elapsed_ms": 0,
+        "p_2402_raw": null,
+        "p_2402_final_after_shrinkage": null,
+        "json_parse_error": null,
+        "fallback_reason": null,
+        "llm_prompt_metadata": {},
+        "scanner_elapsed_ms": 0
+      }
+    },
+    "kalshi:KXAMEND22-29-JAN01": {
+      "market_id": "kalshi:KXAMEND22-29-JAN01",
+      "p_market": 0.11,
+      "p_stat": 0.11,
+      "p_2402": null,
+      "p_blf": 0.04904191847910752,
+      "p_final": 0.1037019352196312,
+      "confidence": "medium",
+      "uncertainty": 0.02,
+      "evidence_quality": 0,
+      "risk_flags": [
+        "rag_disabled",
+        "blf_partial_1_failed"
+      ],
+      "reason": "market/statistical prior only",
+      "evidence_package": {
+        "market_id": "kalshi:KXAMEND22-29-JAN01",
+        "question": "Will the 22nd Amendment be repealed or reinterpreted to let Presidents run for a third term before Jan 1, 2029",
+        "p_2402": null,
+        "evidence_quality": 0,
+        "confidence": "low",
+        "evidence_for_yes": [],
+        "evidence_for_no": [],
+        "open_questions": [
+          "No external RAG evidence available."
+        ],
+        "resolution_check": {},
+        "risk_flags": [
+          "rag_disabled"
+        ],
+        "scanner_error": null,
+        "queries": [],
+        "search_queries": [],
+        "result_count": 0,
+        "raw_search_result_count": 0,
+        "deduped_search_result_count": 0,
+        "llm_summary_used": false,
+        "reasoning_summary": "",
+        "llm_attempted": false,
+        "llm_succeeded": false,
+        "llm_failed": false,
+        "llm_fallback": false,
+        "llm_error_category": null,
+        "llm_elapsed_ms": 0,
+        "p_2402_raw": null,
+        "p_2402_final_after_shrinkage": null,
+        "json_parse_error": null,
+        "fallback_reason": null,
+        "llm_prompt_metadata": {},
+        "scanner_elapsed_ms": 0
+      }
+    },
+    "kalshi:KXBOND-30-ATJ": {
+      "market_id": "kalshi:KXBOND-30-ATJ",
+      "p_market": 0.1,
+      "p_stat": 0.1,
+      "p_2402": null,
+      "p_blf": 0.20599681822635274,
+      "p_final": 0.10655602163705247,
+      "confidence": "medium",
+      "uncertainty": 0.023094010767585035,
+      "evidence_quality": 0,
+      "risk_flags": [
+        "rag_disabled"
+      ],
+      "reason": "market/statistical prior only",
+      "evidence_package": {
+        "market_id": "kalshi:KXBOND-30-ATJ",
+        "question": "Will Aaron Taylor-Johnson be the next James Bond?",
+        "p_2402": null,
+        "evidence_quality": 0,
+        "confidence": "low",
+        "evidence_for_yes": [],
+        "evidence_for_no": [],
+        "open_questions": [
+          "No external RAG evidence available."
+        ],
+        "resolution_check": {},
+        "risk_flags": [
+          "rag_disabled"
+        ],
+        "scanner_error": null,
+        "queries": [],
+        "search_queries": [],
+        "result_count": 0,
+        "raw_search_result_count": 0,
+        "deduped_search_result_count": 0,
+        "llm_summary_used": false,
+        "reasoning_summary": "",
+        "llm_attempted": false,
+        "llm_succeeded": false,
+        "llm_failed": false,
+        "llm_fallback": false,
+        "llm_error_category": null,
+        "llm_elapsed_ms": 0,
+        "p_2402_raw": null,
+        "p_2402_final_after_shrinkage": null,
+        "json_parse_error": null,
+        "fallback_reason": null,
+        "llm_prompt_metadata": {},
+        "scanner_elapsed_ms": 0
+      }
+    },
+    "kalshi:KXBOND-30-CAL": {
+      "market_id": "kalshi:KXBOND-30-CAL",
+      "p_market": 0.385,
+      "p_stat": 0.385,
+      "p_2402": null,
+      "p_blf": 0.38935815174561655,
+      "p_final": 0.38534611428710097,
+      "confidence": "medium",
+      "uncertainty": 0.04358898943540671,
+      "evidence_quality": 0,
+      "risk_flags": [
+        "rag_disabled"
+      ],
+      "reason": "market/statistical prior only",
+      "evidence_package": {
+        "market_id": "kalshi:KXBOND-30-CAL",
+        "question": "Will Callum Turner be the next James Bond?",
+        "p_2402": null,
+        "evidence_quality": 0,
+        "confidence": "low",
+        "evidence_for_yes": [],
+        "evidence_for_no": [],
+        "open_questions": [
+          "No external RAG evidence available."
+        ],
+        "resolution_check": {},
+        "risk_flags": [
+          "rag_disabled"
+        ],
+        "scanner_error": null,
+        "queries": [],
+        "search_queries": [],
+        "result_count": 0,
+        "raw_search_result_count": 0,
+        "deduped_search_result_count": 0,
+        "llm_summary_used": false,
+        "reasoning_summary": "",
+        "llm_attempted": false,
+        "llm_succeeded": false,
+        "llm_failed": false,
+        "llm_fallback": false,
+        "llm_error_category": null,
+        "llm_elapsed_ms": 0,
+        "p_2402_raw": null,
+        "p_2402_final_after_shrinkage": null,
+        "json_parse_error": null,
+        "fallback_reason": null,
+        "llm_prompt_metadata": {},
+        "scanner_elapsed_ms": 0
+      }
+    },
+    "kalshi:KXBOND-30-HC": {
+      "market_id": "kalshi:KXBOND-30-HC",
+      "p_market": 0.07500000000000001,
+      "p_stat": 0.07500000000000001,
+      "p_2402": null,
+      "p_blf": 0.058034503729228866,
+      "p_final": 0.07352411844311911,
+      "confidence": "medium",
+      "uncertainty": 0.02886751345948129,
+      "evidence_quality": 0,
+      "risk_flags": [
+        "rag_disabled"
+      ],
+      "reason": "market/statistical prior only",
+      "evidence_package": {
+        "market_id": "kalshi:KXBOND-30-HC",
+        "question": "Will Henry Cavill be the next James Bond?",
+        "p_2402": null,
+        "evidence_quality": 0,
+        "confidence": "low",
+        "evidence_for_yes": [],
+        "evidence_for_no": [],
+        "open_questions": [
+          "No external RAG evidence available."
+        ],
+        "resolution_check": {},
+        "risk_flags": [
+          "rag_disabled"
+        ],
+        "scanner_error": null,
+        "queries": [],
+        "search_queries": [],
+        "result_count": 0,
+        "raw_search_result_count": 0,
+        "deduped_search_result_count": 0,
+        "llm_summary_used": false,
+        "reasoning_summary": "",
+        "llm_attempted": false,
+        "llm_succeeded": false,
+        "llm_failed": false,
+        "llm_fallback": false,
+        "llm_error_category": null,
+        "llm_elapsed_ms": 0,
+        "p_2402_raw": null,
+        "p_2402_final_after_shrinkage": null,
+        "json_parse_error": null,
+        "fallback_reason": null,
+        "llm_prompt_metadata": {},
+        "scanner_elapsed_ms": 0
+      }
+    },
+    "kalshi:KXBOND-30-JACO": {
+      "market_id": "kalshi:KXBOND-30-JACO",
+      "p_market": 0.175,
+      "p_stat": 0.175,
+      "p_2402": null,
+      "p_blf": 0.2980539909211145,
+      "p_final": 0.1833826801100144,
+      "confidence": "medium",
+      "uncertainty": 0.05291502622129183,
+      "evidence_quality": 0,
+      "risk_flags": [
+        "rag_disabled"
+      ],
+      "reason": "market/statistical prior only",
+      "evidence_package": {
+        "market_id": "kalshi:KXBOND-30-JACO",
+        "question": "Will Jacob Elordi be the next James Bond?",
+        "p_2402": null,
+        "evidence_quality": 0,
+        "confidence": "low",
+        "evidence_for_yes": [],
+        "evidence_for_no": [],
+        "open_questions": [
+          "No external RAG evidence available."
+        ],
+        "resolution_check": {},
+        "risk_flags": [
+          "rag_disabled"
+        ],
+        "scanner_error": null,
+        "queries": [],
+        "search_queries": [],
+        "result_count": 0,
+        "raw_search_result_count": 0,
+        "deduped_search_result_count": 0,
+        "llm_summary_used": false,
+        "reasoning_summary": "",
+        "llm_attempted": false,
+        "llm_succeeded": false,
+        "llm_failed": false,
+        "llm_fallback": false,
+        "llm_error_category": null,
+        "llm_elapsed_ms": 0,
+        "p_2402_raw": null,
+        "p_2402_final_after_shrinkage": null,
+        "json_parse_error": null,
+        "fallback_reason": null,
+        "llm_prompt_metadata": {},
+        "scanner_elapsed_ms": 0
+      }
+    },
+    "kalshi:KXBOND-30-JON": {
+      "market_id": "kalshi:KXBOND-30-JON",
+      "p_market": 0.035,
+      "p_stat": 0.035,
+      "p_2402": null,
+      "p_blf": 0.08321518039296039,
+      "p_final": 0.037718245176505336,
+      "confidence": "medium",
+      "uncertainty": 0.02,
+      "evidence_quality": 0,
+      "risk_flags": [
+        "rag_disabled"
+      ],
+      "reason": "market/statistical prior only",
+      "evidence_package": {
+        "market_id": "kalshi:KXBOND-30-JON",
+        "question": "Will Jonathan Bailey be the next James Bond?",
+        "p_2402": null,
+        "evidence_quality": 0,
+        "confidence": "low",
+        "evidence_for_yes": [],
+        "evidence_for_no": [],
+        "open_questions": [
+          "No external RAG evidence available."
+        ],
+        "resolution_check": {},
+        "risk_flags": [
+          "rag_disabled"
+        ],
+        "scanner_error": null,
+        "queries": [],
+        "search_queries": [],
+        "result_count": 0,
+        "raw_search_result_count": 0,
+        "deduped_search_result_count": 0,
+        "llm_summary_used": false,
+        "reasoning_summary": "",
+        "llm_attempted": false,
+        "llm_succeeded": false,
+        "llm_failed": false,
+        "llm_fallback": false,
+        "llm_error_category": null,
+        "llm_elapsed_ms": 0,
+        "p_2402_raw": null,
+        "p_2402_final_after_shrinkage": null,
+        "json_parse_error": null,
+        "fallback_reason": null,
+        "llm_prompt_metadata": {},
+        "scanner_elapsed_ms": 0
+      }
+    },
+    "kalshi:KXBOND-30-JOS": {
+      "market_id": "kalshi:KXBOND-30-JOS",
+      "p_market": 0.07,
+      "p_stat": 0.07,
+      "p_2402": null,
+      "p_blf": 0.12092409322003678,
+      "p_final": 0.07331249827248418,
+      "confidence": "medium",
+      "uncertainty": 0.05033222956847166,
+      "evidence_quality": 0,
+      "risk_flags": [
+        "rag_disabled"
+      ],
+      "reason": "market/statistical prior only",
+      "evidence_package": {
+        "market_id": "kalshi:KXBOND-30-JOS",
+        "question": "Will Josh O'Connor be the next James Bond?",
+        "p_2402": null,
+        "evidence_quality": 0,
+        "confidence": "low",
+        "evidence_for_yes": [],
+        "evidence_for_no": [],
+        "open_questions": [
+          "No external RAG evidence available."
+        ],
+        "resolution_check": {},
+        "risk_flags": [
+          "rag_disabled"
+        ],
+        "scanner_error": null,
+        "queries": [],
+        "search_queries": [],
+        "result_count": 0,
+        "raw_search_result_count": 0,
+        "deduped_search_result_count": 0,
+        "llm_summary_used": false,
+        "reasoning_summary": "",
+        "llm_attempted": false,
+        "llm_succeeded": false,
+        "llm_failed": false,
+        "llm_fallback": false,
+        "llm_error_category": null,
+        "llm_elapsed_ms": 0,
+        "p_2402_raw": null,
+        "p_2402_final_after_shrinkage": null,
+        "json_parse_error": null,
+        "fallback_reason": null,
+        "llm_prompt_metadata": {},
+        "scanner_elapsed_ms": 0
+      }
+    },
+    "kalshi:KXBOND-30-THEO": {
+      "market_id": "kalshi:KXBOND-30-THEO",
+      "p_market": 0.05,
+      "p_stat": 0.05,
+      "p_2402": null,
+      "p_blf": 0.11658232043164227,
+      "p_final": 0.05381835623694898,
+      "confidence": "medium",
+      "uncertainty": 0.02,
+      "evidence_quality": 0,
+      "risk_flags": [
+        "rag_disabled"
+      ],
+      "reason": "market/statistical prior only",
+      "evidence_package": {
+        "market_id": "kalshi:KXBOND-30-THEO",
+        "question": "Will Theo James be the next James Bond?",
+        "p_2402": null,
+        "evidence_quality": 0,
+        "confidence": "low",
+        "evidence_for_yes": [],
+        "evidence_for_no": [],
+        "open_questions": [
+          "No external RAG evidence available."
+        ],
+        "resolution_check": {},
+        "risk_flags": [
+          "rag_disabled"
+        ],
+        "scanner_error": null,
+        "queries": [],
+        "search_queries": [],
+        "result_count": 0,
+        "raw_search_result_count": 0,
+        "deduped_search_result_count": 0,
+        "llm_summary_used": false,
+        "reasoning_summary": "",
+        "llm_attempted": false,
+        "llm_succeeded": false,
+        "llm_failed": false,
+        "llm_fallback": false,
+        "llm_error_category": null,
+        "llm_elapsed_ms": 0,
+        "p_2402_raw": null,
+        "p_2402_final_after_shrinkage": null,
+        "json_parse_error": null,
+        "fallback_reason": null,
+        "llm_prompt_metadata": {},
+        "scanner_elapsed_ms": 0
+      }
+    },
+    "kalshi:KXBOND-30-TOMH": {
+      "market_id": "kalshi:KXBOND-30-TOMH",
+      "p_market": 0.045,
+      "p_stat": 0.045,
+      "p_2402": null,
+      "p_blf": 0.09804051485795214,
+      "p_final": 0.04811744781654524,
+      "confidence": "medium",
+      "uncertainty": 0.04041451884327381,
+      "evidence_quality": 0,
+      "risk_flags": [
+        "rag_disabled"
+      ],
+      "reason": "market/statistical prior only",
+      "evidence_package": {
+        "market_id": "kalshi:KXBOND-30-TOMH",
+        "question": "Will Tom Holland be the next James Bond?",
+        "p_2402": null,
+        "evidence_quality": 0,
+        "confidence": "low",
+        "evidence_for_yes": [],
+        "evidence_for_no": [],
+        "open_questions": [
+          "No external RAG evidence available."
+        ],
+        "resolution_check": {},
+        "risk_flags": [
+          "rag_disabled"
+        ],
+        "scanner_error": null,
+        "queries": [],
+        "search_queries": [],
+        "result_count": 0,
+        "raw_search_result_count": 0,
+        "deduped_search_result_count": 0,
+        "llm_summary_used": false,
+        "reasoning_summary": "",
+        "llm_attempted": false,
+        "llm_succeeded": false,
+        "llm_failed": false,
+        "llm_fallback": false,
+        "llm_error_category": null,
+        "llm_elapsed_ms": 0,
+        "p_2402_raw": null,
+        "p_2402_final_after_shrinkage": null,
+        "json_parse_error": null,
+        "fallback_reason": null,
+        "llm_prompt_metadata": {},
+        "scanner_elapsed_ms": 0
+      }
+    },
+    "kalshi:KXCANAL-29": {
+      "market_id": "kalshi:KXCANAL-29",
+      "p_market": 0.315,
+      "p_stat": 0.315,
+      "p_2402": null,
+      "p_blf": 0.12092409322003678,
+      "p_final": 0.2954026559302339,
+      "confidence": "medium",
+      "uncertainty": 0.05033222956847166,
+      "evidence_quality": 0,
+      "risk_flags": [
+        "rag_disabled"
+      ],
+      "reason": "market/statistical prior only",
+      "evidence_package": {
+        "market_id": "kalshi:KXCANAL-29",
+        "question": "Will Trump take back the Panama Canal?",
+        "p_2402": null,
+        "evidence_quality": 0,
+        "confidence": "low",
+        "evidence_for_yes": [],
+        "evidence_for_no": [],
+        "open_questions": [
+          "No external RAG evidence available."
+        ],
+        "resolution_check": {},
+        "risk_flags": [
+          "rag_disabled"
+        ],
+        "scanner_error": null,
+        "queries": [],
+        "search_queries": [],
+        "result_count": 0,
+        "raw_search_result_count": 0,
+        "deduped_search_result_count": 0,
+        "llm_summary_used": false,
+        "reasoning_summary": "",
+        "llm_attempted": false,
+        "llm_succeeded": false,
+        "llm_failed": false,
+        "llm_fallback": false,
+        "llm_error_category": null,
+        "llm_elapsed_ms": 0,
+        "p_2402_raw": null,
+        "p_2402_final_after_shrinkage": null,
+        "json_parse_error": null,
+        "fallback_reason": null,
+        "llm_prompt_metadata": {},
+        "scanner_elapsed_ms": 0
+      }
+    },
+    "kalshi:KXCOLLEGERANK-TOP20-EMO": {
+      "market_id": "kalshi:KXCOLLEGERANK-TOP20-EMO",
+      "p_market": 0.315,
+      "p_stat": 0.315,
+      "p_2402": null,
+      "p_blf": 0.12536233233393096,
+      "p_final": 0.29603162637605973,
+      "confidence": "medium",
+      "uncertainty": 0.023094010767585035,
+      "evidence_quality": 0,
+      "risk_flags": [
+        "rag_disabled"
+      ],
+      "reason": "market/statistical prior only",
+      "evidence_package": {
+        "market_id": "kalshi:KXCOLLEGERANK-TOP20-EMO",
+        "question": "Will Emory be top 20 on U.S. News & World Report's Best National Universities Rankings in 2027?",
+        "p_2402": null,
+        "evidence_quality": 0,
+        "confidence": "low",
+        "evidence_for_yes": [],
+        "evidence_for_no": [],
+        "open_questions": [
+          "No external RAG evidence available."
+        ],
+        "resolution_check": {},
+        "risk_flags": [
+          "rag_disabled"
+        ],
+        "scanner_error": null,
+        "queries": [],
+        "search_queries": [],
+        "result_count": 0,
+        "raw_search_result_count": 0,
+        "deduped_search_result_count": 0,
+        "llm_summary_used": false,
+        "reasoning_summary": "",
+        "llm_attempted": false,
+        "llm_succeeded": false,
+        "llm_failed": false,
+        "llm_fallback": false,
+        "llm_error_category": null,
+        "llm_elapsed_ms": 0,
+        "p_2402_raw": null,
+        "p_2402_final_after_shrinkage": null,
+        "json_parse_error": null,
+        "fallback_reason": null,
+        "llm_prompt_metadata": {},
+        "scanner_elapsed_ms": 0
+      }
+    },
+    "kalshi:KXEARTHQUAKECALIFORNIA-35": {
+      "market_id": "kalshi:KXEARTHQUAKECALIFORNIA-35",
+      "p_market": 0.32,
+      "p_stat": 0.32,
+      "p_2402": null,
+      "p_blf": 0.0852346799559072,
+      "p_final": 0.2939847370944414,
+      "confidence": "medium",
+      "uncertainty": 0.020816659994661323,
+      "evidence_quality": 0,
+      "risk_flags": [
+        "rag_disabled"
+      ],
+      "reason": "market/statistical prior only",
+      "evidence_package": {
+        "market_id": "kalshi:KXEARTHQUAKECALIFORNIA-35",
+        "question": "Will there be an at least 8.0 magnitude earthquake in California before 2035?",
+        "p_2402": null,
+        "evidence_quality": 0,
+        "confidence": "low",
+        "evidence_for_yes": [],
+        "evidence_for_no": [],
+        "open_questions": [
+          "No external RAG evidence available."
+        ],
+        "resolution_check": {},
+        "risk_flags": [
+          "rag_disabled"
+        ],
+        "scanner_error": null,
+        "queries": [],
+        "search_queries": [],
+        "result_count": 0,
+        "raw_search_result_count": 0,
+        "deduped_search_result_count": 0,
+        "llm_summary_used": false,
+        "reasoning_summary": "",
+        "llm_attempted": false,
+        "llm_succeeded": false,
+        "llm_failed": false,
+        "llm_fallback": false,
+        "llm_error_category": null,
+        "llm_elapsed_ms": 0,
+        "p_2402_raw": null,
+        "p_2402_final_after_shrinkage": null,
+        "json_parse_error": null,
+        "fallback_reason": null,
+        "llm_prompt_metadata": {},
+        "scanner_elapsed_ms": 0
+      }
+    },
+    "kalshi:KXELONMARS-99": {
+      "market_id": "kalshi:KXELONMARS-99",
+      "p_market": 0.08,
+      "p_stat": 0.08,
+      "p_2402": null,
+      "p_blf": 0.09905256129220187,
+      "p_final": 0.08140429618270675,
+      "confidence": "medium",
+      "uncertainty": 0.06928203230275509,
+      "evidence_quality": 0,
+      "risk_flags": [
+        "rag_disabled"
+      ],
+      "reason": "market/statistical prior only",
+      "evidence_package": {
+        "market_id": "kalshi:KXELONMARS-99",
+        "question": "Will Elon Musk visit Mars before Aug 1, 2099?",
+        "p_2402": null,
+        "evidence_quality": 0,
+        "confidence": "low",
+        "evidence_for_yes": [],
+        "evidence_for_no": [],
+        "open_questions": [
+          "No external RAG evidence available."
+        ],
+        "resolution_check": {},
+        "risk_flags": [
+          "rag_disabled"
+        ],
+        "scanner_error": null,
+        "queries": [],
+        "search_queries": [],
+        "result_count": 0,
+        "raw_search_result_count": 0,
+        "deduped_search_result_count": 0,
+        "llm_summary_used": false,
+        "reasoning_summary": "",
+        "llm_attempted": false,
+        "llm_succeeded": false,
+        "llm_failed": false,
+        "llm_fallback": false,
+        "llm_error_category": null,
+        "llm_elapsed_ms": 0,
+        "p_2402_raw": null,
+        "p_2402_final_after_shrinkage": null,
+        "json_parse_error": null,
+        "fallback_reason": null,
+        "llm_prompt_metadata": {},
+        "scanner_elapsed_ms": 0
+      }
+    }
+  }
+}

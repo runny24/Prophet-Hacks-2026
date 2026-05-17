@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(PA_SERVER_API_KEY=prophet_961d5e2c5f66e857_c628fbb1b3d98acec0e37c89a1912d9361bb5e3bb545ea15 prophet trade dashboard --help)",
+      "Bash(PA_SERVER_API_KEY=prophet_961d5e2c5f66e857_c628fbb1b3d98acec0e37c89a1912d9361bb5e3bb545ea15 prophet trade dashboard --slug first_test_v2)",
+      "Bash(curl -s http://localhost:8000)",
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(curl -s http://localhost:5000)",
+      "Bash(PA_SERVER_API_KEY=prophet_961d5e2c5f66e857_c628fbb1b3d98acec0e37c89a1912d9361bb5e3bb545ea15 python3 -c ' *)",
+      "Bash(python3 -c ' *)",
+      "Bash(python3 -m ai_prophet_core)",
+      "Bash(/Library/Frameworks/Python.framework/Versions/3.12/bin/python3 -c ' *)",
+      "Bash(PA_SERVER_API_KEY=prophet_961d5e2c5f66e857_c628fbb1b3d98acec0e37c89a1912d9361bb5e3bb545ea15 OPENROUTER_API_KEY=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 EDGE_TRADER_DRY_RUN=1 EDGE_TRADER_SLUG=felix-dry-run-v01 /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 -m edge_trader_bot --once --dry-run)",
+      "Bash(PA_SERVER_API_KEY=prophet_961d5e2c5f66e857_c628fbb1b3d98acec0e37c89a1912d9361bb5e3bb545ea15 OPENROUTER_API_KEY=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 EDGE_TRADER_DRY_RUN=1 EDGE_TRADER_ENABLE_BLF=1 EDGE_TRADER_BLF_MODEL=perplexity/sonar EDGE_TRADER_SLUG=felix-blf-test-v01 LOG_LEVEL=DEBUG /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 -m edge_trader_bot --once --dry-run --max-markets 3)",
+      "Bash(PA_SERVER_API_KEY=prophet_961d5e2c5f66e857_c628fbb1b3d98acec0e37c89a1912d9361bb5e3bb545ea15 OPENROUTER_API_KEY=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 EDGE_TRADER_DRY_RUN=1 EDGE_TRADER_ENABLE_BLF=1 EDGE_TRADER_BLF_MODEL=perplexity/sonar EDGE_TRADER_SLUG=felix-blf-tuned-v01 LOG_LEVEL=INFO /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 -m edge_trader_bot --once --dry-run --max-markets 10)",
+      "Bash(PA_SERVER_API_KEY=prophet_961d5e2c5f66e857_c628fbb1b3d98acec0e37c89a1912d9361bb5e3bb545ea15 OPENROUTER_API_KEY=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 EDGE_TRADER_DRY_RUN=1 EDGE_TRADER_ENABLE_BLF=1 EDGE_TRADER_BLF_MODEL=perplexity/sonar EDGE_TRADER_SLUG=felix-fullrun-tuned-v01 LOG_LEVEL=INFO /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 -m edge_trader_bot --once --dry-run)",
+      "Bash(PA_SERVER_API_KEY=prophet_961d5e2c5f66e857_c628fbb1b3d98acec0e37c89a1912d9361bb5e3bb545ea15 OPENROUTER_API_KEY=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 EDGE_TRADER_DRY_RUN=1 EDGE_TRADER_ENABLE_BLF=1 EDGE_TRADER_BLF_MODEL=perplexity/sonar EDGE_TRADER_SLUG=felix-live-v01 LOG_LEVEL=INFO /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 -m edge_trader_bot --once --dry-run --max-markets 20)",
+      "Bash(PA_SERVER_API_KEY=prophet_961d5e2c5f66e857_c628fbb1b3d98acec0e37c89a1912d9361bb5e3bb545ea15 OPENROUTER_API_KEY=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 EDGE_TRADER_ENABLE_BLF=1 EDGE_TRADER_BLF_MODEL=perplexity/sonar EDGE_TRADER_SLUG=felix-live-v01 LOG_LEVEL=INFO /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 -m edge_trader_bot --once --max-markets 20 --allow-live-submit)"
+    ]
+  }
+}

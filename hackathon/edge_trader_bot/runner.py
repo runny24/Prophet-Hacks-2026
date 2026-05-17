@@ -23,13 +23,20 @@ from .memory import JsonlMemory
 from .rag_scanner import RagScanner
 from .schemas import ForecastSignals, MarketView, TradeDecision
 from .stat_priors import initial_signals
+from . import trading_history
+from .trading_history import DEFAULT_ARCHIVE_DIR
 from .trading_policy import decide_trade, rank_decisions
 
 logger = logging.getLogger(__name__)
 
 
 class EdgeTraderBot:
-    def __init__(self, config: BotConfig, memory_path: Path | None = None) -> None:
+    def __init__(
+        self,
+        config: BotConfig,
+        memory_path: Path | None = None,
+        archive_dir: Path | None = DEFAULT_ARCHIVE_DIR,
+    ) -> None:
         self.config = config
         self.rag = RagScanner(
             enabled=config.enable_rag,
@@ -39,6 +46,7 @@ class EdgeTraderBot:
         )
         self.blf = BlfVerifier(enabled=config.enable_blf)
         self.memory = JsonlMemory(memory_path or Path(".edge_trader/memory.jsonl"))
+        self.archive_dir: Path | None = archive_dir
 
     def run(self, once: bool = False) -> None:
         env_status = get_env_status()
@@ -120,16 +128,50 @@ class EdgeTraderBot:
         participant_idx: int,
         lease: TickLease,
     ) -> None:
-        tick = session.load_candidates(lease)
-        bound_lease = tick.lease
-        candidates = [market_view(market) for market in tick.candidates.markets]
-        portfolio = session.get_portfolio(participant_idx)
-
+        t_start = time.time()
+        run_dir: Path | None = None
+        bound_lease: TickLease | None = None
+        candidates: list[MarketView] = []
+        portfolio = None
+        selected: list[MarketView] = []
+        decisions: list[TradeDecision] = []
+        errors_list: list[dict] = []
+        submission_result: dict = {}
         plan: dict | None = None
+
         try:
+            tick = session.load_candidates(lease)
+            bound_lease = tick.lease
+            candidates = [market_view(market) for market in tick.candidates.markets]
+            portfolio = session.get_portfolio(participant_idx)
+
+            # Create archive directory now that we have tick_id
+            if self.archive_dir is not None:
+                run_dir = trading_history.make_tick_run_dir(self.archive_dir, bound_lease.tick_id)
+
+            experiment_id = getattr(session, "_experiment_id", None) or getattr(
+                session, "experiment_id", None
+            )
+            trading_history.archive_tick_artifact(
+                run_dir,
+                "metadata",
+                trading_history.build_metadata(
+                    tick_id=bound_lease.tick_id,
+                    candidate_set_id=bound_lease.candidate_set_id,
+                    participant_idx=participant_idx,
+                    experiment_id=experiment_id,
+                    config_dict=self.config.to_experiment_config(),
+                ),
+            )
+            trading_history.archive_tick_artifact(
+                run_dir,
+                "candidates",
+                [json_safe(m) for m in tick.candidates.markets],
+            )
+            trading_history.archive_tick_artifact(run_dir, "portfolio_before", json_safe(portfolio))
+
             selected, skipped = self.filter_markets(candidates, portfolio)
             signals_by_market: dict[str, ForecastSignals] = {}
-            decisions: list[TradeDecision] = []
             rag_attempted_count = 0
 
             for market in selected:
@@ -148,7 +190,32 @@ class EdgeTraderBot:
                 if decision is not None:
                     decisions.append(decision)
 
+            trading_history.archive_tick_artifact(
+                run_dir,
+                "strategy_inputs",
+                {
+                    "selected_markets": [json_safe(m) for m in selected],
+                    "skipped_markets": skipped,
+                    "signals": {mid: json_safe(sig) for mid, sig in signals_by_market.items()},
+                },
+            )
+            trading_history.archive_tick_artifact(
+                run_dir,
+                "market_snapshots",
+                {
+                    market.market_id: json_safe(market)
+                    for market in selected
+                },
+            )
+
             ranked_decisions = rank_decisions(decisions, self.config.max_trades_per_tick_target)
+            trading_history.archive_tick_artifact(
+                run_dir, "decisions", [json_safe(d) for d in ranked_decisions]
+            )
+            trading_history.archive_tick_artifact(
+                run_dir, "intents", [d.to_intent_dict() for d in ranked_decisions]
+            )
+
             plan = self.build_plan(
                 lease=bound_lease,
                 candidates_count=len(candidates),
@@ -163,23 +230,62 @@ class EdgeTraderBot:
                 participant_idx=participant_idx,
                 decisions=ranked_decisions,
             )
+            submission_result = plan["submission"]
+
+            if self.config.dry_run:
+                trading_history.archive_tick_artifact(
+                    run_dir,
+                    "dry_run_result",
+                    {
+                        "dry_run": True,
+                        "hypothetical_intents_count": len(ranked_decisions),
+                        "decisions": [json_safe(d) for d in ranked_decisions],
+                    },
+                )
+                trading_history.archive_tick_artifact(run_dir, "submit_result", None)
+            else:
+                trading_history.archive_tick_artifact(run_dir, "dry_run_result", None)
+                trading_history.archive_tick_artifact(run_dir, "submit_result", submission_result)
+
             safe_plan = json_safe(plan)
             session.put_plan(bound_lease, participant_idx, safe_plan)
             self.memory.append(safe_plan)
             self.log_plan_summary(safe_plan)
             session.finalize(bound_lease, participant_idx)
+            trading_history.archive_tick_artifact(run_dir, "finalize_result", {"status": "ok"})
+
         except Exception as exc:
+            errors_list.append(json_safe(exc))
             if plan is None:
-                plan = self.build_error_plan(bound_lease, len(candidates), exc)
+                plan = self.build_error_plan(
+                    bound_lease or lease, len(candidates), exc  # type: ignore[arg-type]
+                )
             else:
                 plan.setdefault("errors", []).append(json_safe(exc))
             safe_plan = json_safe(plan)
             try:
-                session.put_plan(bound_lease, participant_idx, safe_plan)
+                session.put_plan(bound_lease or lease, participant_idx, safe_plan)  # type: ignore[arg-type]
             except Exception:
-                logger.exception("Failed to persist error plan for tick %s", bound_lease.tick_id)
+                logger.exception("Failed to persist error plan for tick %s", lease.tick_id)
             self.memory.append(safe_plan)
             raise
+        finally:
+            trading_history.archive_tick_artifact(run_dir, "errors", errors_list)
+            trading_history.write_summary(
+                run_dir,
+                trading_history.build_summary(
+                    tick_id=bound_lease.tick_id if bound_lease else None,
+                    candidate_count=len(candidates),
+                    processed_count=len(selected),
+                    intent_count=len(decisions),
+                    submitted=submission_result.get("submit_called", False),
+                    dry_run=self.config.dry_run,
+                    errors=errors_list,
+                    markets_touched=[d.market_id for d in decisions],
+                    pnl_before=json_safe(portfolio).get("pnl") if portfolio else None,
+                    elapsed_seconds=time.time() - t_start,
+                ),
+            )
 
     def filter_markets(self, markets, portfolio):
         selected: list[MarketView] = []
@@ -481,6 +587,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--max-markets", type=int, help="Maximum candidates to process after filtering.")
     parser.add_argument("--allow-live-submit", action="store_true", help="Allow real submit calls when dry-run is false.")
     parser.add_argument("--check-env", action="store_true", help="Print non-secret environment readiness and exit.")
+    parser.add_argument(
+        "--archive-dir",
+        type=Path,
+        default=DEFAULT_ARCHIVE_DIR,
+        help="Directory for per-tick JSON archives (default: logs/trading_history). Pass 'none' to disable.",
+    )
     return parser.parse_args()
 
 
@@ -500,7 +612,8 @@ def main() -> None:
         config = BotConfig(**{**config.to_experiment_config(), "max_markets_to_consider": args.max_markets})
     if args.allow_live_submit:
         config = BotConfig(**{**config.to_experiment_config(), "allow_live_submit": True})
-    EdgeTraderBot(config, memory_path=args.memory_path).run(once=args.once)
+    archive_dir = None if str(args.archive_dir).lower() == "none" else args.archive_dir
+    EdgeTraderBot(config, memory_path=args.memory_path, archive_dir=archive_dir).run(once=args.once)
 
 
 def get_env_status() -> dict[str, dict[str, object]]:

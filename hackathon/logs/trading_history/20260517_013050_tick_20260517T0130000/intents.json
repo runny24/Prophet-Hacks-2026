@@ -1,0 +1,23 @@
+[
+  {
+    "market_id": "kalshi:KX2028RRUN-28-TMAS",
+    "action": "BUY",
+    "side": "YES",
+    "shares": "294",
+    "rationale": "market/statistical prior only"
+  },
+  {
+    "market_id": "kalshi:KX2028RRUN-28-TUC",
+    "action": "BUY",
+    "side": "YES",
+    "shares": "98",
+    "rationale": "market/statistical prior only"
+  },
+  {
+    "market_id": "kalshi:KX2028RRUN-28-MRUB",
+    "action": "BUY",
+    "side": "YES",
+    "shares": "75",
+    "rationale": "market/statistical prior only"
+  }
+]

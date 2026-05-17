@@ -1,0 +1,14 @@
+{
+  "tick": "2026-05-17T00:00:00+00:00",
+  "candidate_count": 256,
+  "processed_count": 3,
+  "intent_count": 0,
+  "submitted": false,
+  "dry_run": true,
+  "errors": [],
+  "markets_touched": [],
+  "pnl_before": null,
+  "pnl_after": null,
+  "elapsed_seconds": 33.2,
+  "created_at": "2026-05-16T23:56:54.831680+00:00"
+}
