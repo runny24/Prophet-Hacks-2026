@@ -11,6 +11,8 @@ import json
 import logging
 import os
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import TimeoutError as FuturesTimeoutError
 from dataclasses import dataclass, field
 
 import requests
@@ -75,19 +77,29 @@ class BlfVerifier:
         trial_confidences: list[str] = []
         errors: list[str] = []
 
-        for trial_idx in range(self.trials):
+        with ThreadPoolExecutor(max_workers=self.trials) as pool:
+            future_map = {
+                pool.submit(self._run_trial, market, signals.p_market, api_key, model): i
+                for i in range(self.trials)
+            }
             try:
-                result = self._run_trial(market, signals.p_market, api_key, model)
-                trial_probs.append(result["p_yes"])
-                trial_confidences.append(result.get("confidence", "low"))
-                logger.debug(
-                    "BLF trial %d/%d market=%s p_yes=%.3f confidence=%s",
-                    trial_idx + 1, self.trials, market.market_id,
-                    result["p_yes"], result.get("confidence"),
-                )
-            except Exception as exc:
-                errors.append(f"trial_{trial_idx}: {type(exc).__name__}: {exc}")
-                logger.warning("BLF trial %d failed for %s: %s", trial_idx + 1, market.market_id, exc)
+                for future in as_completed(future_map, timeout=self.timeout_seconds + 10):
+                    trial_idx = future_map[future]
+                    try:
+                        result = future.result()
+                        trial_probs.append(result["p_yes"])
+                        trial_confidences.append(result.get("confidence", "low"))
+                        logger.debug(
+                            "BLF trial %d/%d market=%s p_yes=%.3f confidence=%s",
+                            trial_idx + 1, self.trials, market.market_id,
+                            result["p_yes"], result.get("confidence"),
+                        )
+                    except Exception as exc:
+                        errors.append(f"trial_{trial_idx}: {type(exc).__name__}: {exc}")
+                        logger.warning("BLF trial %d failed for %s: %s", trial_idx + 1, market.market_id, exc)
+            except FuturesTimeoutError:
+                errors.append("blf_trials_timeout")
+                logger.warning("BLF trials timed out for %s after %ds", market.market_id, self.timeout_seconds + 10)
 
         if not trial_probs:
             signals.risk_flags.append("blf_all_trials_failed")

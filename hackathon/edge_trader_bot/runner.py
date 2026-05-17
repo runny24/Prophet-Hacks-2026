@@ -6,7 +6,9 @@ import argparse
 import logging
 import os
 import re
+import threading
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import UTC, datetime
 from pathlib import Path
 
@@ -172,23 +174,43 @@ class EdgeTraderBot:
 
             selected, skipped = self.filter_markets(candidates, portfolio)
             signals_by_market: dict[str, ForecastSignals] = {}
-            rag_attempted_count = 0
 
-            for market in selected:
-                signals = initial_signals(market)
-                if self.should_run_rag(market, rag_attempted_count):
-                    signals = self.rag.scan(market, signals)
-                    if self.config.enable_rag:
-                        rag_attempted_count += 1
+            _rag_lock = threading.Lock()
+            _rag_count = [0]
+
+            def _process_market(market: MarketView):
+                if time.time() - t_start > self.config.tick_process_deadline_sec:
+                    sig = initial_signals(market)
+                    sig.risk_flags.append("deadline_skip")
+                    logger.warning("Deadline skip for market %s", market.market_id)
+                    return market.market_id, sig, None
+
+                sig = initial_signals(market)
+                with _rag_lock:
+                    do_rag = self.should_run_rag(market, _rag_count[0])
+                    if do_rag and self.config.enable_rag:
+                        _rag_count[0] += 1
+                if do_rag:
+                    sig = self.rag.scan(market, sig)
                 else:
-                    signals.risk_flags.append("rag_skipped_budget")
-                signals = self.blf.verify(market, signals)
-                signals = combine_signals(signals)
-                signals_by_market[market.market_id] = signals
+                    sig.risk_flags.append("rag_skipped_budget")
+                sig = self.blf.verify(market, sig)
+                sig = combine_signals(sig)
+                dec = decide_trade(market, sig, portfolio, self.config)
+                return market.market_id, sig, dec
 
-                decision = decide_trade(market, signals, portfolio, self.config)
-                if decision is not None:
-                    decisions.append(decision)
+            max_workers = min(self.config.blf_max_workers, max(1, len(selected)))
+            with ThreadPoolExecutor(max_workers=max_workers) as pool:
+                futs = {pool.submit(_process_market, m): m for m in selected}
+                for fut in as_completed(futs):
+                    try:
+                        mid, sig, dec = fut.result()
+                        signals_by_market[mid] = sig
+                        if dec is not None:
+                            decisions.append(dec)
+                    except Exception as exc:
+                        market = futs[fut]
+                        logger.warning("Market %s processing failed: %s", market.market_id, exc)
 
             trading_history.archive_tick_artifact(
                 run_dir,

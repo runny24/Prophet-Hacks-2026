@@ -31,6 +31,8 @@ class BotConfig:
     max_notional_per_market_target: float = 600.0
     reserve_cash: float = 500.0
     deadline_buffer_sec: int = 90
+    blf_max_workers: int = 4
+    tick_process_deadline_sec: int = 480
 
     enable_rag: bool = False
     enable_blf: bool = False
@@ -79,6 +81,10 @@ class BotConfig:
             llm_json_retries=int(os.getenv("EDGE_TRADER_LLM_JSON_RETRIES", str(cls.llm_json_retries))),
             allow_live_submit=os.getenv("EDGE_TRADER_ALLOW_LIVE_SUBMIT", "0").lower()
             in {"1", "true", "yes"},
+            blf_max_workers=int(os.getenv("EDGE_TRADER_BLF_MAX_WORKERS", str(cls.blf_max_workers))),
+            tick_process_deadline_sec=int(
+                os.getenv("EDGE_TRADER_TICK_DEADLINE_SEC", str(cls.tick_process_deadline_sec))
+            ),
         )
 
     def to_experiment_config(self) -> dict:
