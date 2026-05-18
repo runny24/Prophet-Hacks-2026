@@ -237,6 +237,9 @@ class BotConfig:
         return asdict(self)
 
     def config_hash(self) -> str:
+        pinned = os.getenv("EDGE_TRADER_CONFIG_HASH", "").strip()
+        if pinned:
+            return pinned
         payload = json.dumps(self.to_experiment_config(), sort_keys=True, default=str)
         return f"sha256:{hashlib.sha256(payload.encode()).hexdigest()[:16]}"
 
