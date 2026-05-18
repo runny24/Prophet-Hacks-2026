@@ -234,20 +234,24 @@ class ChatCompletionsJsonSummarizer:
                     raise LlmRagError("empty_response", "LLM response missing message content") from exc
                 if not content:
                     raise LlmRagError("empty_response", "LLM response content is empty")
-                try:
-                    parsed = json.loads(content)
-                except json.JSONDecodeError as exc:
-                    raise LlmRagError("invalid_json", str(exc), json_parse_error=str(exc)) from exc
+                logger.info(
+                    "LLM RAG raw content preview market=%s len=%d: %.400s",
+                    market.market_id,
+                    len(content),
+                    content[:400].replace("\n", " "),
+                )
+                parsed = extract_json_from_llm_content(content, market_id=market.market_id)
                 return validate_llm_rag_output(parsed)
             except requests.Timeout as exc:
                 last_error = LlmRagError("timeout", str(exc))
             except requests.HTTPError as exc:
-                last_error = LlmRagError("http_error", str(exc))
+                last_error = LlmRagError("http_error", f"{exc} body={exc.response.text[:300] if exc.response is not None else ''}")
             except LlmRagError as exc:
                 last_error = exc
             except Exception as exc:
                 last_error = LlmRagError("unexpected_exception", str(exc))
-            logger.warning("LLM RAG summarization attempt failed: %s", last_error)
+                logger.warning("LLM RAG unexpected exception for %s", market.market_id, exc_info=True)
+            logger.warning("LLM RAG summarization attempt failed market=%s: %s", market.market_id, last_error)
         raise last_error or LlmRagError("unexpected_exception", "LLM RAG summarization failed")
 
 
@@ -1009,9 +1013,75 @@ def build_llm_rag_prompt(market: MarketView, evidence_items: list[dict[str, Any]
     )
 
 
+def extract_json_from_llm_content(content: str, *, market_id: str = "") -> dict[str, Any]:
+    """Extract a JSON object from LLM output that may include markdown fences or prose."""
+    stripped = content.strip()
+    # Direct parse (happy path — model obeyed response_format)
+    try:
+        result = json.loads(stripped)
+        if isinstance(result, dict):
+            return result
+    except json.JSONDecodeError:
+        pass
+    # Strip ```json ... ``` or ``` ... ``` fences
+    fence = re.search(r"```(?:json)?\s*(\{[\s\S]*?\})\s*```", stripped)
+    if fence:
+        try:
+            result = json.loads(fence.group(1))
+            if isinstance(result, dict):
+                logger.info("LLM RAG JSON extracted from markdown fence market=%s", market_id)
+                return result
+        except json.JSONDecodeError:
+            pass
+    # Last resort: find outermost { ... }
+    start = stripped.find("{")
+    end = stripped.rfind("}")
+    if start != -1 and end > start:
+        try:
+            result = json.loads(stripped[start: end + 1])
+            if isinstance(result, dict):
+                logger.info("LLM RAG JSON extracted from brace scan market=%s", market_id)
+                return result
+        except json.JSONDecodeError as exc:
+            raise LlmRagError(
+                "invalid_json",
+                f"Brace-scan JSON parse failed market={market_id}: {exc}",
+                json_parse_error=str(exc),
+            ) from exc
+    raise LlmRagError(
+        "invalid_json",
+        f"No JSON object found in LLM content market={market_id} len={len(content)}: {stripped[:120]!r}",
+    )
+
+
+_LLM_RAG_FIELD_ALIASES: dict[str, tuple[str, ...]] = {
+    "p_2402_raw": ("p_estimate", "probability", "p_yes", "p_raw", "estimated_probability", "p_final"),
+    "evidence_quality": ("quality", "evidence_score", "score"),
+    "reasoning_summary": ("summary", "reasoning", "explanation", "rationale"),
+    "evidence_for_yes": ("yes_evidence", "supporting_evidence", "evidence_yes", "for_yes"),
+    "evidence_for_no": ("no_evidence", "opposing_evidence", "evidence_no", "counter_evidence", "for_no"),
+    "open_questions": ("questions", "uncertainties", "open_issues", "unanswered_questions"),
+    "risk_flags": ("flags", "risks", "risk_factors", "warnings"),
+    "confidence": ("confidence_level", "confidence_score"),
+}
+
+
+def normalize_llm_rag_fields(data: dict[str, Any]) -> dict[str, Any]:
+    """Map common field-name variants to canonical names before validation."""
+    for canonical, aliases in _LLM_RAG_FIELD_ALIASES.items():
+        if canonical not in data:
+            for alias in aliases:
+                if alias in data:
+                    data[canonical] = data[alias]
+                    logger.debug("LLM RAG field alias %r → %r", alias, canonical)
+                    break
+    return data
+
+
 def validate_llm_rag_output(data: Any) -> dict[str, Any]:
     if not isinstance(data, dict):
         raise LlmRagError("invalid_json", "LLM output must be a JSON object")
+    data = normalize_llm_rag_fields(data)
     required = {
         "evidence_for_yes",
         "evidence_for_no",
