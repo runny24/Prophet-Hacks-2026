@@ -190,68 +190,103 @@ class ChatCompletionsJsonSummarizer:
         timeout_seconds: int,
         json_retries: int,
         max_items: int,
+        fallback_provider_config: LlmProviderConfig | None = None,
     ) -> None:
         self.provider_config = provider_config
         self.timeout_seconds = timeout_seconds
         self.json_retries = max(1, json_retries)
         self.max_items = max_items
+        self.fallback_provider_config = fallback_provider_config
 
-    def summarize(self, market: MarketView, evidence_items: list[dict[str, Any]]) -> dict[str, Any]:
-        prompt = build_llm_rag_prompt(market, evidence_items[: self.max_items])
-        last_error: LlmRagError | None = None
-        for _ in range(self.json_retries):
-            try:
-                response = requests.post(
-                    self.provider_config.endpoint,
-                    headers=build_llm_headers(self.provider_config),
-                    json={
-                        "model": self.provider_config.model,
-                        "messages": [
-                            {
-                                "role": "system",
-                                "content": (
-                                    "You are a prediction-market evidence analyst. "
-                                    "Return strict JSON only. Do not include hidden reasoning or chain-of-thought."
-                                ),
-                            },
-                            {"role": "user", "content": prompt},
-                        ],
-                        "temperature": 0,
-                        "response_format": {"type": "json_object"},
+    def _attempt(self, market: MarketView, prompt: str, config: LlmProviderConfig) -> dict[str, Any]:
+        """Single LLM call — raises LlmRagError or requests exception on any failure."""
+        response = requests.post(
+            config.endpoint,
+            headers=build_llm_headers(config),
+            json={
+                "model": config.model,
+                "messages": [
+                    {
+                        "role": "system",
+                        "content": (
+                            "You are a prediction-market evidence analyst. "
+                            "Return strict JSON only. Do not include hidden reasoning or chain-of-thought."
+                        ),
                     },
-                    timeout=self.timeout_seconds,
-                )
-                if response.status_code == 429:
-                    raise LlmRagError("rate_limit", "LLM provider rate limited request")
-                response.raise_for_status()
-                try:
-                    payload = response.json()
-                except ValueError as exc:
-                    raise LlmRagError("malformed_response", str(exc)) from exc
-                try:
-                    content = payload["choices"][0]["message"]["content"]
-                except (KeyError, IndexError, TypeError) as exc:
-                    raise LlmRagError("empty_response", "LLM response missing message content") from exc
-                if not content:
-                    raise LlmRagError("empty_response", "LLM response content is empty")
-                logger.info(
-                    "LLM RAG raw content preview market=%s len=%d: %.400s",
-                    market.market_id,
-                    len(content),
-                    content[:400].replace("\n", " "),
-                )
-                parsed = extract_json_from_llm_content(content, market_id=market.market_id)
-                return validate_llm_rag_output(parsed)
+                    {"role": "user", "content": prompt},
+                ],
+                "temperature": 0,
+                "response_format": {"type": "json_object"},
+            },
+            timeout=self.timeout_seconds,
+        )
+        if response.status_code == 429:
+            raise LlmRagError("rate_limit", "LLM provider rate limited request")
+        response.raise_for_status()
+        try:
+            payload = response.json()
+        except ValueError as exc:
+            raise LlmRagError("malformed_response", str(exc)) from exc
+        try:
+            content = payload["choices"][0]["message"]["content"]
+        except (KeyError, IndexError, TypeError) as exc:
+            raise LlmRagError("empty_response", "LLM response missing message content") from exc
+        if not content:
+            raise LlmRagError("empty_response", "LLM response content is empty")
+        logger.info(
+            "LLM RAG raw content preview market=%s provider=%s len=%d: %.400s",
+            market.market_id,
+            config.provider,
+            len(content),
+            content[:400].replace("\n", " "),
+        )
+        parsed = extract_json_from_llm_content(content, market_id=market.market_id)
+        return validate_llm_rag_output(parsed)
+
+    def _run_with_retries(
+        self,
+        market: MarketView,
+        prompt: str,
+        config: LlmProviderConfig,
+        retries: int,
+    ) -> tuple[dict[str, Any] | None, LlmRagError | None]:
+        last_error: LlmRagError | None = None
+        for _ in range(retries):
+            try:
+                return self._attempt(market, prompt, config), None
             except requests.Timeout as exc:
                 last_error = LlmRagError("timeout", str(exc))
             except requests.HTTPError as exc:
-                last_error = LlmRagError("http_error", f"{exc} body={exc.response.text[:300] if exc.response is not None else ''}")
+                body = exc.response.text[:300] if exc.response is not None else ""
+                last_error = LlmRagError("http_error", f"{exc} body={body}")
             except LlmRagError as exc:
                 last_error = exc
             except Exception as exc:
                 last_error = LlmRagError("unexpected_exception", str(exc))
-                logger.warning("LLM RAG unexpected exception for %s", market.market_id, exc_info=True)
-            logger.warning("LLM RAG summarization attempt failed market=%s: %s", market.market_id, last_error)
+                logger.warning("LLM RAG unexpected exception market=%s provider=%s", market.market_id, config.provider, exc_info=True)
+            logger.warning("LLM RAG attempt failed market=%s provider=%s: %s", market.market_id, config.provider, last_error)
+        return None, last_error
+
+    def summarize(self, market: MarketView, evidence_items: list[dict[str, Any]]) -> dict[str, Any]:
+        prompt = build_llm_rag_prompt(market, evidence_items[: self.max_items])
+
+        result, last_error = self._run_with_retries(market, prompt, self.provider_config, self.json_retries)
+        if result is not None:
+            return result
+
+        if self.fallback_provider_config is not None:
+            logger.warning(
+                "LLM RAG primary provider=%s exhausted for %s, trying fallback provider=%s model=%s",
+                self.provider_config.provider,
+                market.market_id,
+                self.fallback_provider_config.provider,
+                self.fallback_provider_config.model,
+            )
+            result, fallback_error = self._run_with_retries(market, prompt, self.fallback_provider_config, 1)
+            if result is not None:
+                return result
+            last_error = fallback_error or last_error
+
         raise last_error or LlmRagError("unexpected_exception", "LLM RAG summarization failed")
 
 
@@ -479,11 +514,30 @@ def build_default_llm_summarizer() -> LlmRagSummarizer | None:
     provider_config = build_llm_provider_config_from_env()
     if provider_config is None:
         return None
+    fallback_config = build_llm_fallback_config_from_env(provider_config)
     return ChatCompletionsJsonSummarizer(
         provider_config,
         timeout_seconds=int(os.getenv("EDGE_TRADER_LLM_TIMEOUT_SECONDS", "20")),
         json_retries=int(os.getenv("EDGE_TRADER_LLM_JSON_RETRIES", "1")),
         max_items=int(os.getenv("EDGE_TRADER_MAX_LLM_EVIDENCE_ITEMS", "5")),
+        fallback_provider_config=fallback_config,
+    )
+
+
+def build_llm_fallback_config_from_env(primary: LlmProviderConfig) -> LlmProviderConfig | None:
+    """Return an OpenRouter→DeepSeek fallback when primary is direct DeepSeek and key is available."""
+    if primary.provider != "deepseek":
+        return None
+    api_key = os.getenv("OPENROUTER_API_KEY")
+    if not api_key:
+        return None
+    model = primary.model if "/" in primary.model else f"deepseek/{primary.model}"
+    logger.info("LLM RAG fallback configured: openrouter model=%s", model)
+    return LlmProviderConfig(
+        provider="openrouter",
+        api_key=api_key,
+        model=model,
+        endpoint=OPENROUTER_CHAT_COMPLETIONS_ENDPOINT,
     )
 
 
