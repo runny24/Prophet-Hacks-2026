@@ -204,8 +204,6 @@ def maybe_price_exit(
         reasons.append("take_profit")
     if movement <= config.price_stop_loss_ticks:
         reasons.append("stop_loss")
-    if held_ticks >= config.price_exit_after_ticks:
-        reasons.append("time_exit")
     if current_signal is not None and current_signal.side not in {"HOLD", side} and not current_signal.blockers:
         reasons.append("signal_reversal")
     if market.spread > config.max_spread:

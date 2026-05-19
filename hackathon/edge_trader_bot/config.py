@@ -97,6 +97,8 @@ class BotConfig:
             model_name=os.getenv("EDGE_TRADER_MODEL", cls.model_name),
             n_ticks=int(os.getenv("EDGE_TRADER_N_TICKS", str(cls.n_ticks))),
             dry_run=os.getenv("EDGE_TRADER_DRY_RUN", "0").lower() in {"1", "true", "yes"},
+            min_edge=float(os.getenv("EDGE_TRADER_MIN_EDGE", str(cls.min_edge))),
+            low_confidence_min_edge=float(os.getenv("EDGE_TRADER_LOW_CONFIDENCE_MIN_EDGE", str(cls.low_confidence_min_edge))),
             enable_rag=os.getenv("EDGE_TRADER_ENABLE_RAG", "0").lower() in {"1", "true", "yes"},
             enable_blf=os.getenv("EDGE_TRADER_ENABLE_BLF", "0").lower() in {"1", "true", "yes"},
             blf_max_markets_per_tick=int(
