@@ -631,6 +631,10 @@ class EdgeTraderBot:
                         signal.blockers.append("max_total_open_shares_guard_cap")
                     signal.blockers = list(dict.fromkeys(signal.blockers))
                     signal.suggested_size = min(signal.suggested_size, 1)
+                if signal.side in ("YES", "NO"):
+                    _entry_ask = market.yes_ask if signal.side == "YES" else market.no_ask
+                    if _entry_ask >= self.config.near_certainty_block_threshold:
+                        signal.blockers.append("near_certainty_blocked")
                 entry = price_signal_to_decision(market, signal, signals)
                 if entry is not None:
                     decisions.append(entry)

@@ -79,8 +79,10 @@ class BotConfig:
     price_max_total_open_positions: int = 20
     price_max_session_loss: float = 100.0
     price_exit_after_ticks: int = 4
-    price_stop_loss_ticks: float = -0.01
-    price_take_profit_ticks: float = 0.005
+    price_stop_loss_ticks: float = -0.02
+    price_stop_loss_min_ticks: int = 15
+    price_take_profit_ticks: float = 0.01
+    near_certainty_block_threshold: float = 0.93
     fresh_event_max_spread: float = 0.015
     live_forecast_max_spread: float = 0.015
     enable_cached_evidence_fallback: bool = True
@@ -99,6 +101,7 @@ class BotConfig:
             dry_run=os.getenv("EDGE_TRADER_DRY_RUN", "0").lower() in {"1", "true", "yes"},
             min_edge=float(os.getenv("EDGE_TRADER_MIN_EDGE", str(cls.min_edge))),
             low_confidence_min_edge=float(os.getenv("EDGE_TRADER_LOW_CONFIDENCE_MIN_EDGE", str(cls.low_confidence_min_edge))),
+            min_volume_24h=float(os.getenv("EDGE_TRADER_MIN_VOLUME_24H", str(cls.min_volume_24h))),
             enable_rag=os.getenv("EDGE_TRADER_ENABLE_RAG", "0").lower() in {"1", "true", "yes"},
             enable_blf=os.getenv("EDGE_TRADER_ENABLE_BLF", "0").lower() in {"1", "true", "yes"},
             blf_max_markets_per_tick=int(
@@ -211,8 +214,14 @@ class BotConfig:
             price_stop_loss_ticks=float(
                 os.getenv("EDGE_TRADER_STOP_LOSS_TICKS", str(cls.price_stop_loss_ticks))
             ),
+            price_stop_loss_min_ticks=int(
+                os.getenv("EDGE_TRADER_STOP_LOSS_MIN_TICKS", str(cls.price_stop_loss_min_ticks))
+            ),
             price_take_profit_ticks=float(
                 os.getenv("EDGE_TRADER_TAKE_PROFIT_TICKS", str(cls.price_take_profit_ticks))
+            ),
+            near_certainty_block_threshold=float(
+                os.getenv("EDGE_TRADER_NEAR_CERTAINTY_THRESHOLD", str(cls.near_certainty_block_threshold))
             ),
             fresh_event_max_spread=float(
                 os.getenv("EDGE_TRADER_FRESH_EVENT_MAX_SPREAD", str(cls.fresh_event_max_spread))

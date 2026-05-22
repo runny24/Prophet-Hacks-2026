@@ -202,7 +202,7 @@ def maybe_price_exit(
     reasons = []
     if movement >= config.price_take_profit_ticks:
         reasons.append("take_profit")
-    if movement <= config.price_stop_loss_ticks:
+    if movement <= config.price_stop_loss_ticks and held_ticks >= config.price_stop_loss_min_ticks:
         reasons.append("stop_loss")
     if current_signal is not None and current_signal.side not in {"HOLD", side} and not current_signal.blockers:
         if current_signal.confidence in {"medium", "high"} or held_ticks >= 5:
