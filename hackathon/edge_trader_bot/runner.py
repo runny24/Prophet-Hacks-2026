@@ -14,7 +14,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import Callable, TypeVar
 
-from ai_prophet_core import DEFAULT_API_URL, APIClientError, ServerAPIClient, TradeIntentRequest
+from ai_prophet_core import DEFAULT_API_URL, APIClientError, APIError, ServerAPIClient, TradeIntentRequest
 from ai_prophet_core.arena import BenchmarkSession, TickLease
 
 from .aggregator import combine_signals
@@ -85,10 +85,11 @@ class EdgeTraderBot:
         if not env_status["PA_SERVER_API_KEY"]["present"]:
             raise RuntimeError("PA_SERVER_API_KEY is required for Prophet Arena server runs")
 
+        api_timeout = int(os.getenv("EDGE_TRADER_API_TIMEOUT", "60"))
         api = ServerAPIClient(
             base_url=os.getenv("PA_SERVER_URL", DEFAULT_API_URL),
             api_key=os.getenv("PA_SERVER_API_KEY"),
-            timeout=30,
+            timeout=api_timeout,
         )
         with BenchmarkSession(api) as session:
             experiment = self.create_experiment_with_slug_retry(session)
@@ -113,7 +114,15 @@ class EdgeTraderBot:
             )
 
             while True:
-                lease = session.claim_tick()
+                try:
+                    lease = session.claim_tick()
+                except APIError as exc:
+                    logger.warning("API error claiming tick, retrying in 15s: %s", exc)
+                    if once:
+                        return
+                    time.sleep(15)
+                    continue
+
                 if not lease.available:
                     if lease.reason == "experiment_completed":
                         logger.info("Experiment completed.")
@@ -128,15 +137,34 @@ class EdgeTraderBot:
                 try:
                     self.process_tick(session, participant.participant_idx, lease)
                     session.complete_tick(lease)
+                except APIError as exc:
+                    logger.warning("API error on tick %s, continuing loop: %s", lease.tick_id, exc)
+                    try:
+                        session.finalize(
+                            lease,
+                            participant.participant_idx,
+                            status="FAILED",
+                            error_code="API_ERROR",
+                            error_detail=str(exc)[:1024],
+                        )
+                    except Exception:
+                        logger.warning("Failed to finalize tick %s after API error", lease.tick_id)
+                    if once:
+                        return
+                    time.sleep(5)
+                    continue
                 except Exception as exc:
                     logger.exception("Tick %s failed", lease.tick_id)
-                    session.finalize(
-                        lease,
-                        participant.participant_idx,
-                        status="FAILED",
-                        error_code="EDGE_TRADER_ERROR",
-                        error_detail=str(exc)[:1024],
-                    )
+                    try:
+                        session.finalize(
+                            lease,
+                            participant.participant_idx,
+                            status="FAILED",
+                            error_code="EDGE_TRADER_ERROR",
+                            error_detail=str(exc)[:1024],
+                        )
+                    except Exception:
+                        logger.warning("Failed to finalize tick %s", lease.tick_id)
                     raise
 
                 if once:
@@ -447,10 +475,7 @@ class EdgeTraderBot:
     def find_cached_successful_evidence(self, market_id: str) -> dict | None:
         if not self.memory.path.exists():
             return None
-        try:
-            lines = self.memory.path.read_text(encoding="utf-8").splitlines()
-        except OSError:
-            return None
+        lines = _tail_lines(self.memory.path, self.config.max_cached_evidence_age_ticks + 2)
         for age, line in enumerate(reversed(lines), start=1):
             try:
                 record = json.loads(line)
@@ -471,10 +496,7 @@ class EdgeTraderBot:
     def find_previous_p_final(self, market_id: str) -> dict | None:
         if not self.memory.path.exists():
             return None
-        try:
-            lines = self.memory.path.read_text(encoding="utf-8").splitlines()
-        except OSError:
-            return None
+        lines = _tail_lines(self.memory.path, self.config.max_cached_evidence_age_ticks + 2)
         for age, line in enumerate(reversed(lines), start=1):
             try:
                 record = json.loads(line)
@@ -1451,6 +1473,34 @@ class RuntimeDiagnostics:
                 "blf_concurrency": self.blf_concurrency,
             },
         }
+
+
+def _tail_lines(path: Path, n: int) -> list[str]:
+    """Read last n non-empty lines from a JSONL file without loading the full file."""
+    try:
+        with path.open("rb") as f:
+            f.seek(0, 2)
+            size = f.tell()
+            if size == 0:
+                return []
+            chunk_size = min(2 * 1024 * 1024, size)  # 2MB chunks
+            lines: list[bytes] = []
+            pos = size
+            remainder = b""
+            while pos > 0 and len(lines) < n + 1:
+                read_size = min(chunk_size, pos)
+                pos -= read_size
+                f.seek(pos)
+                chunk = f.read(read_size) + remainder
+                parts = chunk.split(b"\n")
+                remainder = parts[0]
+                lines = parts[1:] + lines
+            if remainder:
+                lines = [remainder] + lines
+            non_empty = [ln.decode("utf-8", errors="replace") for ln in lines if ln.strip()]
+            return non_empty[-n:] if len(non_empty) > n else non_empty
+    except OSError:
+        return []
 
 
 def run_bounded_jobs(
