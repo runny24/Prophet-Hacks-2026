@@ -101,6 +101,8 @@ class BotConfig:
             dry_run=os.getenv("EDGE_TRADER_DRY_RUN", "0").lower() in {"1", "true", "yes"},
             min_edge=float(os.getenv("EDGE_TRADER_MIN_EDGE", str(cls.min_edge))),
             low_confidence_min_edge=float(os.getenv("EDGE_TRADER_LOW_CONFIDENCE_MIN_EDGE", str(cls.low_confidence_min_edge))),
+            exit_edge=float(os.getenv("EDGE_TRADER_EXIT_EDGE", str(cls.exit_edge))),
+            max_new_notional_per_trade=float(os.getenv("EDGE_TRADER_MAX_NEW_NOTIONAL", str(cls.max_new_notional_per_trade))),
             min_volume_24h=float(os.getenv("EDGE_TRADER_MIN_VOLUME_24H", str(cls.min_volume_24h))),
             enable_rag=os.getenv("EDGE_TRADER_ENABLE_RAG", "0").lower() in {"1", "true", "yes"},
             enable_blf=os.getenv("EDGE_TRADER_ENABLE_BLF", "0").lower() in {"1", "true", "yes"},
