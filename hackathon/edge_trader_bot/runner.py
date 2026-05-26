@@ -134,6 +134,27 @@ class EdgeTraderBot:
                     time.sleep(retry)
                     continue
 
+                # Skip ticks that are already too old to complete before their deadline.
+                tick_age_sec = _tick_age_seconds(lease.tick_id)
+                if tick_age_sec is not None and tick_age_sec > 420:  # 7-minute cutoff; deadline is 9 min
+                    logger.warning(
+                        "Tick %s is %.0fs old (past safe processing window), skipping",
+                        lease.tick_id, tick_age_sec,
+                    )
+                    try:
+                        session.finalize(
+                            lease,
+                            participant.participant_idx,
+                            status="FAILED",
+                            error_code="STALE_TICK",
+                            error_detail=f"tick {tick_age_sec:.0f}s old, skipped to avoid past-deadline submission",
+                        )
+                    except Exception:
+                        pass
+                    if once:
+                        return
+                    continue
+
                 try:
                     self.process_tick(session, participant.participant_idx, lease)
                     session.complete_tick(lease)
@@ -1475,8 +1496,8 @@ class RuntimeDiagnostics:
         }
 
 
-def _load_candidates_with_retry(session: "BenchmarkSession", lease: "TickLease", max_attempts: int = 5, base_delay: int = 20):
-    """Retry load_candidates on transient server errors with linear backoff."""
+def _load_candidates_with_retry(session: "BenchmarkSession", lease: "TickLease", max_attempts: int = 4, base_delay: int = 5):
+    """Retry load_candidates on transient server errors with short linear backoff."""
     last_exc: Exception = RuntimeError("no attempts made")
     for attempt in range(max_attempts):
         try:
@@ -1484,13 +1505,22 @@ def _load_candidates_with_retry(session: "BenchmarkSession", lease: "TickLease",
         except APIError as exc:
             last_exc = exc
             if attempt < max_attempts - 1:
-                delay = base_delay * (attempt + 1)
+                delay = base_delay * (attempt + 1)  # 5, 10, 15s
                 logger.warning(
                     "load_candidates attempt %d/%d failed, retrying in %ds: %s",
                     attempt + 1, max_attempts, delay, exc,
                 )
                 time.sleep(delay)
     raise last_exc
+
+
+def _tick_age_seconds(tick_id: str) -> float | None:
+    """Return how many seconds old a tick is, or None if unparseable."""
+    try:
+        tick_ts = datetime.fromisoformat(tick_id)
+        return (datetime.now(UTC) - tick_ts).total_seconds()
+    except (ValueError, TypeError):
+        return None
 
 
 def _tail_lines(path: Path, n: int) -> list[str]:
