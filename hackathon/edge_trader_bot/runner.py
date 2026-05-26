@@ -201,7 +201,7 @@ class EdgeTraderBot:
             time_budget_seconds=self.config.tick_time_budget_seconds,
             stop_before_deadline_seconds=self.config.stop_new_work_before_deadline_seconds,
         )
-        tick = session.load_candidates(lease)
+        tick = _load_candidates_with_retry(session, lease)
         bound_lease = tick.lease
         candidates = [market_view(market) for market in tick.candidates.markets]
         portfolio = session.get_portfolio(participant_idx)
@@ -1473,6 +1473,24 @@ class RuntimeDiagnostics:
                 "blf_concurrency": self.blf_concurrency,
             },
         }
+
+
+def _load_candidates_with_retry(session: "BenchmarkSession", lease: "TickLease", max_attempts: int = 5, base_delay: int = 20):
+    """Retry load_candidates on transient server errors with linear backoff."""
+    last_exc: Exception = RuntimeError("no attempts made")
+    for attempt in range(max_attempts):
+        try:
+            return session.load_candidates(lease)
+        except APIError as exc:
+            last_exc = exc
+            if attempt < max_attempts - 1:
+                delay = base_delay * (attempt + 1)
+                logger.warning(
+                    "load_candidates attempt %d/%d failed, retrying in %ds: %s",
+                    attempt + 1, max_attempts, delay, exc,
+                )
+                time.sleep(delay)
+    raise last_exc
 
 
 def _tail_lines(path: Path, n: int) -> list[str]:
